@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hesap ve veri silme — My Cosmic Code</title>
+<meta name="robots" content="index,follow" />
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">Ana sayfa</a><a href="privacy.html">Gizlilik</a><a href="terms.html">Koşullar</a><strong>Hesabı sil</strong></nav>
+<h1>Hesap ve Veri Silme — My Cosmic Code</h1>
+<p><em>Bu çeviri yalnızca kolaylık sağlamak amacıyla sunulmuştur. İngilizce sürümle arasında herhangi bir farklılık olması hâlinde İngilizce sürüm esas alınır: <a href="https://my-cosmic-code.web.app/delete-account.html" rel="noopener">İngilizce sürüm</a>.</em></p>
+<p><strong>Son güncelleme: 12 Ekim 2026</strong></p>
+<p>Bu sayfa, Google Play'in hesap sunan her uygulamadan <strong>uygulamayı yüklemeden ve oturum açmadan</strong> erişilebilen bir silme yolu yayımlamasını zorunlu tutması nedeniyle vardır. Bu sayfa, Hırvatistan'da kurulu bir şahıs işletmesi (obrt) olan <strong>Krist Code Taylor</strong> tarafından yayımlanan <strong>My Cosmic Code</strong> (<code>com.mycosmiccode.app</code>) için geçerlidir.</p>
+<p>Sayfa dürüst bir nedenle kısadır: silmemiz gereken hiçbir şey yoktur. Uygulamanın <strong>hesap sunucusu ve bulut senkronizasyonu yoktur</strong>; bu nedenle hesabınızın veya verilerinizin hiçbir kopyası bize hiçbir zaman ulaşmamıştır. Dolayısıyla silme, kendi cihazınızda, hemen, kimseden izin istemeden ve herhangi bir kimlik kontrolü olmadan sizin yaptığınız bir işlemdir — çünkü veriler zaten, ve yalnızca, sizin elinizdedir.</p>
+<hr />
+<h2>Burada “hesap” ne anlama gelir</h2>
+<p>My Cosmic Code'a kaydolmak, cihazlar arası geçerli gerçek bir hesap <strong>oluşturmaz</strong>. Girdiğiniz e-posta ve şifre telefonunuzda (<code>mcc.account.v1</code>) saklanır ve yalnızca bu yerel kopyayla karşılaştırılır. Bunları tutan bir sunucu, şifre sıfırlama e-postası ve kendi cihazınız dışında herhangi bir yerde kaydınıza ait bir kayıt yoktur. Güvenlik sınırları dahil tam açıklama için [Gizlilik Bildirimi](privacy.html) sayfasına bakın.</p>
+<hr />
+<h2>Hesabınızı ve verilerinizi nasıl silersiniz</h2>
+<p><strong>Seçenek 1 — her şeyi tek adımda silin.</strong> <em>Ben</em> ekranı → <strong>Verilerin</strong> → <strong>Her şeyi sil</strong>. Profilinizi, günlüğünüzü, diğer kişinin verilerini, kaydedilmiş Deste yorumlarını, kaydedilmiş “Seni Neler Bekliyor?” görünümlerini, kaydedilmiş Kozmik Raporları, son aramaları ve yerel hesabınızı birlikte, hemen ve geri alınamaz biçimde siler. Yerel hesabın silinmesi oturumunuzu kapatır.</p>
+<p><strong>Seçenek 2 — her seferinde bir şey silin.</strong> Her veri türünün ayrıca kendi düğmesi vardır; böylece geri kalanını silmeden birini silebilirsiniz:</p>
+<div class="scroll"><table>
+<thead><tr><th>Silmek istediğiniz</th><th>Nerede</th><th>Neyi siler</th></tr></thead>
+<tbody>
+<tr><td>Yerel hesap</td><td><em>Ben</em> ekranı → <strong>Hesap</strong> → <strong>Hesabı sil</strong></td><td>Saklanan e-postanızı ve şifre kontrol değerini</td></tr>
+<tr><td>Diğer kişi / Uyum verileri</td><td><em>Uyum</em> → <strong>Kaldır</strong></td><td>Kaydedilmiş partner doğum bilgilerini</td></tr>
+<tr><td>Kaydedilmiş Deste yorumları</td><td><em>Deste</em> → <strong>Yorumların</strong> → her kayıtta <strong>Sil</strong></td><td>O kaydedilmiş yorumu</td></tr>
+<tr><td>Kaydedilmiş “Seni Neler Bekliyor?” görünümleri</td><td><em>Seni Neler Bekliyor?</em> → <strong>Kayıtlı görünümler</strong> → her kayıtta <strong>Sil</strong></td><td>O kaydedilmiş görünümü</td></tr>
+<tr><td>Kaydedilmiş Kozmik Raporlar</td><td><em>Kozmik Rapor</em> → <strong>Kayıtlı raporlar</strong> → her kayıtta <strong>Sil</strong></td><td>O kaydedilmiş raporu</td></tr>
+<tr><td>Son aramalar</td><td><em>Ara</em> → <strong>Son aramaları temizle</strong></td><td>Son arama geçmişinizi</td></tr>
+</tbody>
+</table></div>
+<p><strong>Seçenek 3 — uygulamayı kaldırın.</strong> My Cosmic Code'u kaldırmak, uygulamanın cihazdaki özel depolama alanının <strong>tamamını</strong> tek adımda siler: hesap, profil, günlük, diğer kişinin verileri, kaydedilmiş yorumlar ve son aramalar birlikte. Telefonunuzda hiçbir şey kalmaz ve başka hiçbir yerde de hiçbir şey kalmaz, çünkü hiçbir şey hiçbir zaman başka bir yerde saklanmamıştır.</p>
+<hr />
+<h2>Ne saklanır ve ne kadar süreyle</h2>
+<p><strong>Silmeden önce veya sonra, hiçbir aşamada tarafımızca hiçbir şey saklanmaz.</strong> Sunucu tarafında bir kopya, yedek, arşiv veya otomatik bir süre sonu yoktur. Verileriniz, siz onları uygulama içinden kaldırana veya uygulamayı kaldırana kadar uygulamanın özel depolama alanında bulunur ve cihazınızdaki silme işlemi bu verilerin sonudur.</p>
+<p>Belirtilmeye değer tek istisna, silinmesi bize düşmediği için: <strong>sesle dikte</strong> kullandıysanız, bu ses telefonunuzun kendi işletim sisteminin konuşma tanıma hizmeti tarafından işlenmiştir. 5 Ağustos 2026'dan bu yana uygulama bu tanımanın cihazda çalışmasını zorunlu tutar, dolayısıyla ses telefonunuzdan çıkmaz — ancak işletim sisteminizin saklayabileceği her türlü veri, bu uygulamaya değil, cihaz üreticinizin ve Google'ın politikalarına tabidir. Bu veriler size ait herhangi bir hesap içermez ve My Cosmic Code verilerinizle bağlantılı değildir.</p>
+<hr />
+<h2>Uygulama içi düğmeleri kullanamıyorsanız</h2>
+<p>Hesap sunucusu olmadığından, işleme koymamız gereken bir silme talebi ve cihazınıza ulaşabilecek bir destek kuyruğu yoktur. Uygulamanın yüklü olduğu telefona erişiminizi kaybettiyseniz, veriler o cihazla sınırlıdır: bizim tarafımızdan kurtarılamaz ve bize açık da değildir.</p>
+<p>Silme veya gizlilikle ilgili sorular: <strong>kristcodetaylor@gmail.com</strong></p>
+<p>Veri koruma haklarınıza saygı gösterilmediğini düşünüyorsanız, Hırvatistan denetim makamına, <strong>Agencija za zaštitu osobnih podataka (AZOP)</strong>, Selska cesta 136, 10000 Zagreb, Hırvatistan — <a href="https://azop.hr" rel="noopener">azop.hr</a> adresine şikâyette bulunabilirsiniz.</p>
+<footer>My Cosmic Code · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

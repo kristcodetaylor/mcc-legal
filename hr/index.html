@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Cosmic Code: Horoskop — aplikacija za Android</title>
+<meta name="description" content="Dnevni horoskop, natalna karta, kompatibilnost, numerologija i sanjarica." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://my-cosmic-code.web.app/hr/" />
+<link rel="alternate" hreflang="en" href="https://my-cosmic-code.web.app/" />
+<link rel="alternate" hreflang="hr" href="https://my-cosmic-code.web.app/hr/" />
+<link rel="alternate" hreflang="de" href="https://my-cosmic-code.web.app/de/" />
+<link rel="alternate" hreflang="es" href="https://my-cosmic-code.web.app/es/" />
+<link rel="alternate" hreflang="fr" href="https://my-cosmic-code.web.app/fr/" />
+<link rel="alternate" hreflang="pt-BR" href="https://my-cosmic-code.web.app/pt/" />
+<link rel="alternate" hreflang="it" href="https://my-cosmic-code.web.app/it/" />
+<link rel="alternate" hreflang="pl" href="https://my-cosmic-code.web.app/pl/" />
+<link rel="alternate" hreflang="tr" href="https://my-cosmic-code.web.app/tr/" />
+<link rel="alternate" hreflang="zh-TW" href="https://my-cosmic-code.web.app/zh-tw/" />
+<link rel="alternate" hreflang="zh-CN" href="https://my-cosmic-code.web.app/zh-cn/" />
+<link rel="alternate" hreflang="ja" href="https://my-cosmic-code.web.app/ja/" />
+<link rel="alternate" hreflang="hi" href="https://my-cosmic-code.web.app/hi/" />
+<link rel="alternate" hreflang="x-default" href="https://my-cosmic-code.web.app/" />
+<link rel="icon" href="../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="My Cosmic Code: Horoskop" />
+<meta property="og:description" content="Dnevni horoskop, natalna karta, kompatibilnost, numerologija i sanjarica." />
+<meta property="og:url" content="https://my-cosmic-code.web.app/hr/" />
+<meta property="og:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="500" />
+<meta property="og:locale" content="hr" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="My Cosmic Code: Horoskop" />
+<meta name="twitter:description" content="Dnevni horoskop, natalna karta, kompatibilnost, numerologija i sanjarica." />
+<meta name="twitter:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","alternateName":"My Cosmic Code: Horoskop","description":"Dnevni horoskop, natalna karta, kompatibilnost, numerologija i sanjarica.","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"hr","url":"https://my-cosmic-code.web.app/hr/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hr","image":"https://my-cosmic-code.web.app/feature-graphic.png","screenshot":["https://my-cosmic-code.web.app/screenshots/1-home.jpg","https://my-cosmic-code.web.app/screenshots/2-birth-chart.jpg","https://my-cosmic-code.web.app/screenshots/3-explore.jpg","https://my-cosmic-code.web.app/screenshots/4-aspects.jpg","https://my-cosmic-code.web.app/screenshots/5-dream-journal.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Person","name":"Krist Code Taylor"},"sameAs":["https://www.facebook.com/profile.php?id=61594778747018","https://play.google.com/store/apps/details?id=com.mycosmiccode.app"]}</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.hero { text-align: center; padding: 1rem 0 1.5rem; }
+.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.langs { font-size: .9rem; line-height: 2; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<img class="graphic" src="../feature-graphic.png" width="1024" height="500" alt="My Cosmic Code: Horoskop" />
+<img class="icon" src="../icon-512.png" width="96" height="96" alt="" />
+<h1>My Cosmic Code: Horoskop</h1>
+<p class="lead">Dnevni horoskop, natalna karta, kompatibilnost, numerologija i sanjarica.</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hr" rel="noopener">Preuzmi na Google Playu</a>
+</header>
+<div class="shots">
+<img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Početni zaslon: tvoj Cosmic Code — životni put i osobna godina — sa Suncem, Mjesecom i podznakom" />
+<img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Natalna karta s planetima, kućama, aspektima, ascendentom i MC-om" />
+<img src="../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="Istraži: tranziti, lunarni kalendar, numerologija i osobna godina" />
+<img src="../screenshots/4-aspects.jpg" width="540" height="1040" loading="lazy" alt="Aspekti između planeta u natalnoj karti, s orbisima" />
+<img src="../screenshots/5-dream-journal.jpg" width="540" height="1040" loading="lazy" alt="Zapisivanje sna u privatni dnevnik snova" />
+</div>
+<p>My Cosmic Code miran je i privatan astrološki suputnik za svaki horoskopski znak: osobni dnevni horoskop izrađen iz tvoje natalne karte, potpuna natalna karta izračunata iz stvarne astronomije, ljubavna kompatibilnost i slaganje znakova, numerologija, karta noćnog neba i dnevnik snova sa sanjaricom. Sve se računa na tvom telefonu i tvoji podaci ostaju na njemu.</p>
+<h2>NOĆNO NEBO: PRAVO NEBO, BILO GDJE, BILO KADA</h2>
+<ul>
+<li>Karta neba iznad tebe ili bilo kojeg grada, u bilo koji sat: pravo zvjezdano nebo, svih 88 zviježđa, Mjesec i planeti na nebu večeras.</li>
+<li>Usmjeri prema nebu: podigni telefon i karta ga prati, pa vidiš koje su zvijezde i zviježđa ondje. Bez kamere.</li>
+<li>Večeras skače na tamno nebo. Duboko nebo dodaje galaksije, maglice i zvjezdane skupove.</li>
+<li>Nebo mog rođenja: pravo nebo iznad mjesta rođenja u trenutku tvog rođenja.</li>
+<li>Moje kozmičko nebo: tvoji natalni planeti među pravim zvijezdama i današnji planeti kako prolaze pored njih — gdje su planeti upravo sada u tvojoj karti.</li>
+</ul>
+<h2>ČETIRI HOROSKOPA</h2>
+<ul>
+<li>Zapadni (tvoja natalna karta), vedski (Mjesečev znak, nakshatra, lagna, dasha), kineski (životinja i element prema stvarnoj kineskoj Novoj godini) i japanski (eto i Devet zvijezda), svaki na svom ekranu.</li>
+</ul>
+<h2>HOROSKOP ZA DANAS, IZ TVOG NEBA</h2>
+<ul>
+<li>Kartica Danas pokazuje što je danas drukčije za tebe: tvoj osobni dan, u kojem je znaku Mjesec upravo sada i sljedeći tranzit prema tvojoj karti.</li>
+<li>Sezona pred tobom: vremenska crta nadolazećih astroloških tranzita tvojih planeta.</li>
+<li>Obavijesti o tranzitima u dane koji su važni za tvoju kartu: jaki tranziti, planeti koji mijenjaju smjer, mladi i puni Mjesec; najviše tri tjedno.</li>
+<li>Mjesečeve mijene, mjesečev kalendar i Mjesečev znak iz dana u dan.</li>
+</ul>
+<h2>PRAVA NATALNA KARTA, NE SAMO HOROSKOPSKI ZNAK</h2>
+<ul>
+<li>Znak Sunca, znak Mjeseca i podznak (ascendent) iz datuma, vremena i mjesta rođenja — tri znaka koja astrologija čita zajedno, a ne samo tvoj horoskopski znak.</li>
+<li>Potpun kotač natalne karte s planetima, kućama, aspektima, ascendentom i medium coeli.</li>
+<li>Retrogradni planeti označeni su u tvojoj karti.</li>
+<li>Prikaz Sunčeva sustava i nebo iz dana u dan.</li>
+<li>Kozmički izvještaj s tekstom za svih 144 kombinacija znaka i podznaka.</li>
+</ul>
+<h2>SVIH 12 HOROSKOPSKIH ZNAKOVA</h2>
+<ul>
+<li>Ovan, Bik, Blizanci, Rak, Lav, Djevica, Vaga, Škorpion, Strijelac, Jarac, Vodenjak i Ribe, svaki sa svojim elementom, vladajućim planetom, kamenom i bojom.</li>
+</ul>
+<h2>LJUBAVNA KOMPATIBILNOST I VIŠE</h2>
+<ul>
+<li>Usporedi dvije natalne karte u pet područja života: ljubav, intima, prijateljstvo, posao i dobrobit.</li>
+<li>Sinastrija, kompozitna karta i preklapanje kuća.</li>
+<li>Bez bodova i postotaka slaganja: vidiš kako se dvije karte stvarno susreću.</li>
+</ul>
+<h2>NUMEROLOGIJA S PRIKAZANIM RAČUNOM</h2>
+<ul>
+<li>Životni broj, osobna godina i osobni dan, s prikazanim računom.</li>
+</ul>
+<h2>PRIVATNI DNEVNIK SNOVA I SANJARICA</h2>
+<ul>
+<li>Zapiši snove, brojeve koje stalno viđaš i simbole koje stalno primjećuješ. Ako želiš, izgovori umjesto da tipkaš.</li>
+<li>Dodirni Analiziraj i sanjarica, tumač snova u dnevniku, pokaže kako tradicija čita simbole sna — zmiju, zube, vodu, padanje, kuću — do pet značenja po snu.</li>
+<li>Značenje snova se opisuje, ne predviđa: što simbol tradicionalno predstavlja, a ne što će se dogoditi. Zadnja riječ o tvom snu ostaje tvoja.</li>
+<li>Analiza pokazuje i koliko se često simbol vraća. Sanjarica radi offline, kao i pretraga cijele aplikacije.</li>
+</ul>
+<h2>PRIVATNO PO DIZAJNU</h2>
+<p>Bez oglasa, bez analitike, bez pratitelja, bez korisničkog računa. Podaci o rođenju, karta i dnevnik pohranjeni su samo na tvom uređaju, a možeš ih izvesti ili obrisati u aplikaciji. Diktiranje radi na telefonu; za jezik koji telefon ne prepoznaje offline, poput hrvatskog, aplikacija prvo pita smije li glas ići Googleovoj usluzi za govor.</p>
+<h2>ISKRENO O TOME ŠTO JEST</h2>
+<p>Aplikacija opisuje nebo i brojeve onakvima kakvi jesu i ne tvrdi da predviđa događaje.</p>
+<p>Aplikacija, tumačenja i sanjarica su na hrvatskom, engleskom, njemačkom, španjolskom, francuskom, talijanskom, poljskom, portugalskom (Brazil), turskom, kineskom (tradicionalnom i pojednostavljenom), japanskom i hindskom.</p>
+<h2>Još u aplikaciji</h2>
+<ul>
+<li><a href="natalna-karta/">Natalna karta</a></li>
+<li><a href="mjesecev-kalendar/">Mjesečev kalendar</a></li>
+<li><a href="numerologija/">Numerologija</a></li>
+<li><a href="slaganje-znakova/">Slaganje znakova</a></li>
+<li><a href="kineski-horoskop/">Kineski i vedski horoskop</a></li>
+<li><a href="sanjarica/">Sanjarica</a></li>
+</ul>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hr" rel="noopener">Preuzmi na Google Playu</a></p>
+<h2>Pravno</h2>
+<ul>
+<li><a href="privacy.html">Obavijest o privatnosti</a></li>
+<li><a href="terms.html">Uvjeti korištenja</a></li>
+<li><a href="delete-account.html">Brisanje računa i podataka</a></li>
+</ul>
+<h2>Jezici</h2>
+<p class="langs"><a href="../index.html" hreflang="en" lang="en">English</a> · <strong>Hrvatski</strong> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../pt/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../zh-tw/index.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a> · <a href="../zh-cn/index.html" hreflang="zh-CN" lang="zh-CN">简体中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

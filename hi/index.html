@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Cosmic Code: राशिफल — Android ऐप</title>
+<meta name="description" content="राशिफल, जन्म कुंडली, नक्षत्र, चीनी राशि, अंक ज्योतिष और सपनों का अर्थ" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://my-cosmic-code.web.app/hi/" />
+<link rel="alternate" hreflang="en" href="https://my-cosmic-code.web.app/" />
+<link rel="alternate" hreflang="hr" href="https://my-cosmic-code.web.app/hr/" />
+<link rel="alternate" hreflang="de" href="https://my-cosmic-code.web.app/de/" />
+<link rel="alternate" hreflang="es" href="https://my-cosmic-code.web.app/es/" />
+<link rel="alternate" hreflang="fr" href="https://my-cosmic-code.web.app/fr/" />
+<link rel="alternate" hreflang="pt-BR" href="https://my-cosmic-code.web.app/pt/" />
+<link rel="alternate" hreflang="it" href="https://my-cosmic-code.web.app/it/" />
+<link rel="alternate" hreflang="pl" href="https://my-cosmic-code.web.app/pl/" />
+<link rel="alternate" hreflang="tr" href="https://my-cosmic-code.web.app/tr/" />
+<link rel="alternate" hreflang="zh-TW" href="https://my-cosmic-code.web.app/zh-tw/" />
+<link rel="alternate" hreflang="zh-CN" href="https://my-cosmic-code.web.app/zh-cn/" />
+<link rel="alternate" hreflang="ja" href="https://my-cosmic-code.web.app/ja/" />
+<link rel="alternate" hreflang="hi" href="https://my-cosmic-code.web.app/hi/" />
+<link rel="alternate" hreflang="x-default" href="https://my-cosmic-code.web.app/" />
+<link rel="icon" href="../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="My Cosmic Code: राशिफल" />
+<meta property="og:description" content="राशिफल, जन्म कुंडली, नक्षत्र, चीनी राशि, अंक ज्योतिष और सपनों का अर्थ" />
+<meta property="og:url" content="https://my-cosmic-code.web.app/hi/" />
+<meta property="og:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="500" />
+<meta property="og:locale" content="hi_IN" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="My Cosmic Code: राशिफल" />
+<meta name="twitter:description" content="राशिफल, जन्म कुंडली, नक्षत्र, चीनी राशि, अंक ज्योतिष और सपनों का अर्थ" />
+<meta name="twitter:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","alternateName":"My Cosmic Code: राशिफल","description":"राशिफल, जन्म कुंडली, नक्षत्र, चीनी राशि, अंक ज्योतिष और सपनों का अर्थ","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"hi","url":"https://my-cosmic-code.web.app/hi/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN","image":"https://my-cosmic-code.web.app/feature-graphic.png","screenshot":["https://my-cosmic-code.web.app/screenshots/1-home.jpg","https://my-cosmic-code.web.app/screenshots/2-birth-chart.jpg","https://my-cosmic-code.web.app/screenshots/3-explore.jpg","https://my-cosmic-code.web.app/screenshots/4-aspects.jpg","https://my-cosmic-code.web.app/screenshots/5-dream-journal.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Person","name":"Krist Code Taylor"},"sameAs":["https://www.facebook.com/profile.php?id=61594778747018","https://play.google.com/store/apps/details?id=com.mycosmiccode.app"]}</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.hero { text-align: center; padding: 1rem 0 1.5rem; }
+.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.langs { font-size: .9rem; line-height: 2; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<img class="graphic" src="../feature-graphic.png" width="1024" height="500" alt="My Cosmic Code: राशिफल" />
+<img class="icon" src="../icon-512.png" width="96" height="96" alt="" />
+<h1>My Cosmic Code: राशिफल</h1>
+<p class="lead">राशिफल, जन्म कुंडली, नक्षत्र, चीनी राशि, अंक ज्योतिष और सपनों का अर्थ</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a>
+</header>
+<div class="shots">
+<img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="होम स्क्रीन: आपका Cosmic Code — भाग्यांक और व्यक्तिगत वर्ष — सूर्य, चंद्र और लग्न राशि के साथ" />
+<img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="ग्रहों, भावों, पहलुओं, लग्न और मध्य आकाश के साथ जन्म कुंडली चक्र" />
+<img src="../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="Explore: गोचर, चंद्र कैलेंडर, अंक ज्योतिष और व्यक्तिगत वर्ष" />
+<img src="../screenshots/4-aspects.jpg" width="540" height="1040" loading="lazy" alt="जन्म कुंडली में ग्रहों के बीच के पहलू, ऑर्ब के साथ" />
+<img src="../screenshots/5-dream-journal.jpg" width="540" height="1040" loading="lazy" alt="निजी सपनों की डायरी में सपना दर्ज करना" />
+</div>
+<p>My Cosmic Code हर राशि के लिए एक शांत, निजी ज्योतिष ऐप है: आपकी अपनी जन्म कुंडली से बना निजी दैनिक राशिफल, असली खगोलीय गणना से बनी पूरी पश्चिमी जन्म कुंडली, प्रेम और दोस्ती की अनुकूलता, अंक ज्योतिष, तारों का नक्शा और सपनों के शब्दकोश के साथ सपनों की डायरी। सारी गणना आपके फ़ोन पर होती है, और आपका डेटा वहीं रहता है।</p>
+<h2>रात का आकाश: असली आकाश</h2>
+<ul>
+<li>आपके या किसी भी शहर के ऊपर, किसी भी समय का असली तारों का नक्शा: तारे, सभी 88 तारामंडल, चंद्रमा और आज रात आकाश में ग्रह।</li>
+<li>आकाश की ओर करें: फ़ोन ऊपर उठाएँ, नक्शा उसके साथ घूमता है और दिखाता है कि वहाँ कौन-से तारे और तारामंडल हैं। कैमरे के बिना।</li>
+<li>आज रात: सीधे अंधेरे आकाश पर। गहन आकाश: आकाशगंगाएँ, नीहारिकाएँ और तारागुच्छ।</li>
+<li>मेरे जन्म का आकाश: आपके जन्म के क्षण, जन्मस्थान के ऊपर का असली आकाश।</li>
+<li>मेरा कॉस्मिक आकाश: तारों के बीच आपके जन्म के ग्रह, और उनके पास से गुज़रते आज के ग्रह — अभी ग्रह आपकी कुंडली में कहाँ हैं।</li>
+</ul>
+<h2>चार राशिफल, हर एक की अपनी स्क्रीन</h2>
+<ul>
+<li>चीनी राशिफल: असली चीनी नव वर्ष से गिना गया आपके साल का जानवर और तत्व, महीने और घंटे के जानवर, मित्र और विरोधी राशियाँ।</li>
+<li>जापानी राशिफल: आपका एतो और नाइन स्टार की (Nine Star Ki) तारा, उसका तत्व।</li>
+<li>वैदिक राशिफल: निरयन (लाहिड़ी) चंद्र राशि, नक्षत्र और पद, लग्न, विंशोत्तरी दशा और भावों में नवग्रह।</li>
+<li>पश्चिमी राशिफल: आपकी पूरी (सायन) जन्म कुंडली।</li>
+</ul>
+<h2>आपका दैनिक राशिफल, आपके अपने आकाश से</h2>
+<ul>
+<li>आज: आपका व्यक्तिगत दिन अंक, इस समय चंद्रमा की राशि और आपकी कुंडली पर अगला गोचर।</li>
+<li>आने वाला दौर: आपके ग्रहों पर आने वाले गोचर।</li>
+<li>कॉस्मिक लाइव: प्रेम, काम, भावनाओं और मन के लिए आज का आकाश, हर क्षेत्र के गोचर के साथ।</li>
+<li>गोचर की सूचनाएँ: आपकी कुंडली के अहम दिनों पर छोटी सूचना — मज़बूत गोचर, ग्रहों का वक्री या मार्गी होना, अमावस्या और पूर्णिमा; हफ़्ते में अधिकतम तीन।</li>
+<li>चंद्रमा की कलाएँ, चंद्र कैलेंडर और दिन-ब-दिन चंद्रमा की राशि।</li>
+</ul>
+<h2>सिर्फ़ राशि नहीं, असली जन्म कुंडली</h2>
+<ul>
+<li>जन्म तिथि, समय और स्थान से आपकी सूर्य राशि, चंद्र राशि और लग्न — वे तीन राशियाँ जिन्हें ज्योतिष साथ पढ़ता है।</li>
+<li>ग्रहों, भावों, पहलुओं (aspects), लग्न और मध्य आकाश (Midheaven) के साथ पूरा कुंडली चक्र; वक्री ग्रहों पर निशान।</li>
+<li>सौरमंडल का दृश्य और दिन-ब-दिन आकाश।</li>
+<li>कॉस्मिक रिपोर्ट: सूर्य और लग्न राशि के सभी 144 संयोजनों का विवरण, PDF में सेव या शेयर करें।</li>
+</ul>
+<h2>सभी 12 राशियाँ</h2>
+<ul>
+<li>मेष, वृषभ, मिथुन, कर्क, सिंह, कन्या, तुला, वृश्चिक, धनु, मकर, कुंभ और मीन — हर एक का तत्व, स्वामी ग्रह, रत्न और रंग।</li>
+</ul>
+<h2>प्रेम अनुकूलता और भी</h2>
+<ul>
+<li>दो जन्म कुंडलियों की तुलना: प्रेम, अंतरंगता, दोस्ती, काम और सेहत।</li>
+<li>पश्चिमी सिनैस्ट्री, कंपोज़िट चार्ट और हाउस ओवरले।</li>
+<li>न कोई अनुकूलता स्कोर, न प्रतिशत: आप देखते हैं कि दो कुंडलियाँ असल में कैसे मिलती हैं।</li>
+</ul>
+<h2>अंक ज्योतिष, पूरे हिसाब के साथ</h2>
+<ul>
+<li>भाग्यांक (लाइफ पाथ नंबर), व्यक्तिगत वर्ष और व्यक्तिगत दिन, पूरे हिसाब के साथ।</li>
+</ul>
+<h2>निजी सपनों की डायरी और सपनों का शब्दकोश</h2>
+<ul>
+<li>A से Z तक सपनों का शब्दकोश: कोई भी प्रतीक नाम से खोजें, या पूरा सपना लिखें और यह उसके प्रतीक ढूँढ लेता है।</li>
+<li>लोगों के सबसे आम सपने — दाँत गिरना, साँप, पीछा किया जाना, गिरना, पूर्व साथी, शादी, मौत, पानी — विस्तार से, जैसे सपने में साँप काट ले तो क्या मतलब है।</li>
+<li>सपने और बार-बार दिखने वाले अंक व प्रतीक लिखें, या बोलकर लिखें।</li>
+<li>सपने पर “विश्लेषण करें” दबाएँ: शब्दकोश दिखाता है कि स्वप्न परंपरा उसके प्रतीकों — साँप, दाँत, पानी, गिरना, घर — को कैसे पढ़ती है, हर प्रतीक के पाँच तक अर्थ।</li>
+<li>सिर्फ़ वर्णन, भविष्यवाणी नहीं: प्रतीक का परंपरागत अर्थ, यह नहीं कि आगे क्या होगा। अपने सपने का आख़िरी अर्थ आप ही तय करते हैं।</li>
+<li>विश्लेषण यह भी दिखाता है कि कोई प्रतीक कितनी बार लौटता है। शब्दकोश ऑफ़लाइन चलता है।</li>
+</ul>
+<h2>पूरी तरह निजी</h2>
+<p>न विज्ञापन, न एनालिटिक्स, न ट्रैकर, न अकाउंट। आपकी जन्म विवरण, कुंडली और डायरी सिर्फ़ आपके डिवाइस पर रहती हैं, और आप उन्हें ऐप में एक्सपोर्ट या डिलीट कर सकते हैं। बोलकर लिखना आपके फ़ोन पर ही होता है; जिस भाषा को फ़ोन ऑफ़लाइन नहीं लिख पाता, उसके लिए ऐप पहले पूछता है कि क्या आवाज़ Google की स्पीच सेवा को भेजी जाए।</p>
+<h2>साफ़-साफ़: यह ऐप क्या है</h2>
+<p>ऐप आकाश और अंकों का वैसा ही वर्णन करता है जैसे वे हैं; यह घटनाओं की भविष्यवाणी का दावा नहीं करता।</p>
+<p>ऐप की स्क्रीन, सभी व्याख्याएँ और सपनों का शब्दकोश हिन्दी में हैं, और अंग्रेज़ी, क्रोएशियाई, जर्मन, स्पेनिश, फ़्रेंच, इतालवी, पोलिश, पुर्तगाली (ब्राज़ील), तुर्की, चीनी (पारंपरिक और सरलीकृत) और जापानी में भी।</p>
+<h2>ऐप में और भी</h2>
+<ul>
+<li><a href="janm-kundali/">पश्चिमी जन्म कुंडली</a></li>
+<li><a href="chandra-calendar/">चंद्र कैलेंडर</a></li>
+<li><a href="ank-jyotish/">अंक ज्योतिष</a></li>
+<li><a href="rashi-milan/">राशि अनुकूलता</a></li>
+<li><a href="vedic-kundali/">चीनी और वैदिक राशिफल</a></li>
+</ul>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a></p>
+<h2>कानूनी</h2>
+<ul>
+<li><a href="../privacy.html">गोपनीयता सूचना</a></li>
+<li><a href="../terms.html">सेवा की शर्तें</a></li>
+<li><a href="../delete-account.html">अकाउंट और डेटा हटाना</a></li>
+</ul>
+<h2>भाषाएँ</h2>
+<p class="langs"><a href="../index.html" hreflang="en" lang="en">English</a> · <a href="../hr/index.html" hreflang="hr" lang="hr">Hrvatski</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../pt/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../zh-tw/index.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a> · <a href="../zh-cn/index.html" hreflang="zh-CN" lang="zh-CN">简体中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <strong>हिन्दी</strong></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

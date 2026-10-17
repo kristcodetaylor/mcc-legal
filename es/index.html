@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Cosmic Code: Horóscopo — app para Android</title>
+<meta name="description" content="Horóscopo diario, carta astral, compatibilidad y diccionario de sueños." />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://my-cosmic-code.web.app/es/" />
+<link rel="alternate" hreflang="en" href="https://my-cosmic-code.web.app/" />
+<link rel="alternate" hreflang="hr" href="https://my-cosmic-code.web.app/hr/" />
+<link rel="alternate" hreflang="de" href="https://my-cosmic-code.web.app/de/" />
+<link rel="alternate" hreflang="es" href="https://my-cosmic-code.web.app/es/" />
+<link rel="alternate" hreflang="fr" href="https://my-cosmic-code.web.app/fr/" />
+<link rel="alternate" hreflang="pt-BR" href="https://my-cosmic-code.web.app/pt/" />
+<link rel="alternate" hreflang="it" href="https://my-cosmic-code.web.app/it/" />
+<link rel="alternate" hreflang="pl" href="https://my-cosmic-code.web.app/pl/" />
+<link rel="alternate" hreflang="tr" href="https://my-cosmic-code.web.app/tr/" />
+<link rel="alternate" hreflang="zh-TW" href="https://my-cosmic-code.web.app/zh-tw/" />
+<link rel="alternate" hreflang="zh-CN" href="https://my-cosmic-code.web.app/zh-cn/" />
+<link rel="alternate" hreflang="ja" href="https://my-cosmic-code.web.app/ja/" />
+<link rel="alternate" hreflang="hi" href="https://my-cosmic-code.web.app/hi/" />
+<link rel="alternate" hreflang="x-default" href="https://my-cosmic-code.web.app/" />
+<link rel="icon" href="../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="My Cosmic Code: Horóscopo" />
+<meta property="og:description" content="Horóscopo diario, carta astral, compatibilidad y diccionario de sueños." />
+<meta property="og:url" content="https://my-cosmic-code.web.app/es/" />
+<meta property="og:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="500" />
+<meta property="og:locale" content="es_ES" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="My Cosmic Code: Horóscopo" />
+<meta name="twitter:description" content="Horóscopo diario, carta astral, compatibilidad y diccionario de sueños." />
+<meta name="twitter:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","alternateName":"My Cosmic Code: Horóscopo","description":"Horóscopo diario, carta astral, compatibilidad y diccionario de sueños.","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"es","url":"https://my-cosmic-code.web.app/es/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=es-ES","image":"https://my-cosmic-code.web.app/feature-graphic.png","screenshot":["https://my-cosmic-code.web.app/screenshots/1-home.jpg","https://my-cosmic-code.web.app/screenshots/2-birth-chart.jpg","https://my-cosmic-code.web.app/screenshots/3-explore.jpg","https://my-cosmic-code.web.app/screenshots/4-aspects.jpg","https://my-cosmic-code.web.app/screenshots/5-dream-journal.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Person","name":"Krist Code Taylor"},"sameAs":["https://www.facebook.com/profile.php?id=61594778747018","https://play.google.com/store/apps/details?id=com.mycosmiccode.app"]}</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.hero { text-align: center; padding: 1rem 0 1.5rem; }
+.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.langs { font-size: .9rem; line-height: 2; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<img class="graphic" src="../feature-graphic.png" width="1024" height="500" alt="My Cosmic Code: Horóscopo" />
+<img class="icon" src="../icon-512.png" width="96" height="96" alt="" />
+<h1>My Cosmic Code: Horóscopo</h1>
+<p class="lead">Horóscopo diario, carta astral, compatibilidad y diccionario de sueños.</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=es-ES" rel="noopener">Disponible en Google Play</a>
+</header>
+<div class="shots">
+<img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Pantalla de inicio: tu Cosmic Code — camino de vida y año personal — con signo solar, lunar y ascendente" />
+<img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Carta natal con planetas, casas, aspectos, Ascendente y Medio Cielo" />
+<img src="../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="Explorar: tránsitos, calendario lunar, numerología y año personal" />
+<img src="../screenshots/4-aspects.jpg" width="540" height="1040" loading="lazy" alt="Aspectos entre los planetas de una carta natal, con orbes" />
+<img src="../screenshots/5-dream-journal.jpg" width="540" height="1040" loading="lazy" alt="Anotar un sueño en el diario de sueños privado" />
+</div>
+<p>My Cosmic Code es una app de astrología tranquila y privada para todos los signos del zodiaco: un horóscopo diario personal creado a partir de tu propia carta astral, una carta natal completa calculada con astronomía real, compatibilidad amorosa y de amistad, numerología, un mapa del cielo, un diario de sueños y un diccionario de sueños. Todo se calcula en tu teléfono y tus datos se quedan en él.</p>
+<p>Ahora, totalmente en español.</p>
+<h2>CIELO NOCTURNO: EL CIELO REAL</h2>
+<ul>
+<li>Un mapa estelar del cielo real sobre ti o sobre cualquier ciudad, a cualquier hora: las estrellas, las 88 constelaciones, la Luna y los planetas en el cielo esta noche.</li>
+<li>Apunta al cielo: levanta el teléfono y el mapa lo sigue; ves qué estrellas y constelaciones hay ahí, sin cámara.</li>
+<li>Esta noche salta al cielo oscuro. Cielo profundo añade galaxias, nebulosas y cúmulos estelares.</li>
+<li>El cielo de mi nacimiento: el cielo real sobre tu lugar natal en el momento en que naciste.</li>
+<li>Mi cielo cósmico: tus planetas natales entre las estrellas reales y los de hoy pasando junto a ellos — dónde están ahora los planetas en tu carta.</li>
+</ul>
+<h2>CUATRO HORÓSCOPOS</h2>
+<ul>
+<li>Occidental (tu carta astral), védico (signo lunar, nakshatra, lagna, dasha), chino (tu animal y elemento según el Año Nuevo chino real) y japonés (eto y Nueve Estrellas Ki).</li>
+</ul>
+<h2>TU HORÓSCOPO DE HOY, DESDE TU PROPIO CIELO</h2>
+<ul>
+<li>Hoy: tu número de día personal, el signo de la Luna ahora mismo y el próximo tránsito a tu carta.</li>
+<li>La temporada que viene: los próximos tránsitos a tus planetas.</li>
+<li>Avisos de tránsitos en los días clave para tu carta: tránsitos fuertes, estaciones retrógradas y directas, lunas nuevas y llenas; como mucho tres por semana.</li>
+<li>Fases lunares, calendario lunar y el signo de la Luna día a día.</li>
+</ul>
+<h2>UNA CARTA ASTRAL DE VERDAD, NO SOLO UN SIGNO DEL ZODIACO</h2>
+<ul>
+<li>Tu signo solar, tu signo lunar y tu ascendente a partir de tu fecha, hora y lugar de nacimiento: los tres signos que la astrología lee juntos.</li>
+<li>Una rueda de carta natal completa con planetas, casas, aspectos, ascendente y medio cielo; los planetas retrógrados, marcados.</li>
+<li>Una vista del sistema solar y el cielo día a día.</li>
+<li>Un Informe Cósmico con textos para las 144 combinaciones de signo solar y ascendente.</li>
+</ul>
+<h2>LOS 12 SIGNOS DEL ZODIACO</h2>
+<ul>
+<li>Aries, Tauro, Géminis, Cáncer, Leo, Virgo, Libra, Escorpio, Sagitario, Capricornio, Acuario y Piscis, cada uno con su elemento, planeta regente, piedra natal y color.</li>
+</ul>
+<h2>COMPATIBILIDAD AMOROSA Y MÁS</h2>
+<ul>
+<li>Compara dos cartas astrales: amor, intimidad, amistad, trabajo y bienestar.</li>
+<li>Sinastría, carta compuesta y superposición de casas.</li>
+<li>Sin puntuación ni porcentaje de compatibilidad: ves cómo se encuentran de verdad dos cartas.</li>
+</ul>
+<h2>NUMEROLOGÍA CON EL CÁLCULO A LA VISTA</h2>
+<ul>
+<li>Número de camino de vida, año personal y día personal, con el cálculo a la vista.</li>
+</ul>
+<h2>UN DIARIO DE SUEÑOS PRIVADO, CON DICCIONARIO DE SUEÑOS</h2>
+<ul>
+<li>Anota sueños, números y símbolos que se repiten; también puedes dictar.</li>
+<li>Toca Analizar en un sueño y el diccionario te muestra cómo lee la tradición sus símbolos (una serpiente, los dientes, el agua, una casa): hasta cinco significados por sueño.</li>
+<li>Describe, nunca predice: el significado de los sueños según la tradición, no lo que va a pasar. La última palabra sobre tu sueño es tuya.</li>
+<li>El análisis también muestra cada cuánto vuelve un símbolo. El diccionario de sueños funciona sin conexión.</li>
+</ul>
+<h2>PRIVADA POR DISEÑO</h2>
+<p>Sin anuncios, sin analítica, sin rastreadores, sin cuenta. Tus datos de nacimiento, tu carta y tu diario se guardan solo en tu dispositivo y puedes exportarlos o borrarlos desde la app. El dictado por voz funciona en tu teléfono; solo si no puede transcribir un idioma sin conexión, la app te pregunta antes si tu voz puede ir al servicio de voz de Google.</p>
+<h2>HONESTA</h2>
+<p>La app describe el cielo y los números tal como son y no afirma predecir acontecimientos.</p>
+<p>Pantallas, interpretaciones y diccionario de sueños en español, inglés, croata, alemán, francés, italiano, polaco, portugués, turco, chino (tradicional y simplificado), japonés e hindi.</p>
+<h2>Más en la app</h2>
+<ul>
+<li><a href="carta-natal/">Carta natal</a></li>
+<li><a href="calendario-lunar/">Calendario lunar</a></li>
+<li><a href="numerologia/">Numerología</a></li>
+<li><a href="compatibilidad-de-signos/">Compatibilidad de signos</a></li>
+<li><a href="horoscopo-chino/">Horóscopo chino y védico</a></li>
+<li><a href="significado-de-los-suenos/">Diccionario de sueños</a></li>
+</ul>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=es-ES" rel="noopener">Disponible en Google Play</a></p>
+<h2>Legal</h2>
+<ul>
+<li><a href="privacy.html">Aviso de privacidad</a></li>
+<li><a href="terms.html">Términos del servicio</a></li>
+<li><a href="delete-account.html">Eliminación de cuenta y datos</a></li>
+</ul>
+<h2>Idiomas</h2>
+<p class="langs"><a href="../index.html" hreflang="en" lang="en">English</a> · <a href="../hr/index.html" hreflang="hr" lang="hr">Hrvatski</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <strong>Español</strong> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../pt/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="../zh-tw/index.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a> · <a href="../zh-cn/index.html" hreflang="zh-CN" lang="zh-CN">简体中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

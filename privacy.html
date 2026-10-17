@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Notice — My Cosmic Code</title>
+<meta name="robots" content="index,follow" />
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">Home</a><strong>Privacy</strong><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a></nav>
+<h1>Privacy Notice — My Cosmic Code</h1>
+<p><strong>Last updated: 16 October 2026</strong></p>
+<p>My Cosmic Code is an astrology, numerology, and dream-journal app that runs almost entirely on your device. This notice explains, in plain language, exactly what the app does and does not do with your information. Every statement below is checked against the code that ships with this version. If a future version changes how data is handled, this notice changes in the same release — a privacy promise that outlives its truth is worthless.</p>
+<p>The short version: <strong>the app has no account server, no cloud sync, and no analytics. Everything you enter is stored on your phone, and that includes anything you dictate — voice recognition is required to run on your device.</strong></p>
+<hr />
+<h2>Who is responsible for this app</h2>
+<p><strong>Controller: Krist Code Taylor</strong>, a sole proprietorship (obrt) established in Croatia, which publishes My Cosmic Code. Because the app stores data only on your own device, there is no central database of users; the &quot;controller&quot; designation applies to the published software and the decisions about how it processes data, not to a server holding your information.</p>
+<p>Questions about privacy: <strong>kristcodetaylor@gmail.com</strong></p>
+<p><strong>Supervisory authority: Agencija za zaštitu osobnih podataka (AZOP)</strong>, Selska cesta 136, 10000 Zagreb, Croatia — <a href="https://azop.hr" rel="noopener">azop.hr</a>. This is the Croatian data protection authority, and it is where a complaint would be lodged. It applies because the controller is established in Croatia; if that ever changes, this section changes with it.</p>
+<hr />
+<h2>What information the app handles</h2>
+<p>You may choose to enter the following. All of it is optional; the core chart and numerology features are usable without providing any of it beyond your own birth date.</p>
+<ul>
+<li><strong>Your birth data</strong> — birth date, and optionally your name, birth time, and birth place. Used on-device to compute your numerology and the positions of the sun, moon, and planets.</li>
+<li><strong>Dream / number / symbol journal entries</strong> — text you write, or dictate by voice (see <em>Voice dictation</em> below), in the journal.</li>
+<li><strong>An optional local account</strong> — if you choose to register, an email address and a password are stored <strong>on this device only</strong>, to let you lock the app behind a simple sign-in. See <em>The optional local account</em> below for what this does and does not mean.</li>
+<li><strong>A partner's birth data, if you use Compatibility</strong> — name, birth date, and optionally birth time and place, for someone you are comparing yourself with. This is personal data about a second person, entered by you, and subject to the same on-device-only handling as your own data. See <em>Someone else's data</em> below.</li>
+<li><strong>Saved readings</strong> — if you save a Deck (card) reading or a Future View reading, that saved content is stored so you can revisit it later.</li>
+<li><strong>Preferences</strong> — your chosen language (one of the app's nine languages), a local reminder time if you enable one, whether you have switched on the local transit notes (worked out from your birth data on the device, scheduled on the device, never sent anywhere), your recent in-app search queries (used only to show you your own search history), and a few interface flags (whether you've seen the intro/tutorial, whether ambient audio is muted).</li>
+</ul>
+<p>The app also derives values from the above (for example, your life-path number or a planet's sign). These derived values are computed on your device and stored on your device alongside the inputs.</p>
+<h3>Where this information lives</h3>
+<p>All of it is stored <strong>only on your device</strong>, in the app's private storage (<code>AsyncStorage</code>, protected by your operating system's app sandbox). For transparency, here is the complete list of on-device storage keys and what each holds:</p>
+<div class="scroll"><table>
+<thead><tr><th>Storage key</th><th>What it holds</th></tr></thead>
+<tbody>
+<tr><td><code>mcc.profile.v1</code></td><td>Your own birth data</td></tr>
+<tr><td><code>mcc.journal.v1</code></td><td>Your journal entries</td></tr>
+<tr><td><code>mcc.account.v1</code></td><td>Optional local account: email + a locally-computed password check value (see <em>The optional local account</em>)</td></tr>
+<tr><td><code>mcc.session.v1</code></td><td>Whether you're currently signed in to the local account (no personal data itself)</td></tr>
+<tr><td><code>mcc.compatibility.partner.v1</code></td><td>A partner's birth data, if you've added one</td></tr>
+<tr><td><code>mcc.futureview.saves.v1</code></td><td>Any Future View readings you've chosen to save</td></tr>
+<tr><td><code>mcc.deck.readings.v1</code></td><td>Any Deck readings you've chosen to save</td></tr>
+<tr><td><code>mcc.reminder.v1</code></td><td>Your local reminder time and whether it's on</td></tr>
+<tr><td><code>mcc.transitAlerts.v1</code></td><td>Whether transit notes are on — nothing else</td></tr>
+<tr><td><code>mcc.locale.v1</code></td><td>Your language choice</td></tr>
+<tr><td><code>mcc.recentSearches.v1</code></td><td>Text you've typed into in-app search, kept so you can see your own recent searches</td></tr>
+<tr><td><code>mcc.lastExport.v1</code></td><td>The timestamp of your last export, nothing else</td></tr>
+<tr><td><code>mcc.entitlement.v1</code></td><td>Which plan you have and whether you were an early user who keeps Max free — no payment details</td></tr>
+<tr><td><code>mcc.cosmicReport.saves.v1</code></td><td>Any Cosmic Reports you've chosen to save</td></tr>
+<tr><td><code>mcc.onlineVoiceConsent.v1</code></td><td>Whether you allowed online dictation for a language with no offline model — only your yes or no</td></tr>
+<tr><td><code>mcc.identSeen.v1</code>, <code>mcc.tutorialSeen.v1</code>, <code>mcc.timelineGuideSeen.v1</code>, <code>mcc.ambientMuted.v1</code></td><td>Interface flags — not personal data</td></tr>
+</tbody>
+</table></div>
+<hr />
+<h2>What is transmitted off your device</h2>
+<p><strong>Nothing, for everything above, with a few narrow, explained exceptions.</strong> This app has no account server, no cloud sync, no backup service, no crash reporting, no analytics, no advertising, and no third-party SDK that phones home on your birth data, journal text, account, partner data, or saved readings. There is no code in the app that sends any of that anywhere.</p>
+<p>The exceptions:</p>
+<ul>
+<li><strong>Export everything</strong>, in the <em>Me</em> screen, opens your operating system's standard share sheet so <em>you</em> can send a copy of your data wherever you choose. We never see it; it goes only where you send it. (See <em>Your rights</em> below for exactly what this includes — everything personal listed above that you have entered or saved.)</li>
+<li><strong>Voice dictation</strong>, if you use it to speak a journal entry instead of typing — see the next section. This is the one feature where &quot;stays on your device&quot; is not something the app's own code can fully guarantee.</li>
+<li><strong>Purchases</strong>, if you open the plans or buy a subscription: the app talks to Google Play on your device to show prices, take the payment and check what you own — see <em>Purchases</em> below. None of your birth data, journal or other entries is part of that.</li>
+<li><strong>Sharing a Cosmic Report</strong>, if you choose to save it as a PDF or share it: the app opens your operating system's share or print sheet, and the report goes only where you send it.</li>
+</ul>
+<h3>Voice dictation</h3>
+<p>If you tap the microphone in the journal capture sheet, the app uses your operating system's built-in speech-recognition service to turn your speech into text — the same service any keyboard's dictation button would use. The app is configured to prefer Android's Google-provided recognition service.</p>
+<p><strong>Since 5 August 2026 the app requires this to run strictly on your device.</strong> Every time it starts listening it demands on-device recognition, so your voice is not sent to Google or to anyone else for transcription. The transcript is then handled exactly like typed text: stored only in your journal, on your device, nowhere else.</p>
+<p>The honest cost of that choice: if your phone has no offline language pack for your language, dictation will not work, and the app tells you so. It does not quietly fall back to sending your voice to a server. Since 5 August 2026 the app also offers to <strong>download that pack</strong> for you — Android fetches it, and dictation then runs entirely on your phone. You can still install it yourself in Android's speech settings, or type instead.</p>
+<p><strong>One exception, only with your yes (since 28 September 2026).</strong> Some languages have no offline model on some phones at all — Croatian on current Android phones is the known case — so there is nothing to download. For such a language only, the app asks you, in the capture sheet, whether your voice may go to Google's speech-recognition service so it can be written down. Only after you tap <strong>Allow and speak</strong> does it do so, and only while Speak is listening. The audio goes from your phone's speech service to Google, not to us: we never receive, see or store the recording, and the transcript stays in your journal on your device like typed text. Google processes the audio under its own privacy policy. You can withdraw that permission at any time with <strong>Stop allowing</strong> in the same sheet; languages your phone can transcribe offline never take this path.</p>
+<p>The app asks your device which packs it actually has before it starts listening, and only ever falls back between regions of the same language (for example Croatian as spoken in Bosnia). It will not transcribe one language with another language's recogniser, because that does not fail — it silently produces nonsense.</p>
+<p><strong>Before 5 August 2026</strong> this was not forced, and on some phones Android's speech service may have sent dictated audio to Google for transcription — the same way its keyboard dictation does. Nothing else in the app ever transmitted anything, and any resulting transcripts stayed in your journal on your device.</p>
+<h3>Your location (Night Sky)</h3>
+<p>If you tap <strong>Here</strong> in the Night Sky, the app asks Android for your <strong>approximate</strong> location, good to within a few kilometres. The app never asks for precise or background location. It uses the location on your device to draw the sky above you, and keeps it only while that screen is open. It is <strong>not stored</strong> and <strong>not sent anywhere</strong>. If you say no, the Night Sky works the same with your birth place or a city you choose. You can withdraw the permission at any time in Android's settings.</p>
+<p><strong>Point at the sky</strong> asks for the same permission, so that the compass can use true north. While it is on, the app also reads your phone's compass and motion sensors to know where the phone points; those readings stay on the phone too and are not kept. Once you have allowed location, the Night Sky opens over where you are, without asking again.</p>
+<h3>Someone else's data</h3>
+<p>If you use Compatibility, you provide a <strong>second person's</strong> birth data. That person is not a user of this app and has not agreed to this notice themselves. That data is stored on your device only, in the same way your own data is, and is never transmitted. If you enter another person's data, you are responsible for having a lawful basis to do so (for example, their consent, or a legitimate personal/household-activity basis) — the app has no way to verify this and stores whatever you enter.</p>
+<hr />
+<h2>The optional local account</h2>
+<p>Registering does <strong>not</strong> create a real, cross-device account. There is no server to verify a credential against. The email and password you enter are checked only against a copy stored on this device (<code>mcc.account.v1</code>), and the password is protected by a fast, non-cryptographic check value — good enough that it isn't stored as plain text, <strong>not</strong> the kind of protection a real backend account uses (which would use a proper cryptographic hash such as bcrypt or argon2). &quot;Forgot password&quot; does not send an email — there is no mail server — it simply lets you reset the locally-stored value after re-entering the same email. Treat this account the same way you'd treat any other data on an unlocked phone: it protects against casual access, not against someone who has your unlocked device or a copy of its storage.</p>
+<hr />
+<h2>Purchases</h2>
+<p>If you buy a subscription, <strong>Google Play</strong> handles the whole payment: your card or other payment method, billing address and the charge itself. Google does this as an independent controller under the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. We never receive your payment details.</p>
+<p>What the app keeps: only the <strong>purchase state</strong> — which plan is active — which it reads from Google Play on your device when you open the plans, buy or restore, and, once you have done any of those, each time the app starts. It keeps a short local copy (<code>mcc.entitlement.v1</code>) so the screen does not flicker. It is not sent anywhere by us. The app checks the purchase on your device; there is no server of ours that verifies it. If you never open the plans, the app never contacts Google Play's billing service at all.</p>
+<p>What we see: Google Play shows the publisher an <strong>order record</strong> for each purchase — order number, product, price, currency, country and date. It does not include your name or card. We use these records only to handle refunds, answer your questions and keep the accounts that tax law requires, and we keep them for as long as that law requires.</p>
+<p>Legal basis: performance of the contract you enter by buying (Article 6(1)(b)) and our legal obligation to keep accounting records (Article 6(1)(c)).</p>
+<p>To cancel or manage a subscription, use Google Play → Payments &amp; subscriptions. Deleting the app does not cancel it.</p>
+<hr />
+<h2>No third parties, no advertising, no tracking</h2>
+<ul>
+<li>The app contains <strong>no advertising</strong>.</li>
+<li>The app contains <strong>no analytics or measurement tools</strong>.</li>
+<li>The app contains <strong>no third-party trackers or data brokers</strong>.</li>
+<li>The app makes <strong>no automated decisions</strong> about you and does not profile you.</li>
+<li>Payments are handled by <strong>Google Play</strong>, not by us — see <em>Purchases</em>.</li>
+<li>The one service outside our control that may see any of your data is your phone's own operating-system speech-recognition service, and only if you choose to dictate rather than type. It runs on your device, except for a language your phone cannot transcribe offline, and then only after you tap <strong>Allow and speak</strong> — see <em>Voice dictation</em> above.</li>
+</ul>
+<hr />
+<h2>The website</h2>
+<p><strong>my-cosmic-code.web.app</strong> (this site, including the dream dictionary and the app in your browser) is hosted on <strong>Google Firebase Hosting</strong>. To deliver a page, Google necessarily processes technical request data — your IP address, the page requested, the time and your browser's user agent — as our hosting provider (processor), under Google's data processing terms; Google may also process it outside the EU under the EU–US Data Privacy Framework. We use it only to deliver and protect the site (legitimate interest, Article 6(1)(f)). The site sets <strong>no cookies</strong> and has <strong>no analytics, advertising or tracking</strong>; fonts and images are served from the site itself. <strong>The app in your browser</strong> stores what you enter only in your browser's local storage on your device, like the phone app does; clearing this site's data in your browser removes it. Links to Google Play and Facebook take you to those services only when you tap them, under their own privacy policies.</p>
+<hr />
+<h2>Legal basis (GDPR)</h2>
+<p>For users in the European Economic Area, we note the following under the General Data Protection Regulation:</p>
+<ul>
+<li><strong>Article 6(1)(a) — consent / your own action.</strong> Any information exists because you chose to type or say it into an app that keeps it on your device. You can withdraw it at any time by deleting it (see <em>Your rights</em>).</li>
+<li><strong>Article 9 — special categories of data.</strong> Birth data can reveal or imply philosophical or religious beliefs, so we treat it as special-category data. Our safeguard is structural, not a promise to be trusted: for the data covered above, it never leaves your device, so there is no server holding it and nothing to breach or share. Voice dictation is forced on-device since 5 August 2026. The one narrowing since 28 September 2026 is online dictation for a language your phone has no offline model for: your spoken words then reach Google's speech service, so the app asks first and does it only after you tap <strong>Allow and speak</strong> (your explicit consent, Article 9(2)(a)). You can withdraw it at any time with <strong>Stop allowing</strong>.</li>
+</ul>
+<p>Because processing happens on your device, much of the GDPR's machinery around transfers, processors, and breach notification has limited subject matter here. See the internal Record of Processing Activities for how this is tracked.</p>
+<hr />
+<h2>How long information is kept</h2>
+<p>Until <strong>you</strong> delete it. There is no server-side copy and no automatic expiry. Your data remains in the app's private storage until you remove it in-app or uninstall the app, which removes all of the app's on-device storage.</p>
+<p>Order records in Play Console, if you buy a subscription: as long as tax law requires (see <em>Purchases</em>).</p>
+<hr />
+<h2>Your rights and how to exercise them</h2>
+<p>All of these are available directly in the app, free, with no account required and no gate:</p>
+<ul>
+<li><strong>Access / portability</strong> — <strong>Export everything</strong>, in the <em>Me</em> screen, opens your device's share sheet with one JSON file holding <strong>everything personal the app stores</strong>: your profile, your journal, your partner's data (Compatibility), your saved Deck readings, Future View readings and Cosmic Reports, your recent searches, and the email address of your local account (never the password check value). Your language, reminder time and purchase state are settings, not personal data, and are not in it.</li>
+<li><strong>Erasure</strong> — <strong>Delete everything</strong>, in the <em>Me</em> screen, removes every one of those stores — profile, journal, partner data, saved Deck readings, Future View readings and Cosmic Reports, recent searches <strong>and your local account</strong> (which signs you out) — immediately and without an undo. Each of those also keeps its own separate delete control, so you can remove one thing without removing the rest. Your language, reminder time and purchase state stay: they are settings, not personal data.</li>
+<li><strong>Rectification</strong> — edit your birth data, account details, or partner data at any time from the relevant screen.</li>
+</ul>
+<p>Because there is no account server, you do not need to contact anyone to exercise these rights, and there is no identity-verification step: the data is already, and only, in your hands.</p>
+<hr />
+<h2>Children</h2>
+<p>My Cosmic Code is <strong>not directed to children</strong>. It is intended for users aged <strong>16 and older</strong> — which is also the age of digital consent under GDPR Article 8 in Croatia, where the controller is established. We do not knowingly collect information from children — and, structurally, we do not collect information from anyone on any server.</p>
+<p>Since 5 August 2026 setup <strong>asks and refuses</strong>: the birth date you enter for your chart is checked, and if it puts you under 16 the app does not continue. No separate age question is asked, because your birth date already answers it.</p>
+<p>Be clear about what that gate is and is not. It is an honest check, not a verification: nothing stops someone from typing a different year, and we do not attempt to detect that. It means the app asks rather than looking away. Please also do not let a child enter another person's data via Compatibility without a parent or guardian's involvement.</p>
+<hr />
+<h2>Security</h2>
+<p>Your information is protected by your device's operating-system app sandbox, which keeps one app's private storage from being read by other apps, and by any device-level protection you have enabled (passcode, biometrics, disk encryption). See the internal Security Policy for the technical detail behind this notice's claims.</p>
+<p>The strongest security property of this app is architectural: for the data covered by the &quot;nothing transmitted&quot; section above, <strong>there is no server to breach.</strong> Data that never leaves your device cannot be intercepted in transit or exposed in a company data breach, because there is no transit and no company database for that data.</p>
+<hr />
+<h2>Changes to this notice</h2>
+<p>If the app changes in a way that affects privacy — most importantly, if any future version adds cloud sync, a real account server, or any new server-side processing — this notice will be updated <strong>in the same release</strong> that introduces the change, and the &quot;Last updated&quot; date above will change. Material changes will be reflected in the app's in-app privacy screen as well. Continuing to use a version whose notice has changed constitutes acknowledgement of the updated notice for that version.</p>
+<hr />
+<h2>Contact</h2>
+<p><strong>kristcodetaylor@gmail.com.</strong> This is the only channel needed for most requests; there is no central account system, so there is no login help or password-reset queue to route beyond what's already available in-app.</p>
+<p><strong>Provider (trader):</strong> Krist Code Taylor, sole proprietorship (obrt), Braće Stipčić 34, 51000 Rijeka, Croatia · OIB (Croatian tax number) 79241136189 · kristcodetaylor@gmail.com</p>
+<footer>My Cosmic Code · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

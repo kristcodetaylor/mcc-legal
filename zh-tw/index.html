@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>My Cosmic Code: 星座運勢 — Android 應用程式</title>
+<meta name="description" content="每日星座運勢、本命盤、生肖與九星氣學、吠陀占星、星座配對、生命靈數與解夢辭典" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://my-cosmic-code.web.app/zh-tw/" />
+<link rel="alternate" hreflang="en" href="https://my-cosmic-code.web.app/" />
+<link rel="alternate" hreflang="hr" href="https://my-cosmic-code.web.app/hr/" />
+<link rel="alternate" hreflang="de" href="https://my-cosmic-code.web.app/de/" />
+<link rel="alternate" hreflang="es" href="https://my-cosmic-code.web.app/es/" />
+<link rel="alternate" hreflang="fr" href="https://my-cosmic-code.web.app/fr/" />
+<link rel="alternate" hreflang="pt-BR" href="https://my-cosmic-code.web.app/pt/" />
+<link rel="alternate" hreflang="it" href="https://my-cosmic-code.web.app/it/" />
+<link rel="alternate" hreflang="pl" href="https://my-cosmic-code.web.app/pl/" />
+<link rel="alternate" hreflang="tr" href="https://my-cosmic-code.web.app/tr/" />
+<link rel="alternate" hreflang="zh-TW" href="https://my-cosmic-code.web.app/zh-tw/" />
+<link rel="alternate" hreflang="zh-CN" href="https://my-cosmic-code.web.app/zh-cn/" />
+<link rel="alternate" hreflang="ja" href="https://my-cosmic-code.web.app/ja/" />
+<link rel="alternate" hreflang="hi" href="https://my-cosmic-code.web.app/hi/" />
+<link rel="alternate" hreflang="x-default" href="https://my-cosmic-code.web.app/" />
+<link rel="icon" href="../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="My Cosmic Code: 星座運勢" />
+<meta property="og:description" content="每日星座運勢、本命盤、生肖與九星氣學、吠陀占星、星座配對、生命靈數與解夢辭典" />
+<meta property="og:url" content="https://my-cosmic-code.web.app/zh-tw/" />
+<meta property="og:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="500" />
+<meta property="og:locale" content="zh_TW" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="My Cosmic Code: 星座運勢" />
+<meta name="twitter:description" content="每日星座運勢、本命盤、生肖與九星氣學、吠陀占星、星座配對、生命靈數與解夢辭典" />
+<meta name="twitter:image" content="https://my-cosmic-code.web.app/feature-graphic.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","alternateName":"My Cosmic Code: 星座運勢","description":"每日星座運勢、本命盤、生肖與九星氣學、吠陀占星、星座配對、生命靈數與解夢辭典","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-TW","url":"https://my-cosmic-code.web.app/zh-tw/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW","image":"https://my-cosmic-code.web.app/feature-graphic.png","screenshot":["https://my-cosmic-code.web.app/screenshots/1-home.jpg","https://my-cosmic-code.web.app/screenshots/2-birth-chart.jpg","https://my-cosmic-code.web.app/screenshots/3-explore.jpg","https://my-cosmic-code.web.app/screenshots/4-aspects.jpg","https://my-cosmic-code.web.app/screenshots/5-dream-journal.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Person","name":"Krist Code Taylor"},"sameAs":["https://www.facebook.com/profile.php?id=61594778747018","https://play.google.com/store/apps/details?id=com.mycosmiccode.app"]}</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.hero { text-align: center; padding: 1rem 0 1.5rem; }
+.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.langs { font-size: .9rem; line-height: 2; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+<img class="graphic" src="../feature-graphic.png" width="1024" height="500" alt="My Cosmic Code: 星座運勢" />
+<img class="icon" src="../icon-512.png" width="96" height="96" alt="" />
+<h1>My Cosmic Code: 星座運勢</h1>
+<p class="lead">每日星座運勢、本命盤、生肖與九星氣學、吠陀占星、星座配對、生命靈數與解夢辭典</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW" rel="noopener">在 Google Play 下載</a>
+</header>
+<div class="shots">
+<img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="主畫面：你的 Cosmic Code——生命靈數與個人流年數——以及太陽、月亮與上升星座" />
+<img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="本命盤盤面，含行星、宮位、相位、上升點與天頂" />
+<img src="../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="探索：行運、月亮曆、生命靈數與個人流年數" />
+<img src="../screenshots/4-aspects.jpg" width="540" height="1040" loading="lazy" alt="本命盤中行星之間的相位，附容許度" />
+<img src="../screenshots/5-dream-journal.jpg" width="540" height="1040" loading="lazy" alt="在私密的夢境日記中記錄一個夢" />
+</div>
+<p>My Cosmic Code 是一款沉靜、重視隱私的占星應用程式，適合每一個星座：依你自己的本命盤產生的個人每日星座運勢、以真實天文資料計算的完整本命盤、愛情與友情配對、生命靈數、真實的星空星圖，以及附解夢辭典的夢境日記。所有計算都在你的手機上完成，你的資料也只留在手機裡。</p>
+<h2>夜空：真實的星空，任何地點、任何時刻</h2>
+<ul>
+<li>你頭頂上或任何城市上空、任何時刻的真實星圖：恆星、全部 88 個星座、月亮，以及今晚天空中的行星。</li>
+<li>對準天空：把手機舉向天空，星圖就會跟著轉動，告訴你那裡有哪些恆星與星座。不需要相機。</li>
+<li>「今晚」直接跳到入夜後的暗空。「深空」加入星系、星雲與星團。</li>
+<li>「我出生時的星空」：你出生那一刻，出生地上空真實的星空。</li>
+<li>「我的宇宙星空」：你的本命行星落在真實群星之間，今天的行星從旁經過——看見此刻行星走到你星盤的哪個位置。</li>
+</ul>
+<h2>中、日、印、西四種體系，各有專屬畫面</h2>
+<ul>
+<li>中國生肖：依每年實際的農曆新年日期算出你的年生肖與五行，還有月生肖與時辰生肖、你的生肖圈，以及今年對你的生肖有什麼意義。</li>
+<li>日本干支與九星氣學：你的干支、九星氣學本命星與其五行，以及與它相合的星。</li>
+<li>吠陀占星：恆星黃道（Lahiri 歲差）下的月亮星座、星宿（nakshatra）與其 pada、上升星座（lagna）、Vimshottari 大運（dasha），以及九曜（graha）落入的宮位。</li>
+<li>西洋占星：你完整的本命盤，詳見下文。</li>
+</ul>
+<h2>你的每日運勢，來自你自己的星空</h2>
+<ul>
+<li>「今日」卡片告訴你今天對你有什麼不同：你的個人流日數、月亮此刻所在的星座，以及下一個觸及你本命盤的行運。</li>
+<li>「未來季節」：你的行星即將遇到的行運時間軸。</li>
+<li>「宇宙即時」：從愛情、工作與方向、情緒氛圍與思緒解讀今天的天象——每個面向都附上背後的行運。</li>
+<li>行運通知：在對你的星盤重要的日子送上簡短提醒——強烈的行運、行星轉為逆行或順行、新月與滿月、行星進入你的星座。每週最多三則。</li>
+<li>月相、月亮曆，以及每天月亮所在的星座。</li>
+</ul>
+<h2>真正的本命盤，不只是一個星座</h2>
+<ul>
+<li>依你的出生日期、時間與地點算出太陽星座、月亮星座與上升星座——占星學會把這三個星座放在一起解讀，而不只看你的太陽星座。</li>
+<li>完整的本命盤盤面，標出行星、宮位、相位、上升點與天頂。</li>
+<li>本命盤中標示逆行行星。</li>
+<li>依真實樣貌繪製的行星、太陽系檢視，以及可逐日切換的星空檢視。</li>
+<li>「宇宙報告」把你的星盤和數字整合在一起，收錄全部 144 種太陽與上升星座組合的解說——可存成 PDF 或分享。</li>
+</ul>
+<h2>完整 12 星座</h2>
+<ul>
+<li>牡羊座、金牛座、雙子座、巨蟹座、獅子座、處女座、天秤座、天蠍座、射手座、摩羯座、水瓶座與雙魚座，各附元素、守護星、誕生石與代表色。</li>
+</ul>
+<h2>愛情配對，還有更多</h2>
+<ul>
+<li>從五個生活面向比較兩張本命盤：愛情、親密關係、友情、工作與身心狀態。</li>
+<li>兩張星盤之間的相位（比較盤）、組合盤，以及宮位疊加：看出一個人的行星落在另一人星盤的哪個宮位。</li>
+<li>沒有配對分數或百分比：你看到的是兩張星盤實際如何交會。</li>
+</ul>
+<h2>生命靈數，算式全公開</h2>
+<ul>
+<li>生命靈數、個人流年數與個人流日數，逐步列出算式，讓你看懂每個數字是怎麼得來的。</li>
+</ul>
+<h2>私密的夢境日記與解夢辭典</h2>
+<ul>
+<li>從 A 到 Z 的完整解夢辭典：依名稱查詢任何夢境符號，或輸入整段夢境，自動找出其中的符號。</li>
+<li>最常見的夢——掉牙、蛇、被追趕、墜落、前任、婚禮、死亡、水——都有深入解讀，並涵蓋常見變化：被蛇咬代表什麼、前任回來又代表什麼。</li>
+<li>記下夢境、反覆看到的數字和一再注意到的符號。想用說的也可以，不必打字。</li>
+<li>在夢境上點一下「分析」，解夢辭典就會顯示解夢傳統如何解讀其中的符號——蛇、牙齒、水、墜落、房子——每個詞條最多列出五種夢境含義。</li>
+<li>只描述，不預測：呈現符號在傳統上代表什麼，而不是將會發生什麼。夢的最終解讀權在你。</li>
+<li>分析也會顯示某個夢、符號或數字在日記中重複出現的頻率。</li>
+<li>解夢辭典內建在你的手機裡，可離線使用；整個應用程式的搜尋功能也一樣。</li>
+</ul>
+<h2>隱私優先的設計</h2>
+<p>沒有廣告、沒有分析工具、沒有追蹤器、不需要帳號。你的出生資料、星盤和日記只儲存在你的裝置上，你可以在應用程式內匯出或刪除。語音輸入在手機上處理；只有遇到手機無法離線辨識的語言時，應用程式才會先詢問你，是否允許把語音傳送到 Google 的語音服務。</p>
+<h2>誠實說明它是什麼</h2>
+<p>本應用程式如實描述天象與數字，不聲稱能預測任何事件。</p>
+<p>應用程式畫面、所有解讀與解夢辭典皆提供繁體中文、簡體中文、日文、印地文、英文、克羅埃西亞文、德文、西班牙文、法文、義大利文、波蘭文、葡萄牙文（巴西）與土耳其文。</p>
+<h2>應用程式內的更多功能</h2>
+<ul>
+<li><a href="xingpan/">本命盤</a></li>
+<li><a href="yueli/">月亮曆</a></li>
+<li><a href="shuzi-mingli/">生命靈數</a></li>
+<li><a href="xingzuo-peidui/">星座配對</a></li>
+<li><a href="shengxiao/">生肖與吠陀占星</a></li>
+</ul>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW" rel="noopener">在 Google Play 下載</a></p>
+<h2>法律資訊</h2>
+<ul>
+<li><a href="../privacy.html">隱私權聲明</a></li>
+<li><a href="../terms.html">服務條款</a></li>
+<li><a href="../delete-account.html">帳號與資料刪除</a></li>
+</ul>
+<h2>語言</h2>
+<p class="langs"><a href="../index.html" hreflang="en" lang="en">English</a> · <a href="../hr/index.html" hreflang="hr" lang="hr">Hrvatski</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../pt/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a> · <strong>繁體中文</strong> · <a href="../zh-cn/index.html" hreflang="zh-CN" lang="zh-CN">简体中文</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../hi/index.html" hreflang="hi" lang="hi">हिन्दी</a></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>
