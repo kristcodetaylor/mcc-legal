@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ホロスコープ作成アプリ — 出生図（ネイタルチャート）、太陽・月・アセンダント</title>
+<meta name="description" content="生年月日・出生時刻・出生地から、あなたの出生図（ネイタルチャート）を作成。太陽星座、月星座、アセンダント、天体、ハウス、アスペクトがわかります。無料のAndroidアプリで、アカウント登録不要・広告なし。" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://mycosmiccode.app/ja/horoscope/" />
+<link rel="alternate" hreflang="en" href="https://mycosmiccode.app/birth-chart/" />
+<link rel="alternate" hreflang="hr" href="https://mycosmiccode.app/hr/natalna-karta/" />
+<link rel="alternate" hreflang="de" href="https://mycosmiccode.app/de/geburtshoroskop/" />
+<link rel="alternate" hreflang="es" href="https://mycosmiccode.app/es/carta-natal/" />
+<link rel="alternate" hreflang="fr" href="https://mycosmiccode.app/fr/theme-astral/" />
+<link rel="alternate" hreflang="pt-BR" href="https://mycosmiccode.app/pt/mapa-astral/" />
+<link rel="alternate" hreflang="it" href="https://mycosmiccode.app/it/tema-natale/" />
+<link rel="alternate" hreflang="pl" href="https://mycosmiccode.app/pl/horoskop-urodzeniowy/" />
+<link rel="alternate" hreflang="tr" href="https://mycosmiccode.app/tr/dogum-haritasi/" />
+<link rel="alternate" hreflang="zh-TW" href="https://mycosmiccode.app/zh-tw/xingpan/" />
+<link rel="alternate" hreflang="zh-CN" href="https://mycosmiccode.app/zh-cn/xingpan/" />
+<link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/horoscope/" />
+<link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/janm-kundali/" />
+<link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/birth-chart/" />
+<link rel="icon" href="../../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="ホロスコープ作成アプリ — 出生図（ネイタルチャート）、太陽・月・アセンダント" />
+<meta property="og:description" content="生年月日・出生時刻・出生地から、あなたの出生図（ネイタルチャート）を作成。太陽星座、月星座、アセンダント、天体、ハウス、アスペクトがわかります。無料のAndroidアプリで、アカウント登録不要・広告なし。" />
+<meta property="og:url" content="https://mycosmiccode.app/ja/horoscope/" />
+<meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"生年月日・出生時刻・出生地から、あなたの出生図（ネイタルチャート）を作成。太陽星座、月星座、アセンダント、天体、ハウス、アスペクトがわかります。無料のAndroidアプリで、アカウント登録不要・広告なし。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"ja","url":"https://mycosmiccode.app/ja/horoscope/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP","screenshot":["https://mycosmiccode.app/screenshots/2-birth-chart.jpg","https://mycosmiccode.app/screenshots/4-aspects.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"アセンダント（上昇星座）はどうやって調べればいいですか？","acceptedAnswer":{"@type":"Answer","text":"生年月日、正確な出生時刻、出生地を入力してください。アセンダントはその瞬間に東の地平線から昇ってくる星座なので、日付だけでなく時刻と場所が必要です。"}},{"@type":"Question","name":"太陽星座と出生図の違いは何ですか？","acceptedAnswer":{"@type":"Answer","text":"太陽星座は、太陽がどこにあったかを示すひとつの配置です。出生図には、すべての天体、月、アセンダント、12のハウスが配置され、それらの間のアスペクトも示されます。"}},{"@type":"Question","name":"無料ですか？","acceptedAnswer":{"@type":"Answer","text":"アプリは無料でダウンロードでき、現在のバージョンではすべての機能が使えます。広告はありません。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/ja/"},{"@type":"ListItem","position":2,"name":"出生図","item":"https://mycosmiccode.app/ja/horoscope/"}]}]</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
+.svc { font-size: .9rem; line-height: 2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
+<h1>ホロスコープ作成：あなたの太陽星座・月星座・アセンダント</h1>
+<p class="lead">出生図（ネイタルチャート）は、あなたが生まれた瞬間に、その場所から見えた空の地図です。My Cosmic Codeは実際の天文計算にもとづいてスマートフォン上で出生図を計算し、生まれ星座だけでなく、チャート全体を描き出します。</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a>
+<div class="shots">
+<img src="../../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="天体、ハウス、アスペクト、アセンダント、MC（天頂）を描いた円形のネイタルチャート" />
+<img src="../../screenshots/4-aspects.jpg" width="540" height="1040" loading="lazy" alt="出生図における天体どうしのアスペクトとオーブ" />
+</div>
+<h2>出生図でわかること</h2>
+<ul>
+<li>太陽星座、月星座、アセンダント（上昇星座）。占星術ではこの3つを合わせて読みます。</li>
+<li>各天体の星座とハウス。逆行中の天体も表示。</li>
+<li>天体どうしのアスペクトとオーブ。</li>
+<li>円形のネイタルチャートに描かれたアセンダントとMC（天頂）。</li>
+<li>「Cosmic Report」：チャートと数字をひとつにまとめたレポート。太陽星座とアセンダントの全144通りの組み合わせそれぞれに解説文があります。</li>
+</ul>
+<h2>必要なもの</h2>
+<p>生年月日、出生時刻、出生地の3つです。アセンダントとハウスは、正確な時刻と場所によって決まります。アセンダントは約1日で12星座をひと巡りし、おおよそ2時間ごとに次の星座へ移ります。</p>
+<h2>プライバシーを守る設計</h2>
+<p>広告なし、アクセス解析なし、トラッカーなし、アカウント登録不要。出生情報、チャート、日記はお使いの端末にのみ保存され、アプリ内でエクスポートや削除ができます。</p>
+<h2>よくある質問</h2>
+<h3>アセンダント（上昇星座）はどうやって調べればいいですか？</h3>
+<p>生年月日、正確な出生時刻、出生地を入力してください。アセンダントはその瞬間に東の地平線から昇ってくる星座なので、日付だけでなく時刻と場所が必要です。</p>
+<h3>太陽星座と出生図の違いは何ですか？</h3>
+<p>太陽星座は、太陽がどこにあったかを示すひとつの配置です。出生図には、すべての天体、月、アセンダント、12のハウスが配置され、それらの間のアスペクトも示されます。</p>
+<h3>無料ですか？</h3>
+<p>アプリは無料でダウンロードでき、現在のバージョンではすべての機能が使えます。広告はありません。</p>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a></p>
+<p class="svc"><strong>出生図</strong> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <a href="../eto-kyusei/">干支・九星気学・インド占星術</a></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2026 月亮曆 — 月相與今日月亮星座</title>
+<meta name="description" content="月相、月亮曆，以及每天月亮所在的星座，並與你本命盤中的月亮對照。免費 Android 占星應用程式，沒有廣告。" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://mycosmiccode.app/zh-tw/yueli/" />
+<link rel="alternate" hreflang="en" href="https://mycosmiccode.app/moon-calendar/" />
+<link rel="alternate" hreflang="hr" href="https://mycosmiccode.app/hr/mjesecev-kalendar/" />
+<link rel="alternate" hreflang="de" href="https://mycosmiccode.app/de/mondkalender/" />
+<link rel="alternate" hreflang="es" href="https://mycosmiccode.app/es/calendario-lunar/" />
+<link rel="alternate" hreflang="fr" href="https://mycosmiccode.app/fr/calendrier-lunaire/" />
+<link rel="alternate" hreflang="pt-BR" href="https://mycosmiccode.app/pt/calendario-lunar/" />
+<link rel="alternate" hreflang="it" href="https://mycosmiccode.app/it/calendario-lunare/" />
+<link rel="alternate" hreflang="pl" href="https://mycosmiccode.app/pl/kalendarz-ksiezycowy/" />
+<link rel="alternate" hreflang="tr" href="https://mycosmiccode.app/tr/ay-takvimi/" />
+<link rel="alternate" hreflang="zh-TW" href="https://mycosmiccode.app/zh-tw/yueli/" />
+<link rel="alternate" hreflang="zh-CN" href="https://mycosmiccode.app/zh-cn/yueli/" />
+<link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/tsuki-no-koyomi/" />
+<link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/chandra-calendar/" />
+<link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/moon-calendar/" />
+<link rel="icon" href="../../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="2026 月亮曆 — 月相與今日月亮星座" />
+<meta property="og:description" content="月相、月亮曆，以及每天月亮所在的星座，並與你本命盤中的月亮對照。免費 Android 占星應用程式，沒有廣告。" />
+<meta property="og:url" content="https://mycosmiccode.app/zh-tw/yueli/" />
+<meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"月相、月亮曆，以及每天月亮所在的星座，並與你本命盤中的月亮對照。免費 Android 占星應用程式，沒有廣告。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-TW","url":"https://mycosmiccode.app/zh-tw/yueli/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW","screenshot":["https://mycosmiccode.app/screenshots/3-explore.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"月亮多久換一次星座？","acceptedAnswer":{"@type":"Answer","text":"每兩到三天。它大約 27 天多一點就會走完全部十二個星座。"}},{"@type":"Question","name":"我的月亮星座是什麼？","acceptedAnswer":{"@type":"Answer","text":"就是你出生時月亮所在的星座。月亮移動得很快，所以應用程式會用你的出生日期、時間與地點來找出它。"}},{"@type":"Question","name":"是免費的嗎？","acceptedAnswer":{"@type":"Answer","text":"應用程式可免費下載，目前版本的所有功能都已開放。沒有廣告。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/zh-tw/"},{"@type":"ListItem","position":2,"name":"月亮曆","item":"https://mycosmiccode.app/zh-tw/yueli/"}]}]</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
+.svc { font-size: .9rem; line-height: 2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
+<h1>月亮曆：每天的月相與月亮星座</h1>
+<p class="lead">月亮大約 29.5 天走完一輪月相，每兩到三天換一個星座。My Cosmic Code 兩者都會顯示：今晚的月相和月亮此刻所在的星座，並與你本命盤中的月亮對照。</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW" rel="noopener">在 Google Play 下載</a>
+<div class="shots">
+<img src="../../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="探索：行運、月亮曆、生命靈數與個人流年數" />
+</div>
+<h2>月亮曆：2026年10月 – 2026年11月</h2>
+<p>時間為台北標準時間。星座為當天開始時月亮所在的星座；箭頭標示月亮進入下一個星座的時間。</p>
+<div class="scroll"><table class="moon">
+<thead><tr><th>日期</th><th>月相</th><th>月亮星座</th></tr></thead>
+<tbody>
+<tr data-d="2026-10-01"><td>10月1日週四</td><td>🌖 虧凸月</td><td>金牛座 → 雙子座 01:26</td></tr>
+<tr data-d="2026-10-02"><td>10月2日週五</td><td>🌖 虧凸月</td><td>雙子座</td></tr>
+<tr data-d="2026-10-03"><td>10月3日週六</td><td>🌗 <strong>下弦月</strong> 21:25</td><td>雙子座 → 巨蟹座 03:54</td></tr>
+<tr data-d="2026-10-04"><td>10月4日週日</td><td>🌘 殘月</td><td>巨蟹座</td></tr>
+<tr data-d="2026-10-05"><td>10月5日週一</td><td>🌘 殘月</td><td>巨蟹座 → 獅子座 06:54</td></tr>
+<tr data-d="2026-10-06"><td>10月6日週二</td><td>🌘 殘月</td><td>獅子座</td></tr>
+<tr data-d="2026-10-07"><td>10月7日週三</td><td>🌘 殘月</td><td>獅子座 → 處女座 10:52</td></tr>
+<tr data-d="2026-10-08"><td>10月8日週四</td><td>🌘 殘月</td><td>處女座</td></tr>
+<tr data-d="2026-10-09"><td>10月9日週五</td><td>🌘 殘月</td><td>處女座 → 天秤座 16:10</td></tr>
+<tr data-d="2026-10-10"><td>10月10日週六</td><td>🌑 <strong>新月</strong> 23:50</td><td>天秤座</td></tr>
+<tr data-d="2026-10-11"><td>10月11日週日</td><td>🌒 眉月</td><td>天秤座 → 天蠍座 23:21</td></tr>
+<tr data-d="2026-10-12"><td>10月12日週一</td><td>🌒 眉月</td><td>天蠍座</td></tr>
+<tr data-d="2026-10-13"><td>10月13日週二</td><td>🌒 眉月</td><td>天蠍座</td></tr>
+<tr data-d="2026-10-14"><td>10月14日週三</td><td>🌒 眉月</td><td>天蠍座 → 射手座 08:59</td></tr>
+<tr data-d="2026-10-15"><td>10月15日週四</td><td>🌒 眉月</td><td>射手座</td></tr>
+<tr data-d="2026-10-16"><td>10月16日週五</td><td>🌒 眉月</td><td>射手座 → 摩羯座 20:57</td></tr>
+<tr data-d="2026-10-17"><td>10月17日週六</td><td>🌒 眉月</td><td>摩羯座</td></tr>
+<tr data-d="2026-10-18"><td>10月18日週日</td><td>🌒 眉月</td><td>摩羯座</td></tr>
+<tr data-d="2026-10-19"><td>10月19日週一</td><td>🌓 <strong>上弦月</strong> 00:13</td><td>摩羯座 → 水瓶座 09:39</td></tr>
+<tr data-d="2026-10-20"><td>10月20日週二</td><td>🌔 盈凸月</td><td>水瓶座</td></tr>
+<tr data-d="2026-10-21"><td>10月21日週三</td><td>🌔 盈凸月</td><td>水瓶座 → 雙魚座 20:35</td></tr>
+<tr data-d="2026-10-22"><td>10月22日週四</td><td>🌔 盈凸月</td><td>雙魚座</td></tr>
+<tr data-d="2026-10-23"><td>10月23日週五</td><td>🌔 盈凸月</td><td>雙魚座</td></tr>
+<tr data-d="2026-10-24"><td>10月24日週六</td><td>🌔 盈凸月</td><td>雙魚座 → 牡羊座 03:53</td></tr>
+<tr data-d="2026-10-25"><td>10月25日週日</td><td>🌔 盈凸月</td><td>牡羊座</td></tr>
+<tr data-d="2026-10-26"><td>10月26日週一</td><td>🌕 <strong>滿月</strong> 12:12</td><td>牡羊座 → 金牛座 07:34</td></tr>
+<tr data-d="2026-10-27"><td>10月27日週二</td><td>🌖 虧凸月</td><td>金牛座</td></tr>
+<tr data-d="2026-10-28"><td>10月28日週三</td><td>🌖 虧凸月</td><td>金牛座 → 雙子座 09:01</td></tr>
+<tr data-d="2026-10-29"><td>10月29日週四</td><td>🌖 虧凸月</td><td>雙子座</td></tr>
+<tr data-d="2026-10-30"><td>10月30日週五</td><td>🌖 虧凸月</td><td>雙子座 → 巨蟹座 10:05</td></tr>
+<tr data-d="2026-10-31"><td>10月31日週六</td><td>🌖 虧凸月</td><td>巨蟹座</td></tr>
+<tr data-d="2026-11-01"><td>11月1日週日</td><td>🌖 虧凸月</td><td>巨蟹座 → 獅子座 12:18</td></tr>
+<tr data-d="2026-11-02"><td>11月2日週一</td><td>🌗 <strong>下弦月</strong> 04:28</td><td>獅子座</td></tr>
+<tr data-d="2026-11-03"><td>11月3日週二</td><td>🌘 殘月</td><td>獅子座 → 處女座 16:27</td></tr>
+<tr data-d="2026-11-04"><td>11月4日週三</td><td>🌘 殘月</td><td>處女座</td></tr>
+<tr data-d="2026-11-05"><td>11月5日週四</td><td>🌘 殘月</td><td>處女座 → 天秤座 22:38</td></tr>
+<tr data-d="2026-11-06"><td>11月6日週五</td><td>🌘 殘月</td><td>天秤座</td></tr>
+<tr data-d="2026-11-07"><td>11月7日週六</td><td>🌘 殘月</td><td>天秤座</td></tr>
+<tr data-d="2026-11-08"><td>11月8日週日</td><td>🌘 殘月</td><td>天秤座 → 天蠍座 06:40</td></tr>
+<tr data-d="2026-11-09"><td>11月9日週一</td><td>🌑 <strong>新月</strong> 15:02</td><td>天蠍座</td></tr>
+<tr data-d="2026-11-10"><td>11月10日週二</td><td>🌒 眉月</td><td>天蠍座 → 射手座 16:36</td></tr>
+<tr data-d="2026-11-11"><td>11月11日週三</td><td>🌒 眉月</td><td>射手座</td></tr>
+<tr data-d="2026-11-12"><td>11月12日週四</td><td>🌒 眉月</td><td>射手座</td></tr>
+<tr data-d="2026-11-13"><td>11月13日週五</td><td>🌒 眉月</td><td>射手座 → 摩羯座 04:27</td></tr>
+<tr data-d="2026-11-14"><td>11月14日週六</td><td>🌒 眉月</td><td>摩羯座</td></tr>
+<tr data-d="2026-11-15"><td>11月15日週日</td><td>🌒 眉月</td><td>摩羯座 → 水瓶座 17:24</td></tr>
+<tr data-d="2026-11-16"><td>11月16日週一</td><td>🌒 眉月</td><td>水瓶座</td></tr>
+<tr data-d="2026-11-17"><td>11月17日週二</td><td>🌓 <strong>上弦月</strong> 19:48</td><td>水瓶座</td></tr>
+<tr data-d="2026-11-18"><td>11月18日週三</td><td>🌔 盈凸月</td><td>水瓶座 → 雙魚座 05:19</td></tr>
+<tr data-d="2026-11-19"><td>11月19日週四</td><td>🌔 盈凸月</td><td>雙魚座</td></tr>
+<tr data-d="2026-11-20"><td>11月20日週五</td><td>🌔 盈凸月</td><td>雙魚座 → 牡羊座 13:52</td></tr>
+<tr data-d="2026-11-21"><td>11月21日週六</td><td>🌔 盈凸月</td><td>牡羊座</td></tr>
+<tr data-d="2026-11-22"><td>11月22日週日</td><td>🌔 盈凸月</td><td>牡羊座 → 金牛座 18:09</td></tr>
+<tr data-d="2026-11-23"><td>11月23日週一</td><td>🌔 盈凸月</td><td>金牛座</td></tr>
+<tr data-d="2026-11-24"><td>11月24日週二</td><td>🌕 <strong>滿月</strong> 22:54</td><td>金牛座 → 雙子座 19:09</td></tr>
+<tr data-d="2026-11-25"><td>11月25日週三</td><td>🌖 虧凸月</td><td>雙子座</td></tr>
+<tr data-d="2026-11-26"><td>11月26日週四</td><td>🌖 虧凸月</td><td>雙子座 → 巨蟹座 18:51</td></tr>
+<tr data-d="2026-11-27"><td>11月27日週五</td><td>🌖 虧凸月</td><td>巨蟹座</td></tr>
+<tr data-d="2026-11-28"><td>11月28日週六</td><td>🌖 虧凸月</td><td>巨蟹座 → 獅子座 19:20</td></tr>
+<tr data-d="2026-11-29"><td>11月29日週日</td><td>🌖 虧凸月</td><td>獅子座</td></tr>
+<tr data-d="2026-11-30"><td>11月30日週一</td><td>🌖 虧凸月</td><td>獅子座 → 處女座 22:12</td></tr>
+</tbody>
+</table></div>
+<style>table.moon tr.today td { background: #1A1C27; } table.moon tr.today td:first-child::after { content: " · 今天"; color: #C9A227; }</style>
+<script>(function(){try{var d=new Intl.DateTimeFormat('en-CA',{timeZone:"Asia/Taipei",year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());var r=document.querySelector('table.moon tr[data-d="'+d+'"]');if(r)r.className='today';}catch(e){}})();</script>
+<h2>你會看到什麼</h2>
+<ul>
+<li>月相與月亮曆。</li>
+<li>每天月亮所在的星座；「今日」（Today）卡片上則顯示它此刻所在的星座。</li>
+<li>你自己的月亮星座，來自你的本命盤。</li>
+<li>未來一季（Season Ahead）：你的行星即將遇到的行運時間軸。</li>
+</ul>
+<h2>直接在手機上計算</h2>
+<p>月相與星座都在裝置上依真實天文資料計算，所以月亮曆可以離線使用。</p>
+<h2>隱私優先的設計</h2>
+<p>沒有廣告、沒有分析工具、沒有追蹤器、不需要帳號。你的出生資料、星盤和日記只儲存在你的裝置上，你可以在應用程式內匯出或刪除。</p>
+<h2>常見問題</h2>
+<h3>月亮多久換一次星座？</h3>
+<p>每兩到三天。它大約 27 天多一點就會走完全部十二個星座。</p>
+<h3>我的月亮星座是什麼？</h3>
+<p>就是你出生時月亮所在的星座。月亮移動得很快，所以應用程式會用你的出生日期、時間與地點來找出它。</p>
+<h3>是免費的嗎？</h3>
+<p>應用程式可免費下載，目前版本的所有功能都已開放。沒有廣告。</p>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW" rel="noopener">在 Google Play 下載</a></p>
+<p class="svc"><a href="../xingpan/">本命盤</a> · <strong>月亮曆</strong> · <a href="../shuzi-mingli/">生命靈數</a> · <a href="../xingzuo-peidui/">星座配對</a> · <a href="../shengxiao/">生肖與吠陀占星</a></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

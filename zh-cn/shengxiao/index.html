@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>生肖查询——生肖五行、九星气学与吠陀月亮星座</title>
+<meta name="description" content="按实际的农历新年日期查你的生肖和五行，还有日本干支生肖（eto）与九星气学本命星，以及你的吠陀月亮星座和星宿（nakshatra）。Android 应用，无需账号。" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://mycosmiccode.app/zh-cn/shengxiao/" />
+<link rel="alternate" hreflang="en" href="https://mycosmiccode.app/chinese-zodiac/" />
+<link rel="alternate" hreflang="hr" href="https://mycosmiccode.app/hr/kineski-horoskop/" />
+<link rel="alternate" hreflang="de" href="https://mycosmiccode.app/de/chinesisches-horoskop/" />
+<link rel="alternate" hreflang="es" href="https://mycosmiccode.app/es/horoscopo-chino/" />
+<link rel="alternate" hreflang="fr" href="https://mycosmiccode.app/fr/horoscope-chinois/" />
+<link rel="alternate" hreflang="pt-BR" href="https://mycosmiccode.app/pt/horoscopo-chines/" />
+<link rel="alternate" hreflang="it" href="https://mycosmiccode.app/it/oroscopo-cinese/" />
+<link rel="alternate" hreflang="pl" href="https://mycosmiccode.app/pl/horoskop-chinski/" />
+<link rel="alternate" hreflang="tr" href="https://mycosmiccode.app/tr/cin-burcu/" />
+<link rel="alternate" hreflang="zh-TW" href="https://mycosmiccode.app/zh-tw/shengxiao/" />
+<link rel="alternate" hreflang="zh-CN" href="https://mycosmiccode.app/zh-cn/shengxiao/" />
+<link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/eto-kyusei/" />
+<link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/vedic-kundali/" />
+<link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/chinese-zodiac/" />
+<link rel="icon" href="../../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="生肖查询——生肖五行、九星气学与吠陀月亮星座" />
+<meta property="og:description" content="按实际的农历新年日期查你的生肖和五行，还有日本干支生肖（eto）与九星气学本命星，以及你的吠陀月亮星座和星宿（nakshatra）。Android 应用，无需账号。" />
+<meta property="og:url" content="https://mycosmiccode.app/zh-cn/shengxiao/" />
+<meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"按实际的农历新年日期查你的生肖和五行，还有日本干支生肖（eto）与九星气学本命星，以及你的吠陀月亮星座和星宿（nakshatra）。Android 应用，无需账号。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-CN","url":"https://mycosmiccode.app/zh-cn/shengxiao/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么我的生肖和我以为的不一样？","acceptedAnswer":{"@type":"Answer","text":"农历年从春节（农历新年）开始，时间在 1 月 21 日到 2 月 20 日之间。如果你在一月或二月初出生，你可能属于前一年的生肖。应用会显示你所属农历年的确切起止日期。"}},{"@type":"Question","name":"我的吠陀月亮星座是什么？","acceptedAnswer":{"@type":"Answer","text":"你出生时月亮所在的星座，以恒星为参照（恒星黄道），而不是以季节为参照。如今这两种黄道相差约 24 度，所以你的吠陀月亮星座常常是你西方占星月亮星座的前一个。"}},{"@type":"Question","name":"什么是九星气学？","acceptedAnswer":{"@type":"Answer","text":"日本的一套体系：每一年对应九星之一，每颗星各有所属的五行。你的本命星由出生年份决定，从立春（约 2 月 4 日）起算。"}},{"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"应用可免费下载，当前版本的所有功能都已开放。无广告。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/zh-cn/"},{"@type":"ListItem","position":2,"name":"生肖与吠陀占星","item":"https://mycosmiccode.app/zh-cn/shengxiao/"}]}]</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
+.svc { font-size: .9rem; line-height: 2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
+<h1>根据出生日期，推算你的中国生肖、日本干支九星和吠陀星盘</h1>
+<p class="lead">在一月或二月初出生？你的生肖取决于出生那年的农历新年日期，而不是 1 月 1 日。My Cosmic Code 会查出这个日期并显示给你，再按日本和吠陀的方法解读同一份出生信息。</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a>
+<h2>中国生肖</h2>
+<ul>
+<li>你的年生肖和五行，从农历新年起算（收录 1901–2099 年的农历新年日期）。</li>
+<li>根据太阳位置得出的月份生肖；若知道出生时间，还有时辰生肖。</li>
+<li>你的生肖关系：两个三合生肖、一个六合生肖，以及与你相冲的生肖。</li>
+<li>今年——2026 丙午火马年——对你的生肖意味着什么。</li>
+</ul>
+<h2>日本干支与九星</h2>
+<ul>
+<li>你的干支生肖（eto），即公历年份对应的生肖（日本从 1 月 1 日起算，所以可能与中国生肖不同）。</li>
+<li>你的九星气学本命星及其五行，从立春（约 2 月 4 日）起算。</li>
+<li>与你的本命星相合的星，以及今年的年星。</li>
+</ul>
+<h2>吠陀星盘</h2>
+<ul>
+<li>你在恒星黄道（Lahiri 岁差，ayanamsha）中的月亮星座，常常比西方占星中的早一个星座。</li>
+<li>你的星宿（nakshatra）、所在的 pada 以及星宿主星。</li>
+<li>若有准确的出生时间和地点：你的上升（lagna）、九曜（graha）所落的宫位，以及你的 Vimshottari 大运（dasha）周期。</li>
+</ul>
+<h2>从设计上保护隐私</h2>
+<p>无广告、无数据分析、无追踪器、无需账号。你的出生信息、星盘和日记只保存在你的设备上，你可以在应用内导出或删除。</p>
+<h2>常见问题</h2>
+<h3>为什么我的生肖和我以为的不一样？</h3>
+<p>农历年从春节（农历新年）开始，时间在 1 月 21 日到 2 月 20 日之间。如果你在一月或二月初出生，你可能属于前一年的生肖。应用会显示你所属农历年的确切起止日期。</p>
+<h3>我的吠陀月亮星座是什么？</h3>
+<p>你出生时月亮所在的星座，以恒星为参照（恒星黄道），而不是以季节为参照。如今这两种黄道相差约 24 度，所以你的吠陀月亮星座常常是你西方占星月亮星座的前一个。</p>
+<h3>什么是九星气学？</h3>
+<p>日本的一套体系：每一年对应九星之一，每颗星各有所属的五行。你的本命星由出生年份决定，从立春（约 2 月 4 日）起算。</p>
+<h3>免费吗？</h3>
+<p>应用可免费下载，当前版本的所有功能都已开放。无广告。</p>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a></p>
+<p class="svc"><a href="../xingpan/">本命盘</a> · <a href="../yueli/">月相日历</a> · <a href="../shuzi-mingli/">生命灵数</a> · <a href="../xingzuo-peidui/">星座配对</a> · <strong>生肖与吠陀占星</strong></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>

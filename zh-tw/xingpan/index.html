@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>本命盤 App — 星盤查詢：太陽、月亮與上升星座</title>
+<meta name="description" content="依你的出生日期、時間與地點計算本命盤：太陽、月亮與上升星座、行星、宮位與相位。免費 Android 應用程式，不需帳號、沒有廣告。" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://mycosmiccode.app/zh-tw/xingpan/" />
+<link rel="alternate" hreflang="en" href="https://mycosmiccode.app/birth-chart/" />
+<link rel="alternate" hreflang="hr" href="https://mycosmiccode.app/hr/natalna-karta/" />
+<link rel="alternate" hreflang="de" href="https://mycosmiccode.app/de/geburtshoroskop/" />
+<link rel="alternate" hreflang="es" href="https://mycosmiccode.app/es/carta-natal/" />
+<link rel="alternate" hreflang="fr" href="https://mycosmiccode.app/fr/theme-astral/" />
+<link rel="alternate" hreflang="pt-BR" href="https://mycosmiccode.app/pt/mapa-astral/" />
+<link rel="alternate" hreflang="it" href="https://mycosmiccode.app/it/tema-natale/" />
+<link rel="alternate" hreflang="pl" href="https://mycosmiccode.app/pl/horoskop-urodzeniowy/" />
+<link rel="alternate" hreflang="tr" href="https://mycosmiccode.app/tr/dogum-haritasi/" />
+<link rel="alternate" hreflang="zh-TW" href="https://mycosmiccode.app/zh-tw/xingpan/" />
+<link rel="alternate" hreflang="zh-CN" href="https://mycosmiccode.app/zh-cn/xingpan/" />
+<link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/horoscope/" />
+<link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/janm-kundali/" />
+<link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/birth-chart/" />
+<link rel="icon" href="../../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="本命盤 App — 星盤查詢：太陽、月亮與上升星座" />
+<meta property="og:description" content="依你的出生日期、時間與地點計算本命盤：太陽、月亮與上升星座、行星、宮位與相位。免費 Android 應用程式，不需帳號、沒有廣告。" />
+<meta property="og:url" content="https://mycosmiccode.app/zh-tw/xingpan/" />
+<meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"依你的出生日期、時間與地點計算本命盤：太陽、月亮與上升星座、行星、宮位與相位。免費 Android 應用程式，不需帳號、沒有廣告。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-TW","url":"https://mycosmiccode.app/zh-tw/xingpan/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW","screenshot":["https://mycosmiccode.app/screenshots/2-birth-chart.jpg","https://mycosmiccode.app/screenshots/4-aspects.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"怎麼查我的上升星座？","acceptedAnswer":{"@type":"Answer","text":"輸入你的出生日期、精確的出生時間與出生地點。上升星座是那一刻從東方地平線升起的星座，所以除了日期，還需要時間與地點。"}},{"@type":"Question","name":"太陽星座和本命盤有什麼不同？","acceptedAnswer":{"@type":"Answer","text":"太陽星座只是一個落點：太陽當時所在的位置。本命盤則標出每顆行星、月亮、上升點與十二宮，並顯示它們之間的相位。"}},{"@type":"Question","name":"是免費的嗎？","acceptedAnswer":{"@type":"Answer","text":"應用程式可免費下載，目前版本的所有功能都已開放。沒有廣告。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/zh-tw/"},{"@type":"ListItem","position":2,"name":"本命盤","item":"https://mycosmiccode.app/zh-tw/xingpan/"}]}]</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
+.svc { font-size: .9rem; line-height: 2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
+<h1>免費本命盤：你的太陽、月亮與上升星座</h1>
+<p class="lead">本命盤（又稱出生星盤）是你出生那一分鐘、在出生地點的天空地圖。My Cosmic Code 在你的手機上依真實天文資料計算，畫出完整的星盤，而不只告訴你一個星座。</p>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW" rel="noopener">在 Google Play 下載</a>
+<div class="shots">
+<img src="../../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="本命盤盤面，含行星、宮位、相位、上升點與天頂" />
+<img src="../../screenshots/4-aspects.jpg" width="540" height="1040" loading="lazy" alt="本命盤中行星之間的相位，附容許度" />
+</div>
+<h2>本命盤會顯示什麼</h2>
+<ul>
+<li>你的太陽星座、月亮星座與上升星座：占星學會放在一起解讀的三個星座。</li>
+<li>每顆行星所在的星座與宮位，並標示逆行行星。</li>
+<li>行星之間的相位，以及它們的容許度。</li>
+<li>完整本命盤盤面上的上升點與天頂。</li>
+<li>宇宙報告（Cosmic Report）把你的星盤和數字整合在一起，收錄全部 144 種太陽與上升星座組合的解說。</li>
+</ul>
+<h2>需要準備什麼</h2>
+<p>你的出生日期、出生時間與出生地點。上升星座和宮位取決於精確的時間與地點：上升點大約一天就會走完十二個星座，約每兩小時換一個星座。</p>
+<h2>隱私優先的設計</h2>
+<p>沒有廣告、沒有分析工具、沒有追蹤器、不需要帳號。你的出生資料、星盤和日記只儲存在你的裝置上，你可以在應用程式內匯出或刪除。</p>
+<h2>常見問題</h2>
+<h3>怎麼查我的上升星座？</h3>
+<p>輸入你的出生日期、精確的出生時間與出生地點。上升星座是那一刻從東方地平線升起的星座，所以除了日期，還需要時間與地點。</p>
+<h3>太陽星座和本命盤有什麼不同？</h3>
+<p>太陽星座只是一個落點：太陽當時所在的位置。本命盤則標出每顆行星、月亮、上升點與十二宮，並顯示它們之間的相位。</p>
+<h3>是免費的嗎？</h3>
+<p>應用程式可免費下載，目前版本的所有功能都已開放。沒有廣告。</p>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-TW" rel="noopener">在 Google Play 下載</a></p>
+<p class="svc"><strong>本命盤</strong> · <a href="../yueli/">月亮曆</a> · <a href="../shuzi-mingli/">生命靈數</a> · <a href="../xingzuo-peidui/">星座配對</a> · <a href="../shengxiao/">生肖與吠陀占星</a></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189</footer>
+</div>
+</body>
+</html>
