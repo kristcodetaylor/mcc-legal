@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Doğum tarihinden Çin, Japon ve Vedik burcun</h1>
 <p class="lead">Ocak ya da şubat başında mı doğdun? Çin burcundaki hayvanın 1 Ocak’a değil, doğduğun yıldaki Çin Yeni Yılı tarihine bağlıdır. My Cosmic Code bu tarihi bulur ve gösterir, sonra aynı doğum bilgilerini Japon ve Vedik yoldan okur.</p>
+<section class="tool" id="calculator">
+<h2>Çin burcu, Dokuz Yıldız Ki ve Vedik Ay burcu hesaplama</h2>
+<p>Doğum tarihini gir; Çin Yeni Yılı’nın gerçek tarihine göre sayılan Çin burcundaki hayvanını ve elementini, Japon eto hayvanını ve Dokuz Yıldız’daki yıldızını, ayrıca Vedik Ay burcunu (rashi) öğren.</p>
+<div id="tool-root"><noscript><p>Bu hesaplayıcı JavaScript gerektirir. Uygulama aynısını telefonunda yapar.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"tr","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=tr-TR","common":{"birthDate":"Doğum tarihi","birthTime":"Doğum saati","timeHint":"İsteğe bağlı. Girilmezse Ay öğle saatine göre hesaplanır.","place":"Şehir","placeSearch":"Bir şehir yaz","placeNone":"Bu şehir henüz listemizde yok.","calculate":"Hesapla","badDate":"Gerçek bir tarih gir.","privacy":"Tarayıcında hesaplanır. Yazdığın hiçbir şey gönderilmez ve kaydedilmez.","more":"Tam yorum uygulamada","noscript":"Bu hesaplayıcı JavaScript gerektirir. Uygulama aynısını telefonunda yapar."},"s":{"title":"Çin burcu, Dokuz Yıldız Ki ve Vedik Ay burcu hesaplama","intro":"Doğum tarihini gir; Çin Yeni Yılı’nın gerçek tarihine göre sayılan Çin burcundaki hayvanını ve elementini, Japon eto hayvanını ve Dokuz Yıldız’daki yıldızını, ayrıca Vedik Ay burcunu (rashi) öğren.","timeHint":"İsteğe bağlı. Saat ve şehir yalnızca Ay doğduğun gün burç değiştirdiyse önemlidir.","exactNote":"Vedik Ay burcunu kesinleştirmek için doğum saatini ve şehrini ekle.","range":"Çin takvimimiz 1901–2099 yıllarını kapsar. Bu aralıkta bir tarih gir.","inApp":"Doğum ayı ve doğum saati hayvanların, çevren, nakshatra, lagna ve dasha uygulamada."},"labels":{"chinese":"Çin","japanese":"Japon","vedic":"Vedik","yourAnimal":"Çin burcun","eto":"Eto hayvanın","nineStar":"Dokuz Yıldız’daki yıldızın","vYourRashi":"Ay burcun · Rashi","element":"Element","polarity":"Kutupluluk","yang":"Yang · etkin","yin":"Yin · alıcı","youAre":"Burcun: {0} ({1}). Çin yılın {2} ile {3} arasında.","beforeNewYear":"Çin Yeni Yılı’ndan ({0}) önce doğdun, bu yüzden bir önceki yıl sayılır.","afterNewYear":"Çin Yeni Yılı {0} tarihine denk geldi ve doğum günün ondan sonra, bu yüzden o yıl sayılır.","etoSame":"Japonya’da da {0} {1}: aynı hayvan, {2}.","etoOther":"Japonya yılı 1 Ocak’tan sayar, orada {0} {1}: {2}.","starLine":"Dokuz Yıldız’daki yıldızın {0}: {1} ({2}).","vRashiLine":"Yıldız zodyağında Ay’ın burcu: {0} ({1}).","vWesternDiff":"Batı haritasında aynı Ay’ın burcu: {0}. Vedik zodyak yaklaşık 24° geride durur.","vWesternSame":"Batı haritasında da aynı burç.","vRashiEither":"Ay doğduğun gün burç değiştirdi: doğum saatine göre {0} ya da {1}.","animals":{"rat":"Fare","ox":"Öküz","tiger":"Kaplan","rabbit":"Tavşan","dragon":"Ejderha","snake":"Yılan","horse":"At","goat":"Keçi","monkey":"Maymun","rooster":"Horoz","dog":"Köpek","pig":"Domuz"},"boar":"Yaban Domuzu","elements":{"wood":"Ağaç","fire":"Ateş","earth":"Toprak","metal":"Metal","water":"Su"},"stars":{"1":"Beyaz Su","2":"Siyah Toprak","3":"Parlak Yeşil Ağaç","4":"Yeşil Ağaç","5":"Sarı Toprak","6":"Beyaz Metal","7":"Kırmızı Metal","8":"Beyaz Toprak","9":"Mor Ateş"},"yearNames":{"wood":{"rat":"Ağaç Faresi","ox":"Ağaç Öküzü","tiger":"Ağaç Kaplanı","rabbit":"Ağaç Tavşanı","dragon":"Ağaç Ejderhası","snake":"Ağaç Yılanı","horse":"Ağaç Atı","goat":"Ağaç Keçisi","monkey":"Ağaç Maymunu","rooster":"Ağaç Horozu","dog":"Ağaç Köpeği","pig":"Ağaç Domuzu"},"fire":{"rat":"Ateş Faresi","ox":"Ateş Öküzü","tiger":"Ateş Kaplanı","rabbit":"Ateş Tavşanı","dragon":"Ateş Ejderhası","snake":"Ateş Yılanı","horse":"Ateş Atı","goat":"Ateş Keçisi","monkey":"Ateş Maymunu","rooster":"Ateş Horozu","dog":"Ateş Köpeği","pig":"Ateş Domuzu"},"earth":{"rat":"Toprak Faresi","ox":"Toprak Öküzü","tiger":"Toprak Kaplanı","rabbit":"Toprak Tavşanı","dragon":"Toprak Ejderhası","snake":"Toprak Yılanı","horse":"Toprak Atı","goat":"Toprak Keçisi","monkey":"Toprak Maymunu","rooster":"Toprak Horozu","dog":"Toprak Köpeği","pig":"Toprak Domuzu"},"metal":{"rat":"Metal Faresi","ox":"Metal Öküzü","tiger":"Metal Kaplanı","rabbit":"Metal Tavşanı","dragon":"Metal Ejderhası","snake":"Metal Yılanı","horse":"Metal Atı","goat":"Metal Keçisi","monkey":"Metal Maymunu","rooster":"Metal Horozu","dog":"Metal Köpeği","pig":"Metal Domuzu"},"water":{"rat":"Su Faresi","ox":"Su Öküzü","tiger":"Su Kaplanı","rabbit":"Su Tavşanı","dragon":"Su Ejderhası","snake":"Su Yılanı","horse":"Su Atı","goat":"Su Keçisi","monkey":"Su Maymunu","rooster":"Su Horozu","dog":"Su Köpeği","pig":"Su Domuzu"}},"signs":{"aries":"Koç","taurus":"Boğa","gemini":"İkizler","cancer":"Yengeç","leo":"Aslan","virgo":"Başak","libra":"Terazi","scorpio":"Akrep","sagittarius":"Yay","capricorn":"Oğlak","aquarius":"Kova","pisces":"Balık"}}}</script>
+<script type="module" src="../../tools/horoscopes.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=tr-TR" rel="noopener">Google Play’den edinin</a>
 <h2>Çin burcu</h2>
 <ul>
@@ -112,7 +148,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Ücretsiz mi?</h3>
 <p>Uygulamayı indirmek ücretsizdir ve mevcut sürümde tüm özellikler açıktır. Reklam yok.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=tr-TR" rel="noopener">Google Play’den edinin</a></p>
-<p class="svc"><a href="../dogum-haritasi/">Doğum haritası</a> · <a href="../ay-takvimi/">Ay takvimi</a> · <a href="../numeroloji/">Numeroloji</a> · <a href="../burc-uyumu/">Burç uyumu</a> · <strong>Çin ve Vedik burç</strong> · <a href="../gokyuzu-haritasi/">Gökyüzü haritası</a> · <a href="../ruya-tabirleri/">Rüya tabirleri</a></p>
+<p class="svc"><a href="../dogum-haritasi/">Doğum haritası</a> · <a href="../ay-takvimi/">Ay takvimi</a> · <a href="../numeroloji/">Numeroloji</a> · <a href="../burc-uyumu/">Burç uyumu</a> · <strong>Çin ve Vedik burç</strong> · <a href="../gokyuzu-haritasi/">Gökyüzü haritası</a> · <a href="../burcum-ne/">Burcum ne</a> · <a href="../gezegenler-bugun/">Bugün gezegenler</a> · <a href="../gunun-karti/">Günün Kartı</a> · <a href="../ruya-tabirleri/">Rüya tabirleri</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

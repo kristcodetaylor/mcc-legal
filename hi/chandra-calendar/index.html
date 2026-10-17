@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>चंद्र कैलेंडर: कलाएँ और चंद्रमा की राशि, दिन-ब-दिन</h1>
 <p class="lead">चंद्रमा लगभग 29.5 दिनों में अपनी सभी कलाओं से गुज़रता है और हर दो-तीन दिन में राशि बदलता है। My Cosmic Code दोनों दिखाता है, आज रात की कला और वह राशि जिसमें चंद्रमा इस समय है, आपकी अपनी जन्म कुंडली के चंद्रमा के साथ।</p>
+<section class="tool" id="calculator">
+<h2>तारीख़ के हिसाब से चंद्र कला और चंद्र राशि</h2>
+<p>एक तारीख़ चुनें और चंद्रमा की कला, उसका कितना हिस्सा प्रकाशित है और वह किस राशि में है, देखें, साथ में अगले सात दिन भी। शहर जोड़ें तो दिन और समय स्थानीय समय में दिखेंगे।</p>
+<div id="tool-root"><noscript><p>इस कैलकुलेटर को JavaScript चाहिए। ऐप आपके फ़ोन पर यही करता है।</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"hi","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=hi-IN","common":{"birthDate":"जन्म तिथि","birthTime":"जन्म समय","timeHint":"वैकल्पिक। इसके बिना चंद्रमा की गणना दोपहर के हिसाब से होती है।","place":"शहर","placeSearch":"शहर लिखें","placeNone":"यह शहर अभी हमारी सूची में नहीं है।","calculate":"गणना करें","badDate":"एक असली तारीख़ लिखें।","privacy":"आपके ब्राउज़र में गणना होती है। आप जो लिखते हैं वह कहीं भेजा या सहेजा नहीं जाता।","more":"पूरा विवरण ऐप में है","noscript":"इस कैलकुलेटर को JavaScript चाहिए। ऐप आपके फ़ोन पर यही करता है।"},"s":{"title":"तारीख़ के हिसाब से चंद्र कला और चंद्र राशि","intro":"एक तारीख़ चुनें और चंद्रमा की कला, उसका कितना हिस्सा प्रकाशित है और वह किस राशि में है, देखें, साथ में अगले सात दिन भी। शहर जोड़ें तो दिन और समय स्थानीय समय में दिखेंगे।","date":"तारीख़","cityHint":"वैकल्पिक। शहर चुनने पर दिन और समय स्थानीय होते हैं।","phase":"कला","sign":"चंद्र राशि","day":"दिन","utcNote":"दिन UTC के हिसाब से गिने जाते हैं। चंद्रमा के राशि बदलने और कला के ठीक पूरा होने का सटीक समय देखने के लिए शहर चुनें।","zoneNote":"समय: {z}। तीर दिखाता है कि चंद्रमा अगली राशि में कब प्रवेश करता है।","now":"अभी","noon":"दोपहर 12 बजे"},"labels":{"signs":{"aries":"मेष","taurus":"वृषभ","gemini":"मिथुन","cancer":"कर्क","leo":"सिंह","virgo":"कन्या","libra":"तुला","scorpio":"वृश्चिक","sagittarius":"धनु","capricorn":"मकर","aquarius":"कुंभ","pisces":"मीन"},"phases":{"new":"अमावस्या","waxingCrescent":"बढ़ता अर्धचंद्र","firstQuarter":"प्रथम चतुर्थांश","waxingGibbous":"बढ़ता उत्तल चंद्र","full":"पूर्णिमा","waningGibbous":"घटता उत्तल चंद्र","lastQuarter":"अंतिम चतुर्थांश","waningCrescent":"घटता अर्धचंद्र"},"illuminated":"{p}% प्रकाशित","week":"चंद्रमा, सात दिन आगे तक"}}</script>
+<script type="module" src="../../tools/moon.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a>
 <div class="shots">
 <img src="../../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="Explore: गोचर, चंद्र कैलेंडर, अंक ज्योतिष और व्यक्तिगत वर्ष" />
@@ -173,7 +209,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>क्या यह मुफ़्त है?</h3>
 <p>ऐप डाउनलोड करना मुफ़्त है, और मौजूदा संस्करण में हर फ़ीचर खुला है। कोई विज्ञापन नहीं।</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a></p>
-<p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <strong>चंद्र कैलेंडर</strong> · <a href="../ank-jyotish/">अंक ज्योतिष</a> · <a href="../rashi-milan/">राशि अनुकूलता</a> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <a href="../taron-ka-naksha/">तारों का नक्शा</a></p>
+<p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <strong>चंद्र कैलेंडर</strong> · <a href="../ank-jyotish/">अंक ज्योतिष</a> · <a href="../rashi-milan/">राशि अनुकूलता</a> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <a href="../taron-ka-naksha/">तारों का नक्शा</a> · <a href="../meri-rashi/">मेरी राशि</a> · <a href="../aaj-ke-grah/">आज के ग्रह</a> · <a href="../aaj-ka-card/">आज का कार्ड</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

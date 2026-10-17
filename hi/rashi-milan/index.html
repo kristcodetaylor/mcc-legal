@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>सिनैस्ट्री कैलकुलेटर: दो पूरी जन्म कुंडलियों से राशि अनुकूलता</h1>
 <p class="lead">सूर्य राशि की अनुकूलता दो राशियों की तुलना करती है। My Cosmic Code पश्चिमी ज्योतिष की सिनैस्ट्री पद्धति से दो पूरी जन्म कुंडलियों की तुलना करता है, एक व्यक्ति के हर ग्रह की दूसरे के हर ग्रह से, और दिखाता है कि वे कहाँ मिलते हैं।</p>
+<section class="tool" id="calculator">
+<h2>राशि अनुकूलता कैलकुलेटर</h2>
+<p>दो जन्म तिथियाँ लिखें और दोनों की सूर्य और चंद्र राशि देखें; समय और स्थान पता हों तो दोनों की उदय राशि भी, और वह तत्व-जोड़ी जिसमें आपके चार्ट मिलते हैं।</p>
+<div id="tool-root"><noscript><p>इस कैलकुलेटर को JavaScript चाहिए। ऐप आपके फ़ोन पर यही करता है।</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"hi","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=hi-IN","common":{"birthDate":"जन्म तिथि","birthTime":"जन्म समय","timeHint":"वैकल्पिक। इसके बिना चंद्रमा की गणना दोपहर के हिसाब से होती है।","place":"शहर","placeSearch":"शहर लिखें","placeNone":"यह शहर अभी हमारी सूची में नहीं है।","calculate":"गणना करें","badDate":"एक असली तारीख़ लिखें।","privacy":"आपके ब्राउज़र में गणना होती है। आप जो लिखते हैं वह कहीं भेजा या सहेजा नहीं जाता।","more":"पूरा विवरण ऐप में है","noscript":"इस कैलकुलेटर को JavaScript चाहिए। ऐप आपके फ़ोन पर यही करता है।"},"s":{"title":"राशि अनुकूलता कैलकुलेटर","intro":"दो जन्म तिथियाँ लिखें और दोनों की सूर्य और चंद्र राशि देखें; समय और स्थान पता हों तो दोनों की उदय राशि भी, और वह तत्व-जोड़ी जिसमें आपके चार्ट मिलते हैं।","them":"दूसरा व्यक्ति","timeHint":"वैकल्पिक। इसके बिना चंद्रमा तभी दिखाया जाता है जब वह पूरे दिन एक ही राशि में रहे।","placeHint":"वैकल्पिक। समय के साथ इससे उदय राशि पता चलती है।","moonUnknown":"चंद्रमा के नीचे डैश का मतलब है कि उस दिन चंद्रमा ने राशि बदली। जन्म समय से यह तय हो जाता है।","sunElements":"सूर्य के तत्व","inApp":"ऐप में इस जोड़ी को इन क्षेत्रों में पढ़ा जाता है: {list}।","sep":", ","profiles":{"aries":{"rulingPlanet":"मंगल","birthstone":"हीरा","color":"लाल"},"taurus":{"rulingPlanet":"शुक्र","birthstone":"पन्ना","color":"हरा"},"gemini":{"rulingPlanet":"बुध","birthstone":"अकीक","color":"पीला"},"cancer":{"rulingPlanet":"चंद्रमा","birthstone":"चंद्रकांत मणि","color":"रुपहला"},"leo":{"rulingPlanet":"सूर्य","birthstone":"पेरिडॉट","color":"सुनहरा"},"virgo":{"rulingPlanet":"बुध","birthstone":"नीलम","color":"गहरा नीला"},"libra":{"rulingPlanet":"शुक्र","birthstone":"ओपल","color":"हल्का गुलाबी"},"scorpio":{"rulingPlanet":"प्लूटो","birthstone":"पुखराज","color":"गहरा लाल"},"sagittarius":{"rulingPlanet":"बृहस्पति","birthstone":"फ़िरोज़ा","color":"बैंगनी"},"capricorn":{"rulingPlanet":"शनि","birthstone":"गार्नेट","color":"भूरा"},"aquarius":{"rulingPlanet":"यूरेनस","birthstone":"जमुनिया","color":"चटक नीला"},"pisces":{"rulingPlanet":"नेपच्यून","birthstone":"एक्वामरीन","color":"समुद्री हरा"}}},"labels":{"signs":{"aries":"मेष","taurus":"वृषभ","gemini":"मिथुन","cancer":"कर्क","leo":"सिंह","virgo":"कन्या","libra":"तुला","scorpio":"वृश्चिक","sagittarius":"धनु","capricorn":"मकर","aquarius":"कुंभ","pisces":"मीन"},"sun":"सूर्य","moon":"चंद्रमा","rising":"उदय राशि","elements":{"fire":"अग्नि","earth":"पृथ्वी","air":"वायु","water":"जल"},"you":"आप","risingUnknownBoth":"उदय राशि के लिए आप दोनों का सटीक जन्म समय और स्थान चाहिए।","profileEyebrow":"सूर्य राशि प्रोफ़ाइल","rulingPlanet":"स्वामी ग्रह","birthstone":"जन्म रत्न","color":"रंग","synastryEyebrow":"जहाँ आपके चार्ट मिलते हैं","domains":{"friendship":"दोस्ती","business":"कारोबार","romantic":"प्रेम","sexual":"शारीरिक","health":"स्वास्थ्य"},"aspectsEyebrow":"आपके बीच के एस्पेक्ट","aspectsNeedTier":"भाव, असेंडेंट, मध्याकाश और सभी एस्पेक्ट Pro का हिस्सा हैं।"}}</script>
+<script type="module" src="../../tools/compatibility.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a>
 <h2>तुलना में क्या-क्या है</h2>
 <ul>
@@ -100,7 +136,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>क्या यह मुफ़्त है?</h3>
 <p>ऐप डाउनलोड करना मुफ़्त है, और मौजूदा संस्करण में हर फ़ीचर खुला है। कोई विज्ञापन नहीं।</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a></p>
-<p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <a href="../chandra-calendar/">चंद्र कैलेंडर</a> · <a href="../ank-jyotish/">अंक ज्योतिष</a> · <strong>राशि अनुकूलता</strong> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <a href="../taron-ka-naksha/">तारों का नक्शा</a></p>
+<p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <a href="../chandra-calendar/">चंद्र कैलेंडर</a> · <a href="../ank-jyotish/">अंक ज्योतिष</a> · <strong>राशि अनुकूलता</strong> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <a href="../taron-ka-naksha/">तारों का नक्शा</a> · <a href="../meri-rashi/">मेरी राशि</a> · <a href="../aaj-ke-grah/">आज के ग्रह</a> · <a href="../aaj-ka-card/">आज का कार्ड</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

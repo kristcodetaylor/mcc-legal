@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>生年月日から求める、中国・日本・インドのホロスコープ</h1>
 <p class="lead">1月や2月上旬生まれの方へ。中国式の十二支は、1月1日ではなく、生まれた年の春節の日付で切り替わります。My Cosmic Codeはその日付を調べて表示したうえで、同じ出生データを日本式とインド式（ヴェーダ占星術）でも読み解きます。</p>
+<section class="tool" id="calculator">
+<h2>干支・九星気学の本命星・インド占星術の月星座を計算</h2>
+<p>生年月日を入力すると、旧正月の実際の日付から数えた中国の干支の動物と五行、日本の干支（えと）と九星気学の本命星、そしてインド占星術（ヴェーダ）の月星座（ラーシ）がわかります。</p>
+<div id="tool-root"><noscript><p>この計算ツールには JavaScript が必要です。アプリならスマホで同じことができます。</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"ja","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=ja-JP","common":{"birthDate":"生年月日","birthTime":"出生時刻","timeHint":"任意。未入力の場合、月は正午で計算します。","place":"都市","placeSearch":"都市名を入力","placeNone":"その都市はまだリストにありません。","calculate":"計算する","badDate":"実在する日付を入力してください。","privacy":"ブラウザの中で計算します。入力した内容はどこにも送信・保存されません。","more":"詳しい読み解きはアプリで","noscript":"この計算ツールには JavaScript が必要です。アプリならスマホで同じことができます。"},"s":{"title":"干支・九星気学の本命星・インド占星術の月星座を計算","intro":"生年月日を入力すると、旧正月の実際の日付から数えた中国の干支の動物と五行、日本の干支（えと）と九星気学の本命星、そしてインド占星術（ヴェーダ）の月星座（ラーシ）がわかります。","timeHint":"任意。誕生日に月がサインを移動した場合だけ、時刻と都市が必要です。","exactNote":"出生時刻と都市を入力すると、ヴェーダの月星座が一つに決まります。","range":"中国暦は1901年から2099年までに対応しています。この範囲の日付を入力してください。","inApp":"月と時刻の動物、仲間の輪、ナクシャトラ、ラグナ、ダシャーはアプリでご覧いただけます。"},"labels":{"chinese":"中国","japanese":"日本","vedic":"ヴェーダ","yourAnimal":"中国の干支","eto":"あなたの干支（えと）","nineStar":"あなたの本命星","vYourRashi":"月星座 · ラーシ","element":"五行","polarity":"陰陽","yang":"陽 · 能動","yin":"陰 · 受容","youAre":"中国の干支では{0}（{1}）です。中国暦の年は{2}から{3}までです。","beforeNewYear":"旧正月（{0}）より前の生まれのため、前の年が数えられます。","afterNewYear":"旧正月は{0}で、誕生日はそれより後なので、その年が数えられます。","etoSame":"日本の干支でも{0}で、動物は同じ{2}です。","etoOther":"日本では1月1日から年を数えるため、日本の干支は{0}、動物は{2}になります。","starLine":"九星気学の本命星は{2}です。","vRashiLine":"サイデリアル方式の獣帯では、月は{0}（{1}）にあります。","vWesternDiff":"西洋式のチャートでは、同じ月が{0}にあります。ヴェーダの獣帯は約24°後ろにずれています。","vWesternSame":"西洋式のチャートでも同じサインです。","vRashiEither":"誕生日に月がサインを移動しました。出生時刻によって{0}か{1}になります。","animals":{"rat":"子（ねずみ）","ox":"丑（うし）","tiger":"寅（とら）","rabbit":"卯（うさぎ）","dragon":"辰（たつ）","snake":"巳（へび）","horse":"午（うま）","goat":"未（ひつじ）","monkey":"申（さる）","rooster":"酉（とり）","dog":"戌（いぬ）","pig":"亥（ぶた）"},"boar":"亥（いのしし）","elements":{"wood":"木","fire":"火","earth":"土","metal":"金","water":"水"},"stars":{"1":"一白水星","2":"二黒土星","3":"三碧木星","4":"四緑木星","5":"五黄土星","6":"六白金星","7":"七赤金星","8":"八白土星","9":"九紫火星"},"yearNames":{"wood":{"rat":"木の子（ねずみ）","ox":"木の丑（うし）","tiger":"木の寅（とら）","rabbit":"木の卯（うさぎ）","dragon":"木の辰（たつ）","snake":"木の巳（へび）","horse":"木の午（うま）","goat":"木の未（ひつじ）","monkey":"木の申（さる）","rooster":"木の酉（とり）","dog":"木の戌（いぬ）","pig":"木の亥（ぶた）"},"fire":{"rat":"火の子（ねずみ）","ox":"火の丑（うし）","tiger":"火の寅（とら）","rabbit":"火の卯（うさぎ）","dragon":"火の辰（たつ）","snake":"火の巳（へび）","horse":"火の午（うま）","goat":"火の未（ひつじ）","monkey":"火の申（さる）","rooster":"火の酉（とり）","dog":"火の戌（いぬ）","pig":"火の亥（ぶた）"},"earth":{"rat":"土の子（ねずみ）","ox":"土の丑（うし）","tiger":"土の寅（とら）","rabbit":"土の卯（うさぎ）","dragon":"土の辰（たつ）","snake":"土の巳（へび）","horse":"土の午（うま）","goat":"土の未（ひつじ）","monkey":"土の申（さる）","rooster":"土の酉（とり）","dog":"土の戌（いぬ）","pig":"土の亥（ぶた）"},"metal":{"rat":"金の子（ねずみ）","ox":"金の丑（うし）","tiger":"金の寅（とら）","rabbit":"金の卯（うさぎ）","dragon":"金の辰（たつ）","snake":"金の巳（へび）","horse":"金の午（うま）","goat":"金の未（ひつじ）","monkey":"金の申（さる）","rooster":"金の酉（とり）","dog":"金の戌（いぬ）","pig":"金の亥（ぶた）"},"water":{"rat":"水の子（ねずみ）","ox":"水の丑（うし）","tiger":"水の寅（とら）","rabbit":"水の卯（うさぎ）","dragon":"水の辰（たつ）","snake":"水の巳（へび）","horse":"水の午（うま）","goat":"水の未（ひつじ）","monkey":"水の申（さる）","rooster":"水の酉（とり）","dog":"水の戌（いぬ）","pig":"水の亥（ぶた）"}},"signs":{"aries":"牡羊座","taurus":"牡牛座","gemini":"双子座","cancer":"蟹座","leo":"獅子座","virgo":"乙女座","libra":"天秤座","scorpio":"蠍座","sagittarius":"射手座","capricorn":"山羊座","aquarius":"水瓶座","pisces":"魚座"}}}</script>
+<script type="module" src="../../tools/horoscopes.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a>
 <h2>中国のホロスコープ</h2>
 <ul>
@@ -112,7 +148,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>無料ですか？</h3>
 <p>アプリは無料でダウンロードでき、現在のバージョンではすべての機能が使えます。広告はありません。</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a></p>
-<p class="svc"><a href="../horoscope/">出生図</a> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <strong>干支・九星気学・インド占星術</strong> · <a href="../hoshizora/">今夜の星空</a></p>
+<p class="svc"><a href="../horoscope/">出生図</a> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <strong>干支・九星気学・インド占星術</strong> · <a href="../hoshizora/">今夜の星空</a> · <a href="../seiza/">星座を調べる</a> · <a href="../kyou-no-wakusei/">今日の惑星</a> · <a href="../kyou-no-kaado/">今日のカード</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

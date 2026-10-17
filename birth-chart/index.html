@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Free birth chart: your Sun, Moon and rising sign</h1>
 <p class="lead">A birth chart (natal chart) is a map of the sky at the minute and place you were born. My Cosmic Code computes it on your phone from real astronomy and draws the whole wheel, not just your zodiac sign.</p>
+<section class="tool" id="calculator">
+<h2>Birth chart calculator</h2>
+<p>Enter your date of birth, and your birth time and city if you know them, to see where the Sun, the Moon and the planets stood: the sign and degree of each, on a zodiac wheel.</p>
+<div id="tool-root"><noscript><p>This calculator needs JavaScript. The app does the same on your phone.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"en","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=en","common":{"birthDate":"Date of birth","birthTime":"Time of birth","timeHint":"Optional. Without it the Moon is placed at noon.","place":"City","placeSearch":"Type a city","placeNone":"No city of that name in our list yet.","calculate":"Calculate","badDate":"Enter a real date.","privacy":"Worked out in your browser. Nothing you type is sent anywhere or saved.","more":"The full reading is in the app","noscript":"This calculator needs JavaScript. The app does the same on your phone."},"s":{"title":"Birth chart calculator","intro":"Enter your date of birth, and your birth time and city if you know them, to see where the Sun, the Moon and the planets stood: the sign and degree of each, on a zodiac wheel.","cityHint":"Optional. With a city, the time is read on that city’s clock.","colBody":"Planet","colSign":"Sign","colDeg":"Degree","noTime":"Without a birth time we take the sky at noon. The Moon moves about 13° a day, so its degree is left out, and its sign is shown only if it stayed in one sign all day.","deviceClock":"No city chosen, so the time is read on this device’s clock.","inApp":"Houses, the rising sign and aspects are in the app.","wheel":"Zodiac wheel with the planets of this birth sky"},"labels":{"signs":{"aries":"Aries","taurus":"Taurus","gemini":"Gemini","cancer":"Cancer","leo":"Leo","virgo":"Virgo","libra":"Libra","scorpio":"Scorpio","sagittarius":"Sagittarius","capricorn":"Capricorn","aquarius":"Aquarius","pisces":"Pisces"},"bodies":{"sun":"Sun","moon":"Moon","mercury":"Mercury","venus":"Venus","mars":"Mars","jupiter":"Jupiter","saturn":"Saturn","uranus":"Uranus","neptune":"Neptune","pluto":"Pluto"},"eyebrow":"YOUR BIRTH SKY","moonUnknown":"The Moon crossed signs that day; the exact time would settle it.","sunCusp":"The Sun crossed signs that day; the exact time would settle it.","retrograde":"Retrograde","elementsEyebrow":"ELEMENTS","elements":{"fire":"Fire","earth":"Earth","air":"Air","water":"Water"},"modalitiesEyebrow":"MODALITIES","modalities":{"cardinal":"Cardinal","fixed":"Fixed","mutable":"Mutable"},"partial":"Counted only from placements this birth data can prove."}}</script>
+<script type="module" src="../tools/birth-chart.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=en" rel="noopener">Get it on Google Play</a>
 <div class="shots">
 <img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Natal chart wheel with planets, houses, aspects, Ascendant and Midheaven" />
@@ -105,7 +141,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Is it free?</h3>
 <p>The app is free to download, and in the current version every feature is open. No ads.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=en" rel="noopener">Get it on Google Play</a></p>
-<p class="svc"><strong>Birth chart</strong> · <a href="../moon-calendar/">Moon calendar</a> · <a href="../numerology/">Numerology</a> · <a href="../compatibility/">Compatibility</a> · <a href="../chinese-zodiac/">Chinese &amp; Vedic horoscope</a> · <a href="../night-sky-map/">Night sky map</a> · <a href="../dream-dictionary/">Dream dictionary</a></p>
+<p class="svc"><strong>Birth chart</strong> · <a href="../moon-calendar/">Moon calendar</a> · <a href="../numerology/">Numerology</a> · <a href="../compatibility/">Compatibility</a> · <a href="../chinese-zodiac/">Chinese &amp; Vedic horoscope</a> · <a href="../night-sky-map/">Night sky map</a> · <a href="../zodiac-sign-calculator/">Zodiac sign</a> · <a href="../planets-today/">Planets today</a> · <a href="../card-of-the-day/">Card of the Day</a> · <a href="../dream-dictionary/">Dream dictionary</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

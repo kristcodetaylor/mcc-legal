@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Carta natal gratis: tu signo solar, tu signo lunar y tu ascendente</h1>
 <p class="lead">Una carta natal (carta astral) es un mapa del cielo en el minuto y el lugar en que naciste. My Cosmic Code la calcula en tu teléfono con astronomía real y dibuja la rueda completa, no solo tu signo del zodiaco.</p>
+<section class="tool" id="calculator">
+<h2>Calculadora de carta natal</h2>
+<p>Introduce tu fecha de nacimiento, y la hora y la ciudad si las sabes, para ver dónde estaban el Sol, la Luna y los planetas: el signo y el grado de cada uno, en una rueda zodiacal.</p>
+<div id="tool-root"><noscript><p>Esta calculadora necesita JavaScript. La app hace lo mismo en tu teléfono.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"es","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=es-ES","common":{"birthDate":"Fecha de nacimiento","birthTime":"Hora de nacimiento","timeHint":"Opcional. Sin ella, la Luna se calcula a mediodía.","place":"Ciudad","placeSearch":"Escribe una ciudad","placeNone":"Esa ciudad aún no está en nuestra lista.","calculate":"Calcular","badDate":"Introduce una fecha real.","privacy":"Se calcula en tu navegador. Nada de lo que escribes se envía ni se guarda.","more":"La lectura completa está en la app","noscript":"Esta calculadora necesita JavaScript. La app hace lo mismo en tu teléfono."},"s":{"title":"Calculadora de carta natal","intro":"Introduce tu fecha de nacimiento, y la hora y la ciudad si las sabes, para ver dónde estaban el Sol, la Luna y los planetas: el signo y el grado de cada uno, en una rueda zodiacal.","cityHint":"Opcional. Con una ciudad, la hora se lee en el reloj de esa ciudad.","colBody":"Planeta","colSign":"Signo","colDeg":"Grado","noTime":"Sin hora de nacimiento tomamos el cielo a mediodía. La Luna avanza unos 13° al día, así que omitimos su grado y mostramos su signo solo si estuvo en el mismo signo todo el día.","deviceClock":"No elegiste ciudad, así que la hora se lee en el reloj de este dispositivo.","inApp":"Las casas, el ascendente y los aspectos están en la app.","wheel":"Rueda zodiacal con los planetas de este cielo natal"},"labels":{"signs":{"aries":"Aries","taurus":"Tauro","gemini":"Géminis","cancer":"Cáncer","leo":"Leo","virgo":"Virgo","libra":"Libra","scorpio":"Escorpio","sagittarius":"Sagitario","capricorn":"Capricornio","aquarius":"Acuario","pisces":"Piscis"},"bodies":{"sun":"Sol","moon":"Luna","mercury":"Mercurio","venus":"Venus","mars":"Marte","jupiter":"Júpiter","saturn":"Saturno","uranus":"Urano","neptune":"Neptuno","pluto":"Plutón"},"eyebrow":"TU CIELO DE NACIMIENTO","moonUnknown":"La Luna cambió de signo ese día; la hora exacta lo resolvería.","sunCusp":"El Sol cambió de signo ese día; la hora exacta lo resolvería.","retrograde":"Retrógrado","elementsEyebrow":"ELEMENTOS","elements":{"fire":"Fuego","earth":"Tierra","air":"Aire","water":"Agua"},"modalitiesEyebrow":"MODALIDADES","modalities":{"cardinal":"Cardinal","fixed":"Fijo","mutable":"Mutable"},"partial":"Contado solo a partir de las posiciones que estos datos de nacimiento pueden demostrar."}}</script>
+<script type="module" src="../../tools/birth-chart.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=es-ES" rel="noopener">Disponible en Google Play</a>
 <div class="shots">
 <img src="../../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Carta natal con planetas, casas, aspectos, Ascendente y Medio Cielo" />
@@ -105,7 +141,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>¿Es gratis?</h3>
 <p>La app se descarga gratis y, en la versión actual, todas las funciones están abiertas. Sin anuncios.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=es-ES" rel="noopener">Disponible en Google Play</a></p>
-<p class="svc"><strong>Carta natal</strong> · <a href="../calendario-lunar/">Calendario lunar</a> · <a href="../numerologia/">Numerología</a> · <a href="../compatibilidad-de-signos/">Compatibilidad de signos</a> · <a href="../horoscopo-chino/">Horóscopo chino y védico</a> · <a href="../mapa-del-cielo/">Mapa del cielo</a> · <a href="../significado-de-los-suenos/">Diccionario de sueños</a></p>
+<p class="svc"><strong>Carta natal</strong> · <a href="../calendario-lunar/">Calendario lunar</a> · <a href="../numerologia/">Numerología</a> · <a href="../compatibilidad-de-signos/">Compatibilidad de signos</a> · <a href="../horoscopo-chino/">Horóscopo chino y védico</a> · <a href="../mapa-del-cielo/">Mapa del cielo</a> · <a href="../que-signo-soy/">Qué signo soy</a> · <a href="../planetas-hoy/">Planetas hoy</a> · <a href="../carta-del-dia/">Carta del día</a> · <a href="../significado-de-los-suenos/">Diccionario de sueños</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

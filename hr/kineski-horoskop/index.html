@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Tvoj kineski, japanski i vedski horoskop iz datuma rođenja</h1>
 <p class="lead">Datum rođenja u siječnju ili početkom veljače? Tvoja životinja kineskog zodijaka ovisi o datumu Kineske Nove godine u godini rođenja, a ne o 1. siječnju. My Cosmic Code pronađe taj datum i pokaže ga, a iste podatke o rođenju pročita i na japanski i na vedski način.</p>
+<section class="tool" id="calculator">
+<h2>Kalkulator kineskog horoskopa, Devet zvijezda i vedskog Mjesečevog znaka</h2>
+<p>Upiši datum rođenja i saznaj svoju životinju i element kineskog zodijaka, računato od stvarnog datuma kineske Nove godine, svoj japanski eto i zvijezdu u sustavu Devet zvijezda te svoj vedski Mjesečev znak (rashi).</p>
+<div id="tool-root"><noscript><p>Ovaj kalkulator treba JavaScript. Aplikacija radi isto na tvom mobitelu.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"hr","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=hr","common":{"birthDate":"Datum rođenja","birthTime":"Vrijeme rođenja","timeHint":"Nije obavezno. Bez njega se Mjesec računa za podne.","place":"Grad","placeSearch":"Upiši grad","placeNone":"Tog grada još nema na našem popisu.","calculate":"Izračunaj","badDate":"Upiši stvarni datum.","privacy":"Računa se u tvom pregledniku. Ništa što upišeš ne šalje se nikamo i ne sprema se.","more":"Cijelo tumačenje je u aplikaciji","noscript":"Ovaj kalkulator treba JavaScript. Aplikacija radi isto na tvom mobitelu."},"s":{"title":"Kalkulator kineskog horoskopa, Devet zvijezda i vedskog Mjesečevog znaka","intro":"Upiši datum rođenja i saznaj svoju životinju i element kineskog zodijaka, računato od stvarnog datuma kineske Nove godine, svoj japanski eto i zvijezdu u sustavu Devet zvijezda te svoj vedski Mjesečev znak (rashi).","timeHint":"Nije obavezno. Vrijeme i grad važni su samo ako je Mjesec na tvoj rođendan promijenio znak.","exactNote":"Upiši vrijeme i grad rođenja da se tvoj vedski Mjesečev znak odredi točno.","range":"Naš kineski kalendar pokriva godine od 1901. do 2099. Upiši datum iz tog razdoblja.","inApp":"Životinje mjeseca i sata, tvoj krug, nakshatra, lagna i dasha su u aplikaciji."},"labels":{"chinese":"Kineski","japanese":"Japanski","vedic":"Vedski","yourAnimal":"Tvoj kineski znak","eto":"Tvoj eto","nineStar":"Tvoja zvijezda · Devet zvijezda","vYourRashi":"Tvoj Mjesečev znak · Rashi","element":"Element","polarity":"Polaritet","yang":"Yang · aktivno","yin":"Yin · prijemčivo","youAre":"Ti si {0} ({1}). Tvoja kineska godina traje od {2} do {3}","beforeNewYear":"Datum rođenja pada prije kineske Nove godine ({0}), pa se računa prethodna godina.","afterNewYear":"Kineska Nova godina pala je {0}, a datum rođenja je nakon nje, pa se računa ta godina.","etoSame":"U Japanu si {0} {1}, ista životinja: {2}.","etoOther":"Japan godinu broji od 1. siječnja, pa si ondje {0} {1}: {2}.","starLine":"Tvoja zvijezda u sustavu Devet zvijezda je {0}, {1} ({2}).","vRashiLine":"U sideričnom zodijaku tvoj je Mjesec u znaku {0} ({1}).","vWesternDiff":"U zapadnoj karti isti je Mjesec u znaku {0}: vedski zodijak stoji oko 24° unatrag.","vWesternSame":"U zapadnoj karti to je isti znak.","vRashiEither":"Mjesec je na dan tvog rođenja promijenio znak: {0} ili {1}, ovisno o vremenu rođenja.","animals":{"rat":"Štakor","ox":"Bivol","tiger":"Tigar","rabbit":"Zec","dragon":"Zmaj","snake":"Zmija","horse":"Konj","goat":"Koza","monkey":"Majmun","rooster":"Pijetao","dog":"Pas","pig":"Svinja"},"boar":"Vepar","elements":{"wood":"Drvo","fire":"Vatra","earth":"Zemlja","metal":"Metal","water":"Voda"},"stars":{"1":"Bijela voda","2":"Crna zemlja","3":"Svijetlozeleno drvo","4":"Zeleno drvo","5":"Žuta zemlja","6":"Bijeli metal","7":"Crveni metal","8":"Bijela zemlja","9":"Ljubičasta vatra"},"yearNames":{"wood":{"rat":"Drveni Štakor","ox":"Drveni Bivol","tiger":"Drveni Tigar","rabbit":"Drveni Zec","dragon":"Drveni Zmaj","snake":"Drvena Zmija","horse":"Drveni Konj","goat":"Drvena Koza","monkey":"Drveni Majmun","rooster":"Drveni Pijetao","dog":"Drveni Pas","pig":"Drvena Svinja"},"fire":{"rat":"Vatreni Štakor","ox":"Vatreni Bivol","tiger":"Vatreni Tigar","rabbit":"Vatreni Zec","dragon":"Vatreni Zmaj","snake":"Vatrena Zmija","horse":"Vatreni Konj","goat":"Vatrena Koza","monkey":"Vatreni Majmun","rooster":"Vatreni Pijetao","dog":"Vatreni Pas","pig":"Vatrena Svinja"},"earth":{"rat":"Zemljani Štakor","ox":"Zemljani Bivol","tiger":"Zemljani Tigar","rabbit":"Zemljani Zec","dragon":"Zemljani Zmaj","snake":"Zemljana Zmija","horse":"Zemljani Konj","goat":"Zemljana Koza","monkey":"Zemljani Majmun","rooster":"Zemljani Pijetao","dog":"Zemljani Pas","pig":"Zemljana Svinja"},"metal":{"rat":"Metalni Štakor","ox":"Metalni Bivol","tiger":"Metalni Tigar","rabbit":"Metalni Zec","dragon":"Metalni Zmaj","snake":"Metalna Zmija","horse":"Metalni Konj","goat":"Metalna Koza","monkey":"Metalni Majmun","rooster":"Metalni Pijetao","dog":"Metalni Pas","pig":"Metalna Svinja"},"water":{"rat":"Vodeni Štakor","ox":"Vodeni Bivol","tiger":"Vodeni Tigar","rabbit":"Vodeni Zec","dragon":"Vodeni Zmaj","snake":"Vodena Zmija","horse":"Vodeni Konj","goat":"Vodena Koza","monkey":"Vodeni Majmun","rooster":"Vodeni Pijetao","dog":"Vodeni Pas","pig":"Vodena Svinja"}},"signs":{"aries":"Ovan","taurus":"Bik","gemini":"Blizanci","cancer":"Rak","leo":"Lav","virgo":"Djevica","libra":"Vaga","scorpio":"Škorpion","sagittarius":"Strijelac","capricorn":"Jarac","aquarius":"Vodenjak","pisces":"Ribe"}}}</script>
+<script type="module" src="../../tools/horoscopes.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hr" rel="noopener">Preuzmi na Google Playu</a>
 <h2>Kineski horoskop</h2>
 <ul>
@@ -112,7 +148,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Je li besplatno?</h3>
 <p>Aplikacija se besplatno preuzima, a u trenutnoj verziji sve su značajke otvorene. Bez oglasa.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hr" rel="noopener">Preuzmi na Google Playu</a></p>
-<p class="svc"><a href="../natalna-karta/">Natalna karta</a> · <a href="../mjesecev-kalendar/">Mjesečev kalendar</a> · <a href="../numerologija/">Numerologija</a> · <a href="../slaganje-znakova/">Slaganje znakova</a> · <strong>Kineski i vedski horoskop</strong> · <a href="../karta-neba/">Karta neba</a> · <a href="../sanjarica/">Sanjarica</a></p>
+<p class="svc"><a href="../natalna-karta/">Natalna karta</a> · <a href="../mjesecev-kalendar/">Mjesečev kalendar</a> · <a href="../numerologija/">Numerologija</a> · <a href="../slaganje-znakova/">Slaganje znakova</a> · <strong>Kineski i vedski horoskop</strong> · <a href="../karta-neba/">Karta neba</a> · <a href="../koji-sam-znak/">Koji sam znak</a> · <a href="../planeti-danas/">Planeti danas</a> · <a href="../karta-dana/">Karta dana</a> · <a href="../sanjarica/">Sanjarica</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

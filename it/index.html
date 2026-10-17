@@ -82,6 +82,12 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .langs { font-size: .9rem; line-height: 2; }
 .shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
+
+.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+.svc a { display: block; height: 100%; padding: .9rem 1rem; border: 1px solid #2A2D3D; border-radius: 14px; background: #0E1018; text-decoration: none; }
+.svc a:hover, .svc a:focus-visible { border-color: #C9A227; }
+.svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
+.svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
 </style>
 </head>
 <body>
@@ -93,6 +99,19 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <p class="lead">Oroscopo del giorno, tema natale, affinità di coppia e dizionario dei sogni.</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT" rel="noopener">Disponibile su Google Play</a>
 </header>
+<h2>Provalo qui, nel browser</h2>
+<ul class="svc">
+<li><a href="tema-natale/#calculator"><strong>Tema natale</strong><span>Il tuo tema natale da data, ora e luogo di nascita: segno solare, lunare e ascendente, pianeti, case e aspetti. App Android gratis, senza account né pubblicità.</span></a></li>
+<li><a href="calendario-lunare/#calculator"><strong>Calendario lunare</strong><span>Fasi lunari, calendario lunare e il segno della Luna oggi, giorno per giorno, accanto alla Luna del tuo tema natale. App Android gratuita, senza pubblicità.</span></a></li>
+<li><a href="numerologia/#calculator"><strong>Numerologia</strong><span>Calcola numero del percorso di vita, anno personale e giorno personale dalla data di nascita, con ogni passaggio del calcolo. App Android gratis, senza account.</span></a></li>
+<li><a href="affinita-di-coppia/#calculator"><strong>Affinità di coppia</strong><span>Sinastria di coppia, calcolo gratis online: due temi natali a confronto in amore, intimità, amicizia e lavoro, con aspetti, tema composito e case. Senza pubblicità.</span></a></li>
+<li><a href="oroscopo-cinese/#calculator"><strong>Oroscopo cinese e vedico</strong><span>Il tuo animale dello zodiaco cinese e l’elemento secondo la vera data del Capodanno cinese, il tuo eto giapponese e la stella Ki, il segno lunare vedico e il nakshatra. App Android, senza account.</span></a></li>
+<li><a href="mappa-del-cielo/#calculator"><strong>Mappa del cielo</strong><span>Il vero cielo notturno per ogni luogo e ora: stelle, 88 costellazioni, i pianeti visibili stasera e il cielo della tua nascita. App Android, niente pubblicità.</span></a></li>
+<li><a href="che-segno-sono/#calculator"><strong>Che segno sono</strong><span>Scopri il tuo segno zodiacale e il tuo segno lunare dalla data di nascita, con l’elemento e la modalità di ciascuno. Se quel giorno il segno è cambiato, decide l’ora.</span></a></li>
+<li><a href="pianeti-oggi/#calculator"><strong>Pianeti oggi</strong><span>Dove sono oggi i pianeti: fase e segno della Luna, segno e grado di ogni pianeta, quali sono retrogradi e cosa cambia nei prossimi 7 giorni.</span></a></li>
+<li><a href="carta-del-giorno/#calculator"><strong>Carta del giorno</strong><span>Pesca la tua carta del giorno dal mazzo completo di 78 carte: il nome, dritta o capovolta, tre parole chiave, il tema e una domanda su cui riflettere. App Android, niente pubblicità.</span></a></li>
+<li><a href="dizionario-dei-sogni/"><strong>Dizionario dei sogni</strong></a></li>
+</ul>
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Schermata iniziale: il tuo Cosmic Code — percorso di vita e anno personale — con segno solare, lunare e ascendente" />
 <img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Tema natale con pianeti, case, aspetti, Ascendente e Medio Cielo" />
@@ -162,6 +181,9 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <li><a href="affinita-di-coppia/">Affinità di coppia</a></li>
 <li><a href="oroscopo-cinese/">Oroscopo cinese e vedico</a></li>
 <li><a href="mappa-del-cielo/">Mappa del cielo</a></li>
+<li><a href="che-segno-sono/">Che segno sono</a></li>
+<li><a href="pianeti-oggi/">Pianeti oggi</a></li>
+<li><a href="carta-del-giorno/">Carta del giorno</a></li>
 <li><a href="dizionario-dei-sogni/">Dizionario dei sogni</a></li>
 </ul>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT" rel="noopener">Disponibile su Google Play</a></p>

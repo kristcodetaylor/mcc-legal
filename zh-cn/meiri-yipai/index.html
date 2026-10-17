@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>每日一牌：抽一张牌，正位或逆位</title>
+<meta name="description" content="从完整的 78 张牌组中抽出你的每日一牌：牌名、正位或逆位、三个关键词、主题，以及一个值得静静思考的问题。Android 应用，无广告。" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://mycosmiccode.app/zh-cn/meiri-yipai/" />
+<link rel="alternate" hreflang="en" href="https://mycosmiccode.app/card-of-the-day/" />
+<link rel="alternate" hreflang="hr" href="https://mycosmiccode.app/hr/karta-dana/" />
+<link rel="alternate" hreflang="de" href="https://mycosmiccode.app/de/tageskarte/" />
+<link rel="alternate" hreflang="es" href="https://mycosmiccode.app/es/carta-del-dia/" />
+<link rel="alternate" hreflang="fr" href="https://mycosmiccode.app/fr/carte-du-jour/" />
+<link rel="alternate" hreflang="pt-BR" href="https://mycosmiccode.app/pt/carta-do-dia/" />
+<link rel="alternate" hreflang="it" href="https://mycosmiccode.app/it/carta-del-giorno/" />
+<link rel="alternate" hreflang="pl" href="https://mycosmiccode.app/pl/karta-dnia/" />
+<link rel="alternate" hreflang="tr" href="https://mycosmiccode.app/tr/gunun-karti/" />
+<link rel="alternate" hreflang="zh-TW" href="https://mycosmiccode.app/zh-tw/meiri-yipai/" />
+<link rel="alternate" hreflang="zh-CN" href="https://mycosmiccode.app/zh-cn/meiri-yipai/" />
+<link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/kyou-no-kaado/" />
+<link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/aaj-ka-card/" />
+<link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/card-of-the-day/" />
+<link rel="icon" href="../../icon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My Cosmic Code" />
+<meta property="og:title" content="每日一牌：抽一张牌，正位或逆位" />
+<meta property="og:description" content="从完整的 78 张牌组中抽出你的每日一牌：牌名、正位或逆位、三个关键词、主题，以及一个值得静静思考的问题。Android 应用，无广告。" />
+<meta property="og:url" content="https://mycosmiccode.app/zh-cn/meiri-yipai/" />
+<meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"从完整的 78 张牌组中抽出你的每日一牌：牌名、正位或逆位、三个关键词、主题，以及一个值得静静思考的问题。Android 应用，无广告。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-CN","url":"https://mycosmiccode.app/zh-cn/meiri-yipai/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"每日一牌是随机的吗？","acceptedAnswer":{"@type":"Answer","text":"是的。每次抽牌都会把整副牌重新洗过，这里和 App 里都一样。抽牌时不会用到任何关于你的信息。"}},{"@type":"Question","name":"逆位牌是什么意思？","acceptedAnswer":{"@type":"Answer","text":"就是上下颠倒出现的牌，它会显示逆位的关键词，而不是正位的。关闭“允许逆位牌”，每张牌就都会以正位出现。"}},{"@type":"Question","name":"这张牌会说出今天会发生什么吗？","acceptedAnswer":{"@type":"Answer","text":"不会。它给出关键词、主题和一个值得思考的问题：是可能的主题，而不是预测。你的选择和处境才会塑造你的一天。"}},{"@type":"Question","name":"牌有哪些语言？","acceptedAnswer":{"@type":"Answer","text":"App 的全部 13 种语言。牌名、关键词和问题都用每一种语言写成。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/zh-cn/"},{"@type":"ListItem","position":2,"name":"每日一牌","item":"https://mycosmiccode.app/zh-cn/meiri-yipai/"}]}]</script>
+<style>
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #05060A; color: #E8E6F0;
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+nav { display: flex; gap: 1.25rem; padding-bottom: 1.5rem; font-size: .9rem; }
+nav a { color: #C9A227; }
+h1 { font-size: 1.9rem; line-height: 1.25; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .5rem; color: #C9A227; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 .4rem; }
+p, ul { margin: 0 0 1rem; }
+ul { padding-left: 1.25rem; }
+li { margin-bottom: .4rem; }
+a { color: #9ecbff; }
+strong { color: #FFFFFF; }
+code {
+  background: #14161F; border-radius: 4px; padding: .1em .35em;
+  font: .875em/1.4 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+hr { border: 0; border-top: 1px solid #23262F; margin: 2.5rem 0; }
+blockquote {
+  margin: 1.25rem 0; padding: .75rem 1rem;
+  border-left: 3px solid #C9A227; background: #0C0E15;
+}
+blockquote p:last-child { margin-bottom: 0; }
+.scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid #23262F; vertical-align: top; }
+th { color: #C9A227; font-weight: 600; }
+footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
+@media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
+
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
+.cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
+.cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
+.lead { font-size: 1.15rem; color: #E8E6F0; }
+.shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
+.shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
+.svc { font-size: .9rem; line-height: 2; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
+<h1>每日一牌：从完整牌组中，为今天抽一张</h1>
+<p class="lead">一张牌，看看今天正在如何展开：这就是 My Cosmic Code 牌组里的每日一牌。现在就在这里抽。牌组在你的浏览器中洗牌，和 App 在手机上洗牌的方式相同。</p>
+<section class="tool" id="calculator">
+<h2>每日一牌：抽一张牌</h2>
+<p>从完整的 78 张牌中，为今天抽一张。你会看到牌名、是否为逆位、关键词、主题，以及一个值得静静思考的问题，和 App 里一样。</p>
+<div id="tool-root"><noscript><p>这个计算器需要 JavaScript。App 在你的手机上也能做到。</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"zh-cn","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=zh-CN","common":{"birthDate":"出生日期","birthTime":"出生时间","timeHint":"可不填。未填时，月亮按中午计算。","place":"城市","placeSearch":"输入城市","placeNone":"我们的列表里还没有这个城市。","calculate":"计算","badDate":"请输入真实的日期。","privacy":"在你的浏览器中计算。你输入的内容不会发送到任何地方，也不会保存。","more":"完整解读在 App 里","noscript":"这个计算器需要 JavaScript。App 在你的手机上也能做到。"},"s":{"title":"每日一牌：抽一张牌","intro":"从完整的 78 张牌中，为今天抽一张。你会看到牌名、是否为逆位、关键词、主题，以及一个值得静静思考的问题，和 App 里一样。","again":"再抽一次","how":"每次抽牌，都会在你的浏览器中把 78 张牌重新洗一遍，和 App 的抽法相同。允许逆位时，大约每两张就有一张是逆位。"},"labels":{"name":"每日一牌","desc":"一张牌，看看今天正在如何展开。","today":"今天","reversed":"逆位","keywords":"关键词","question":"值得静静思考的","reading":"面纱观者的解读","draw":"抽牌","reversedToggle":"允许逆位牌","notice":"可能的诠释——并非确定的预测。","cards":{"major-0":{"n":"愚者","up":"开端 · 信任 · 纵身一跃","rev":"犹豫 · 鲁莽 · 起步失误","th":"开端","q":"如果你确信自己不会失败，你会去尝试什么？这又说明了你真正害怕的是什么？"},"major-1":{"n":"魔术师","up":"善用资源 · 意志 · 第一步","rev":"注意力分散 · 未被开发的潜能 · 操纵","th":"能力","q":"在你手中已有的一切里，有什么是你其实还没真正试着用过的？"},"major-2":{"n":"女祭司","up":"直觉 · 未说出口的 · 内在的知晓","rev":"被忽视的直觉 · 秘密 · 失去连结","th":"内在的知晓","q":"在你一再对外讲述的那个版本之下，有什么是你其实早就知道了的？"},"major-3":{"n":"女皇","up":"成长 · 丰盛 · 滋养","rev":"疏于照料 · 透支 · 受阻的成长","th":"成长","q":"你一直在培育的东西里，有哪一样其实需要你放慢脚步去照料，而不是一味推着它走？"},"major-4":{"n":"皇帝","up":"结构 · 权威 · 自律","rev":"僵化 · 控制 · 不稳定","th":"结构","q":"在你生活中的哪个地方，一条清晰的边界会比再一次拼尽全力更有帮助？"},"major-5":{"n":"教皇","up":"传统 · 指引 · 共同的信念","rev":"僵化的成规 · 质疑权威 · 自己的路","th":"传承的智慧","q":"你遵循的规则中，哪一条是因为它真的适合你，哪一条只是因为你从未质疑过它？"},"major-6":{"n":"恋人","up":"连结 · 真正的选择 · 契合","rev":"失衡 · 回避 · 不契合","th":"真正的选择","q":"如果把最省事的选项放在一边，用你真正看重的东西来衡量，这个选择会是什么样子？"},"major-7":{"n":"战车","up":"驱动力 · 专注的意志 · 向前推进","rev":"力量分散 · 迷失方向 · 停滞的势头","th":"向前推进","q":"此刻你正试图把哪两件事拢在一起？要让它们真正朝向同一个方向，需要什么？"},"major-8":{"n":"力量","up":"沉静的决心 · 耐心 · 温柔的勇气","rev":"自我怀疑 · 强求 · 耗竭","th":"沉静的决心","q":"你一直在用力推动的哪件事，其实靠耐心——而不是更大的力气——才真正推得动？"},"major-9":{"n":"隐士","up":"独处 · 省思 · 内在的指引","rev":"孤立 · 回避 · 失去视角","th":"省思","q":"如果给你一周真正的安静，让你独自想想这件事，你会明白些什么？"},"major-10":{"n":"命运之轮","up":"变化 · 循环 · 转折点","rev":"抗拒变化 · 挫折 · 延迟","th":"转折点","q":"有什么已经悄悄改变了，而你还没有完全据此调整自己的计划？"},"major-11":{"n":"正义","up":"公平 · 担当 · 清晰的因果","rev":"失衡 · 逃避责任 · 悬而未决的事","th":"担当","q":"你在哪里等着别人对你公平，而更公平的那一步，其实只有你自己能迈出？"},"major-12":{"n":"倒吊人","up":"新的视角 · 臣服 · 有益的停顿","rev":"拖延 · 抗拒 · 不必要的牺牲","th":"新的视角","q":"如果你停下来一周，不再试图修补这个处境，只是静静观察它，它会是什么样子？"},"major-13":{"n":"死神","up":"结束 · 蜕变 · 放手","rev":"抗拒变化 · 拖延的结束 · 害怕失去","th":"蜕变","q":"有什么事你还称之为“进行中”，但老实说，它其实已经结束了？"},"major-14":{"n":"节制","up":"平衡 · 耐心 · 逐步融合","rev":"过度 · 失衡 · 急躁","th":"平衡","q":"你生活中有什么此刻比例失调——不是错了，只是太多或太少？"},"major-15":{"n":"恶魔","up":"执着 · 顽固的模式 · 束缚你的东西","rev":"挣脱 · 直面模式 · 夺回掌控","th":"束缚你的东西","q":"有哪种模式你一直称之为“事情就是这样”，而实际上你对它的掌控比你承认的要多？"},"major-16":{"n":"高塔","up":"突变 · 艰难的真相 · 必要的崩塌","rev":"推迟的崩塌 · 害怕改变 · 险些发生","th":"突变","q":"你生活中的哪个结构，是你宁愿不承认它已经开始出现裂缝的？"},"major-17":{"n":"星星","up":"希望 · 复苏 · 安静的信念","rev":"气馁 · 与希望失联 · 自我怀疑","th":"复苏","q":"如果你允许自己去做，有哪件微小、不起眼的事，此刻能真正让你重拾希望？"},"major-18":{"n":"月亮","up":"不确定 · 潜意识 · 尚未明朗的事","rev":"逐渐浮现的清晰 · 放下的恐惧 · 直面幻象","th":"未明之事","q":"有什么让你害怕的事，是你其实还没有正面看过的？"},"major-19":{"n":"太阳","up":"清晰 · 活力 · 真正的喜悦","rev":"暂时的挫折 · 迟来的喜悦 · 蒙上阴影的自信","th":"清晰","q":"有什么事其实此刻进展得不错，而你一直忙得没有注意到？"},"major-20":{"n":"审判","up":"如实盘点 · 当头棒喝 · 明确的答案","rev":"自我怀疑 · 回避盘点 · 严苛的自我评判","th":"如实盘点","q":"有什么问题，你一直回避给出直截了当的回答，甚至对自己也是如此？"},"major-21":{"n":"世界","up":"圆满 · 完整 · 抵达","rev":"未完成 · 延迟 · 未了之事","th":"圆满","q":"在你能诚实地说这一章已经完成之前，还缺的那一块是什么？"},"wands-ace":{"n":"权杖王牌","up":"新的火花 · 原始的潜能 · 一扇打开的门","rev":"起步失误 · 受阻的潜能 · 犹豫","th":"新的火花","q":"在抱负与创造动力方面，有什么正在你身上刚刚开始，而你还没决定要拿它怎么办？"},"wands-two":{"n":"权杖二","up":"选择 · 伙伴关系 · 权衡选项","rev":"犹豫不决 · 失衡 · 搁浅的选择","th":"二","q":"在抱负与创造动力方面，你此刻正在权衡什么选择？真正让你迟迟不做决定的是什么？"},"wands-three":{"n":"权杖三","up":"初步进展 · 协作 · 成长","rev":"延迟 · 摩擦 · 落空的期待","th":"三","q":"在抱负与创造动力方面，有哪些初步进展值得你给予比现在更多的肯定？"},"wands-four":{"n":"权杖四","up":"稳定 · 停顿 · 巩固","rev":"停滞 · 躁动不安 · 根基不稳","th":"四","q":"在抱负与创造动力方面，哪里真正停一停，会比一鼓作气冲过去对你更有益？"},"wands-five":{"n":"权杖五","up":"冲突 · 挫折 · 考验","rev":"被回避的冲突 · 化解 · 精疲力竭","th":"五","q":"在抱负与创造动力方面，有什么摩擦被你当作危机来对待，而它也许只是一次考验？"},"wands-six":{"n":"权杖六","up":"恢复 · 合作 · 小小的胜利","rev":"失衡 · 旧有模式 · 迟迟未来的恢复","th":"六","q":"此刻，在抱负与创造动力方面真正的恢复，对你来说具体会是什么样子？"},"wands-seven":{"n":"权杖七","up":"耐心 · 评估 · 稳住","rev":"急躁 · 反复怀疑 · 过早放弃","th":"七","q":"在抱负与创造动力方面，有什么是你快要放弃的，而它恰恰正要开始有回报？"},"wands-eight":{"n":"权杖八","up":"势头 · 专注的努力 · 进展","rev":"停滞不前 · 分散的努力 · 挫败感","th":"八","q":"在抱负与创造动力方面，哪里其实比你自己承认的更有势头？"},"wands-nine":{"n":"权杖九","up":"接近完成 · 韧性 · 门槛","rev":"疲惫 · 戒备心 · 临近终点的挫折","th":"九","q":"在抱负与创造动力方面，有什么其实比现在感觉的更接近完成？"},"wands-ten":{"n":"权杖十","up":"顶点 · 圆满实现 · 全部的重量","rev":"不堪重负 · 迟迟未到的结束 · 需要放手","th":"十","q":"在抱负与创造动力方面，有什么是你一路扛到了终点的？终于把它放下，会是什么感觉？"},"wands-page":{"n":"权杖侍从","up":"好奇 · 新的消息 · 开放","rev":"天真 · 准备不足 · 错过的信号","th":"侍从","q":"在抱负与创造动力方面，你在哪里可以允许自己更像个初学者——带着好奇，而不是早已笃定？"},"wands-knight":{"n":"权杖骑士","up":"追寻 · 冲劲 · 投入","rev":"鲁莽 · 停滞的追寻 · 用错方向的力气","th":"骑士","q":"在抱负与创造动力方面，你此刻在追逐什么？这样的节奏真的有助于达到目标吗？"},"wands-queen":{"n":"权杖王后","up":"内在的精通 · 沉稳 · 挣来的自信","rev":"自我怀疑 · 藏起的智慧 · 耗竭","th":"王后","q":"在抱负与创造动力方面，你其实早已挣得了更多自信，却还没允许自己用上——是在哪里？"},"wands-king":{"n":"权杖国王","up":"权威 · 掌控 · 经验","rev":"僵硬的控制 · 越界 · 滥用权威","th":"国王","q":"在抱负与创造动力方面，你在哪里已经成了别人期待能稳稳带路的那个人？"},"cups-ace":{"n":"圣杯王牌","up":"新的火花 · 原始的潜能 · 一扇打开的门","rev":"起步失误 · 受阻的潜能 · 犹豫","th":"新的火花","q":"在情感与连结方面，有什么正在你身上刚刚开始，而你还没决定要拿它怎么办？"},"cups-two":{"n":"圣杯二","up":"选择 · 伙伴关系 · 权衡选项","rev":"犹豫不决 · 失衡 · 搁浅的选择","th":"二","q":"在情感与连结方面，你此刻正在权衡什么选择？真正让你迟迟不做决定的是什么？"},"cups-three":{"n":"圣杯三","up":"初步进展 · 协作 · 成长","rev":"延迟 · 摩擦 · 落空的期待","th":"三","q":"在情感与连结方面，有哪些初步进展值得你给予比现在更多的肯定？"},"cups-four":{"n":"圣杯四","up":"稳定 · 停顿 · 巩固","rev":"停滞 · 躁动不安 · 根基不稳","th":"四","q":"在情感与连结方面，哪里真正停一停，会比一鼓作气冲过去对你更有益？"},"cups-five":{"n":"圣杯五","up":"冲突 · 挫折 · 考验","rev":"被回避的冲突 · 化解 · 精疲力竭","th":"五","q":"在情感与连结方面，有什么摩擦被你当作危机来对待，而它也许只是一次考验？"},"cups-six":{"n":"圣杯六","up":"恢复 · 合作 · 小小的胜利","rev":"失衡 · 旧有模式 · 迟迟未来的恢复","th":"六","q":"此刻，在情感与连结方面真正的恢复，对你来说具体会是什么样子？"},"cups-seven":{"n":"圣杯七","up":"耐心 · 评估 · 稳住","rev":"急躁 · 反复怀疑 · 过早放弃","th":"七","q":"在情感与连结方面，有什么是你快要放弃的，而它恰恰正要开始有回报？"},"cups-eight":{"n":"圣杯八","up":"势头 · 专注的努力 · 进展","rev":"停滞不前 · 分散的努力 · 挫败感","th":"八","q":"在情感与连结方面，哪里其实比你自己承认的更有势头？"},"cups-nine":{"n":"圣杯九","up":"接近完成 · 韧性 · 门槛","rev":"疲惫 · 戒备心 · 临近终点的挫折","th":"九","q":"在情感与连结方面，有什么其实比现在感觉的更接近完成？"},"cups-ten":{"n":"圣杯十","up":"顶点 · 圆满实现 · 全部的重量","rev":"不堪重负 · 迟迟未到的结束 · 需要放手","th":"十","q":"在情感与连结方面，有什么是你一路扛到了终点的？终于把它放下，会是什么感觉？"},"cups-page":{"n":"圣杯侍从","up":"好奇 · 新的消息 · 开放","rev":"天真 · 准备不足 · 错过的信号","th":"侍从","q":"在情感与连结方面，你在哪里可以允许自己更像个初学者——带着好奇，而不是早已笃定？"},"cups-knight":{"n":"圣杯骑士","up":"追寻 · 冲劲 · 投入","rev":"鲁莽 · 停滞的追寻 · 用错方向的力气","th":"骑士","q":"在情感与连结方面，你此刻在追逐什么？这样的节奏真的有助于达到目标吗？"},"cups-queen":{"n":"圣杯王后","up":"内在的精通 · 沉稳 · 挣来的自信","rev":"自我怀疑 · 藏起的智慧 · 耗竭","th":"王后","q":"在情感与连结方面，你其实早已挣得了更多自信，却还没允许自己用上——是在哪里？"},"cups-king":{"n":"圣杯国王","up":"权威 · 掌控 · 经验","rev":"僵硬的控制 · 越界 · 滥用权威","th":"国王","q":"在情感与连结方面，你在哪里已经成了别人期待能稳稳带路的那个人？"},"swords-ace":{"n":"宝剑王牌","up":"新的火花 · 原始的潜能 · 一扇打开的门","rev":"起步失误 · 受阻的潜能 · 犹豫","th":"新的火花","q":"在思想、真相与冲突方面，有什么正在你身上刚刚开始，而你还没决定要拿它怎么办？"},"swords-two":{"n":"宝剑二","up":"选择 · 伙伴关系 · 权衡选项","rev":"犹豫不决 · 失衡 · 搁浅的选择","th":"二","q":"在思想、真相与冲突方面，你此刻正在权衡什么选择？真正让你迟迟不做决定的是什么？"},"swords-three":{"n":"宝剑三","up":"初步进展 · 协作 · 成长","rev":"延迟 · 摩擦 · 落空的期待","th":"三","q":"在思想、真相与冲突方面，有哪些初步进展值得你给予比现在更多的肯定？"},"swords-four":{"n":"宝剑四","up":"稳定 · 停顿 · 巩固","rev":"停滞 · 躁动不安 · 根基不稳","th":"四","q":"在思想、真相与冲突方面，哪里真正停一停，会比一鼓作气冲过去对你更有益？"},"swords-five":{"n":"宝剑五","up":"冲突 · 挫折 · 考验","rev":"被回避的冲突 · 化解 · 精疲力竭","th":"五","q":"在思想、真相与冲突方面，有什么摩擦被你当作危机来对待，而它也许只是一次考验？"},"swords-six":{"n":"宝剑六","up":"恢复 · 合作 · 小小的胜利","rev":"失衡 · 旧有模式 · 迟迟未来的恢复","th":"六","q":"此刻，在思想、真相与冲突方面真正的恢复，对你来说具体会是什么样子？"},"swords-seven":{"n":"宝剑七","up":"耐心 · 评估 · 稳住","rev":"急躁 · 反复怀疑 · 过早放弃","th":"七","q":"在思想、真相与冲突方面，有什么是你快要放弃的，而它恰恰正要开始有回报？"},"swords-eight":{"n":"宝剑八","up":"势头 · 专注的努力 · 进展","rev":"停滞不前 · 分散的努力 · 挫败感","th":"八","q":"在思想、真相与冲突方面，哪里其实比你自己承认的更有势头？"},"swords-nine":{"n":"宝剑九","up":"接近完成 · 韧性 · 门槛","rev":"疲惫 · 戒备心 · 临近终点的挫折","th":"九","q":"在思想、真相与冲突方面，有什么其实比现在感觉的更接近完成？"},"swords-ten":{"n":"宝剑十","up":"顶点 · 圆满实现 · 全部的重量","rev":"不堪重负 · 迟迟未到的结束 · 需要放手","th":"十","q":"在思想、真相与冲突方面，有什么是你一路扛到了终点的？终于把它放下，会是什么感觉？"},"swords-page":{"n":"宝剑侍从","up":"好奇 · 新的消息 · 开放","rev":"天真 · 准备不足 · 错过的信号","th":"侍从","q":"在思想、真相与冲突方面，你在哪里可以允许自己更像个初学者——带着好奇，而不是早已笃定？"},"swords-knight":{"n":"宝剑骑士","up":"追寻 · 冲劲 · 投入","rev":"鲁莽 · 停滞的追寻 · 用错方向的力气","th":"骑士","q":"在思想、真相与冲突方面，你此刻在追逐什么？这样的节奏真的有助于达到目标吗？"},"swords-queen":{"n":"宝剑王后","up":"内在的精通 · 沉稳 · 挣来的自信","rev":"自我怀疑 · 藏起的智慧 · 耗竭","th":"王后","q":"在思想、真相与冲突方面，你其实早已挣得了更多自信，却还没允许自己用上——是在哪里？"},"swords-king":{"n":"宝剑国王","up":"权威 · 掌控 · 经验","rev":"僵硬的控制 · 越界 · 滥用权威","th":"国王","q":"在思想、真相与冲突方面，你在哪里已经成了别人期待能稳稳带路的那个人？"},"pentacles-ace":{"n":"星币王牌","up":"新的火花 · 原始的潜能 · 一扇打开的门","rev":"起步失误 · 受阻的潜能 · 犹豫","th":"新的火花","q":"在工作、资源与物质世界方面，有什么正在你身上刚刚开始，而你还没决定要拿它怎么办？"},"pentacles-two":{"n":"星币二","up":"选择 · 伙伴关系 · 权衡选项","rev":"犹豫不决 · 失衡 · 搁浅的选择","th":"二","q":"在工作、资源与物质世界方面，你此刻正在权衡什么选择？真正让你迟迟不做决定的是什么？"},"pentacles-three":{"n":"星币三","up":"初步进展 · 协作 · 成长","rev":"延迟 · 摩擦 · 落空的期待","th":"三","q":"在工作、资源与物质世界方面，有哪些初步进展值得你给予比现在更多的肯定？"},"pentacles-four":{"n":"星币四","up":"稳定 · 停顿 · 巩固","rev":"停滞 · 躁动不安 · 根基不稳","th":"四","q":"在工作、资源与物质世界方面，哪里真正停一停，会比一鼓作气冲过去对你更有益？"},"pentacles-five":{"n":"星币五","up":"冲突 · 挫折 · 考验","rev":"被回避的冲突 · 化解 · 精疲力竭","th":"五","q":"在工作、资源与物质世界方面，有什么摩擦被你当作危机来对待，而它也许只是一次考验？"},"pentacles-six":{"n":"星币六","up":"恢复 · 合作 · 小小的胜利","rev":"失衡 · 旧有模式 · 迟迟未来的恢复","th":"六","q":"此刻，在工作、资源与物质世界方面真正的恢复，对你来说具体会是什么样子？"},"pentacles-seven":{"n":"星币七","up":"耐心 · 评估 · 稳住","rev":"急躁 · 反复怀疑 · 过早放弃","th":"七","q":"在工作、资源与物质世界方面，有什么是你快要放弃的，而它恰恰正要开始有回报？"},"pentacles-eight":{"n":"星币八","up":"势头 · 专注的努力 · 进展","rev":"停滞不前 · 分散的努力 · 挫败感","th":"八","q":"在工作、资源与物质世界方面，哪里其实比你自己承认的更有势头？"},"pentacles-nine":{"n":"星币九","up":"接近完成 · 韧性 · 门槛","rev":"疲惫 · 戒备心 · 临近终点的挫折","th":"九","q":"在工作、资源与物质世界方面，有什么其实比现在感觉的更接近完成？"},"pentacles-ten":{"n":"星币十","up":"顶点 · 圆满实现 · 全部的重量","rev":"不堪重负 · 迟迟未到的结束 · 需要放手","th":"十","q":"在工作、资源与物质世界方面，有什么是你一路扛到了终点的？终于把它放下，会是什么感觉？"},"pentacles-page":{"n":"星币侍从","up":"好奇 · 新的消息 · 开放","rev":"天真 · 准备不足 · 错过的信号","th":"侍从","q":"在工作、资源与物质世界方面，你在哪里可以允许自己更像个初学者——带着好奇，而不是早已笃定？"},"pentacles-knight":{"n":"星币骑士","up":"追寻 · 冲劲 · 投入","rev":"鲁莽 · 停滞的追寻 · 用错方向的力气","th":"骑士","q":"在工作、资源与物质世界方面，你此刻在追逐什么？这样的节奏真的有助于达到目标吗？"},"pentacles-queen":{"n":"星币王后","up":"内在的精通 · 沉稳 · 挣来的自信","rev":"自我怀疑 · 藏起的智慧 · 耗竭","th":"王后","q":"在工作、资源与物质世界方面，你其实早已挣得了更多自信，却还没允许自己用上——是在哪里？"},"pentacles-king":{"n":"星币国王","up":"权威 · 掌控 · 经验","rev":"僵硬的控制 · 越界 · 滥用权威","th":"国王","q":"在工作、资源与物质世界方面，你在哪里已经成了别人期待能稳稳带路的那个人？"}}}}</script>
+<script type="module" src="../../tools/card-of-the-day.js"></script>
+</section>
+<a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a>
+<h2>你会看到</h2>
+<ul>
+<li>牌名：从愚者（0）到世界（21）的 22 张牌之一，或权杖、圣杯、宝剑、星币四种花色 56 张牌之一。</li>
+<li>这张牌是正位还是逆位。你可以关闭逆位牌。</li>
+<li>三个关键词，牌为逆位时会随之改变。</li>
+<li>这张牌的主题，以及一个值得静静思考的问题。</li>
+</ul>
+<h2>牌是怎么抽出的</h2>
+<p>78 张牌全部洗匀后取出一张。牌在任何文字出现之前就已选定，文字永远不会改变它：你看到的一定是为这张牌写的内容。允许逆位时，由抛硬币决定它朝哪个方向落下。</p>
+<h2>牌组里的更多内容</h2>
+<ul>
+<li>快速洞见：为你心里想的事抽一张牌，想问的话也可以附上问题。</li>
+<li>三张牌的解读：过去 / 现在 / 未来、现状 / 挑战 / 指引、爱情与关系、事业与创作之路，以及抉择：选项A与选项B。</li>
+<li>阴影解读，以及十张牌的凯尔特十字。</li>
+<li>保存你的解读，之后再打开查看。</li>
+</ul>
+<h2>从设计上保护隐私</h2>
+<p>无广告、无数据分析、无追踪器、无需账号。你的出生信息、星盘和日记只保存在你的设备上，你可以在应用内导出或删除。这个页面上的牌是在你的浏览器中抽出的，不会发送也不会保存任何内容。</p>
+<h2>常见问题</h2>
+<h3>每日一牌是随机的吗？</h3>
+<p>是的。每次抽牌都会把整副牌重新洗过，这里和 App 里都一样。抽牌时不会用到任何关于你的信息。</p>
+<h3>逆位牌是什么意思？</h3>
+<p>就是上下颠倒出现的牌，它会显示逆位的关键词，而不是正位的。关闭“允许逆位牌”，每张牌就都会以正位出现。</p>
+<h3>这张牌会说出今天会发生什么吗？</h3>
+<p>不会。它给出关键词、主题和一个值得思考的问题：是可能的主题，而不是预测。你的选择和处境才会塑造你的一天。</p>
+<h3>牌有哪些语言？</h3>
+<p>App 的全部 13 种语言。牌名、关键词和问题都用每一种语言写成。</p>
+<p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a></p>
+<p class="svc"><a href="../xingpan/">本命盘</a> · <a href="../yueli/">月相日历</a> · <a href="../shuzi-mingli/">生命灵数</a> · <a href="../xingzuo-peidui/">星座配对</a> · <a href="../shengxiao/">生肖与吠陀占星</a> · <a href="../xingtu/">星图</a> · <a href="../xingzuo-chaxun/">星座查询</a> · <a href="../jinri-xingxiang/">今日行星</a> · <strong>每日一牌</strong></p>
+<footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
+</div>
+</body>
+</html>

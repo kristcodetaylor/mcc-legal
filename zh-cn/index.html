@@ -82,6 +82,12 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .langs { font-size: .9rem; line-height: 2; }
 .shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
+
+.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+.svc a { display: block; height: 100%; padding: .9rem 1rem; border: 1px solid #2A2D3D; border-radius: 14px; background: #0E1018; text-decoration: none; }
+.svc a:hover, .svc a:focus-visible { border-color: #C9A227; }
+.svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
+.svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
 </style>
 </head>
 <body>
@@ -93,6 +99,18 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <p class="lead">每日星座运势、本命盘、星座配对、生肖、九星气学、吠陀占星与解梦词典</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a>
 </header>
+<h2>在浏览器里直接试用</h2>
+<ul class="svc">
+<li><a href="xingpan/#calculator"><strong>本命盘</strong><span>根据你的出生日期、时间和地点计算本命盘：太阳、月亮和上升星座，行星、宫位与相位。免费 Android 应用，无需账号，无广告。</span></a></li>
+<li><a href="yueli/#calculator"><strong>月相日历</strong><span>月相、月相日历以及今天月亮所在的星座，逐日显示，并与你本命盘中的月亮对照。免费 Android 占星应用，无广告。</span></a></li>
+<li><a href="shuzi-mingli/#calculator"><strong>生命灵数</strong><span>根据出生日期算出你的生命灵数、个人流年数和个人流日数，每一步算式都列出来。免费 Android 应用，无需账号。</span></a></li>
+<li><a href="xingzuo-peidui/#calculator"><strong>星座配对</strong><span>免费在线计算合盘：从爱情、亲密关系、友情、工作和身心健康五个方面比较两张本命盘，含合盘相位、组合盘和宫位叠加。不打分，无广告。</span></a></li>
+<li><a href="shengxiao/#calculator"><strong>生肖与吠陀占星</strong><span>按实际的农历新年日期查你的生肖和五行，还有日本干支生肖（eto）与九星气学本命星，以及你的吠陀月亮星座和星宿（nakshatra）。Android 应用，无需账号。</span></a></li>
+<li><a href="xingtu/#calculator"><strong>星图</strong><span>任何地点、任何时刻的真实夜空：肉眼可见的恒星、88 个星座、今晚能看到的行星，以及你出生那天的星空。Android 应用，无广告。</span></a></li>
+<li><a href="xingzuo-chaxun/#calculator"><strong>星座查询</strong><span>用出生日期查出你的星座和月亮星座，以及各自的元素与模式。如果星座在那天刚好转换，由出生时间决定。</span></a></li>
+<li><a href="jinri-xingxiang/#calculator"><strong>今日行星</strong><span>今天行星在哪里：月相与月亮星座、每颗行星的星座与度数、哪些行星正在逆行，以及未来 7 天的变化。</span></a></li>
+<li><a href="meiri-yipai/#calculator"><strong>每日一牌</strong><span>从完整的 78 张牌组中抽出你的每日一牌：牌名、正位或逆位、三个关键词、主题，以及一个值得静静思考的问题。Android 应用，无广告。</span></a></li>
+</ul>
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="主屏幕：你的 Cosmic Code——生命灵数和个人流年数——以及太阳、月亮和上升星座" />
 <img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="本命盘图，包含行星、宫位、相位、上升点和天顶" />
@@ -169,6 +187,9 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <li><a href="xingzuo-peidui/">星座配对</a></li>
 <li><a href="shengxiao/">生肖与吠陀占星</a></li>
 <li><a href="xingtu/">星图</a></li>
+<li><a href="xingzuo-chaxun/">星座查询</a></li>
+<li><a href="jinri-xingxiang/">今日行星</a></li>
+<li><a href="meiri-yipai/">每日一牌</a></li>
 </ul>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a></p>
 <h2>法律信息</h2>

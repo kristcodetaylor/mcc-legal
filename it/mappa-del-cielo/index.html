@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Mappa del cielo: il cielo vero sopra di te, stasera o il giorno della tua nascita</h1>
 <p class="lead">Alza il telefono e guarda cosa c’è sopra di te: le stelle, le costellazioni, la Luna e i pianeti, per qualsiasi luogo e a qualsiasi ora. My Cosmic Code calcola il cielo sul tuo telefono con l’astronomia reale e, nella vista Il mio cielo cosmico, mostra anche i pianeti della tua nascita tra le stelle.</p>
+<section class="tool" id="calculator">
+<h2>Mappa del cielo: il cielo sopra di te, adesso</h2>
+<p>Scegli una città per vedere il cielo reale sopra di essa in questo momento: le stelle, le figure e i nomi delle costellazioni, la Luna e i pianeti, con l’orizzonte e i punti cardinali.</p>
+<div id="tool-root"><noscript><p>Questo calcolatore richiede JavaScript. L’app fa lo stesso sul tuo telefono.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"it","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=it-IT","common":{"birthDate":"Data di nascita","birthTime":"Ora di nascita","timeHint":"Facoltativa. Senza, la Luna è calcolata a mezzogiorno.","place":"Città","placeSearch":"Scrivi una città","placeNone":"Questa città non è ancora nella nostra lista.","calculate":"Calcola","badDate":"Inserisci una data reale.","privacy":"Calcolato nel tuo browser. Niente di ciò che scrivi viene inviato o salvato.","more":"La lettura completa è nell’app","noscript":"Questo calcolatore richiede JavaScript. L’app fa lo stesso sul tuo telefono."},"s":{"title":"Mappa del cielo: il cielo sopra di te, adesso","intro":"Scegli una città per vedere il cielo reale sopra di essa in questo momento: le stelle, le figure e i nomi delle costellazioni, la Luna e i pianeti, con l’orizzonte e i punti cardinali.","show":"Mostra il cielo","pickCity":"Scegli una città dall’elenco.","hint":"Trascina per guardarti intorno; + e − per lo zoom.","up":"Sopra l’orizzonte adesso","noneUp":"Il Sole, la Luna e i pianeti sono tutti sotto l’orizzonte in questo momento.","zoomIn":"Ingrandisci","zoomOut":"Riduci","map":"Mappa del cielo: {city}"},"labels":{"bodies":{"sun":"Sole","moon":"Luna","mercury":"Mercurio","venus":"Venere","mars":"Marte","jupiter":"Giove","saturn":"Saturno","uranus":"Urano","neptune":"Nettuno","pluto":"Plutone"},"compass":{"n":"N","e":"E","s":"S","w":"O"},"layers":{"lines":"Figure","names":"Nomi","ground":"Paesaggio"},"daylight":"Il Sole è sopra l’orizzonte. Le stelle sono ancora lì; la luce del giorno le nasconde.","twilight":"Crepuscolo: per ora si vedono solo le stelle più luminose.","now":"Adesso","resetView":"Ripristina la vista","credits":"Stelle: Yale Bright Star Catalogue. Figure: M. van der Sluys, CC BY 4.0. Nomi delle stelle: IAU WGSN. Posizioni del cielo profondo: SIMBAD (CDS). Posizioni: astronomy-engine."}}</script>
+<script type="module" src="../../tools/night-sky.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT" rel="noopener">Disponibile su Google Play</a>
 <h2>Cosa vedi</h2>
 <ul>
@@ -117,7 +153,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>È gratis?</h3>
 <p>L’app si scarica gratis e, nella versione attuale, tutte le funzioni sono aperte. Niente pubblicità.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT" rel="noopener">Disponibile su Google Play</a></p>
-<p class="svc"><a href="../tema-natale/">Tema natale</a> · <a href="../calendario-lunare/">Calendario lunare</a> · <a href="../numerologia/">Numerologia</a> · <a href="../affinita-di-coppia/">Affinità di coppia</a> · <a href="../oroscopo-cinese/">Oroscopo cinese e vedico</a> · <strong>Mappa del cielo</strong> · <a href="../dizionario-dei-sogni/">Dizionario dei sogni</a></p>
+<p class="svc"><a href="../tema-natale/">Tema natale</a> · <a href="../calendario-lunare/">Calendario lunare</a> · <a href="../numerologia/">Numerologia</a> · <a href="../affinita-di-coppia/">Affinità di coppia</a> · <a href="../oroscopo-cinese/">Oroscopo cinese e vedico</a> · <strong>Mappa del cielo</strong> · <a href="../che-segno-sono/">Che segno sono</a> · <a href="../pianeti-oggi/">Pianeti oggi</a> · <a href="../carta-del-giorno/">Carta del giorno</a> · <a href="../dizionario-dei-sogni/">Dizionario dei sogni</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Sinastri hesaplama: iki eksiksiz doğum haritasından burç uyumu</h1>
 <p class="lead">Güneş burcu uyumu iki burcu karşılaştırır. My Cosmic Code iki doğum haritasının tamamını, bir kişinin her gezegenini diğerinin her gezegeniyle karşılaştırır ve nerede buluştuklarını gösterir.</p>
+<section class="tool" id="calculator">
+<h2>Burç uyumu hesaplayıcı</h2>
+<p>İki doğum tarihi gir; iki Güneş ve Ay burcunu, saatleri ve yerleri biliyorsan iki yükselen burcu ve haritalarınızın buluştuğu element çiftini gör.</p>
+<div id="tool-root"><noscript><p>Bu hesaplayıcı JavaScript gerektirir. Uygulama aynısını telefonunda yapar.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"tr","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=tr-TR","common":{"birthDate":"Doğum tarihi","birthTime":"Doğum saati","timeHint":"İsteğe bağlı. Girilmezse Ay öğle saatine göre hesaplanır.","place":"Şehir","placeSearch":"Bir şehir yaz","placeNone":"Bu şehir henüz listemizde yok.","calculate":"Hesapla","badDate":"Gerçek bir tarih gir.","privacy":"Tarayıcında hesaplanır. Yazdığın hiçbir şey gönderilmez ve kaydedilmez.","more":"Tam yorum uygulamada","noscript":"Bu hesaplayıcı JavaScript gerektirir. Uygulama aynısını telefonunda yapar."},"s":{"title":"Burç uyumu hesaplayıcı","intro":"İki doğum tarihi gir; iki Güneş ve Ay burcunu, saatleri ve yerleri biliyorsan iki yükselen burcu ve haritalarınızın buluştuğu element çiftini gör.","them":"Diğer kişi","timeHint":"İsteğe bağlı. Girilmezse Ay yalnızca bütün gün aynı burçta kalıyorsa gösterilir.","placeHint":"İsteğe bağlı. Saatle birlikte yükselen burcu verir.","moonUnknown":"Ay’daki çizgi, Ay’ın o gün burç değiştirdiği anlamına gelir. Doğum saati bunu netleştirir.","sunElements":"Güneş elementleri","inApp":"Uygulamada bu çift şu alanlarda okunur: {list}.","sep":", ","profiles":{"aries":{"rulingPlanet":"Mars","birthstone":"Elmas","color":"Kırmızı"},"taurus":{"rulingPlanet":"Venüs","birthstone":"Zümrüt","color":"Yeşil"},"gemini":{"rulingPlanet":"Merkür","birthstone":"Akik","color":"Sarı"},"cancer":{"rulingPlanet":"Ay","birthstone":"Ay taşı","color":"Gümüş"},"leo":{"rulingPlanet":"Güneş","birthstone":"Peridot","color":"Altın"},"virgo":{"rulingPlanet":"Merkür","birthstone":"Safir","color":"Lacivert"},"libra":{"rulingPlanet":"Venüs","birthstone":"Opal","color":"Pastel pembe"},"scorpio":{"rulingPlanet":"Plüton","birthstone":"Topaz","color":"Koyu kırmızı"},"sagittarius":{"rulingPlanet":"Jüpiter","birthstone":"Turkuaz","color":"Mor"},"capricorn":{"rulingPlanet":"Satürn","birthstone":"Garnet","color":"Kahverengi"},"aquarius":{"rulingPlanet":"Uranüs","birthstone":"Ametist","color":"Elektrik mavisi"},"pisces":{"rulingPlanet":"Neptün","birthstone":"Akuamarin","color":"Deniz yeşili"}}},"labels":{"signs":{"aries":"Koç","taurus":"Boğa","gemini":"İkizler","cancer":"Yengeç","leo":"Aslan","virgo":"Başak","libra":"Terazi","scorpio":"Akrep","sagittarius":"Yay","capricorn":"Oğlak","aquarius":"Kova","pisces":"Balık"},"sun":"Güneş","moon":"Ay","rising":"Yükselen","elements":{"fire":"Ateş","earth":"Toprak","air":"Hava","water":"Su"},"you":"Sen","risingUnknownBoth":"Yükselen için ikinizin de tam doğum saati ve yeri gerekir.","profileEyebrow":"GÜNEŞ BURCU PROFİLİ","rulingPlanet":"Yönetici gezegen","birthstone":"Doğum taşı","color":"Renk","synastryEyebrow":"HARİTALARINIZIN BULUŞTUĞU YERLER","domains":{"friendship":"Arkadaşlık","business":"İş","romantic":"Romantik","sexual":"Cinsel","health":"Sağlık"},"aspectsEyebrow":"ARANIZDAKİ AÇILAR","aspectsNeedTier":"Evler, Yükselen, Tepe Noktası ve tüm açılar Pro’ya dahildir."}}</script>
+<script type="module" src="../../tools/compatibility.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=tr-TR" rel="noopener">Google Play’den edinin</a>
 <h2>Neleri karşılaştırırsın</h2>
 <ul>
@@ -100,7 +136,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Ücretsiz mi?</h3>
 <p>Uygulamayı indirmek ücretsizdir ve mevcut sürümde tüm özellikler açıktır. Reklam yok.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=tr-TR" rel="noopener">Google Play’den edinin</a></p>
-<p class="svc"><a href="../dogum-haritasi/">Doğum haritası</a> · <a href="../ay-takvimi/">Ay takvimi</a> · <a href="../numeroloji/">Numeroloji</a> · <strong>Burç uyumu</strong> · <a href="../cin-burcu/">Çin ve Vedik burç</a> · <a href="../gokyuzu-haritasi/">Gökyüzü haritası</a> · <a href="../ruya-tabirleri/">Rüya tabirleri</a></p>
+<p class="svc"><a href="../dogum-haritasi/">Doğum haritası</a> · <a href="../ay-takvimi/">Ay takvimi</a> · <a href="../numeroloji/">Numeroloji</a> · <strong>Burç uyumu</strong> · <a href="../cin-burcu/">Çin ve Vedik burç</a> · <a href="../gokyuzu-haritasi/">Gökyüzü haritası</a> · <a href="../burcum-ne/">Burcum ne</a> · <a href="../gezegenler-bugun/">Bugün gezegenler</a> · <a href="../gunun-karti/">Günün Kartı</a> · <a href="../ruya-tabirleri/">Rüya tabirleri</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

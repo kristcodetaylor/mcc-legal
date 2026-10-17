@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>月相日历：每天的月相与月亮星座</h1>
 <p class="lead">月亮大约 29.5 天走完一轮月相，每两到三天换一个星座。My Cosmic Code 同时显示今晚的月相和月亮此刻所在的星座，并与你本命盘中的月亮对照。</p>
+<section class="tool" id="calculator">
+<h2>按日期查询月相与月亮星座</h2>
+<p>选择日期，查看当天的月相、月亮被照亮的比例和所在星座，以及之后七天。加上城市，日期和时间就会按当地时间显示。</p>
+<div id="tool-root"><noscript><p>这个计算器需要 JavaScript。App 在你的手机上也能做到。</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"zh-cn","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=zh-CN","common":{"birthDate":"出生日期","birthTime":"出生时间","timeHint":"可不填。未填时，月亮按中午计算。","place":"城市","placeSearch":"输入城市","placeNone":"我们的列表里还没有这个城市。","calculate":"计算","badDate":"请输入真实的日期。","privacy":"在你的浏览器中计算。你输入的内容不会发送到任何地方，也不会保存。","more":"完整解读在 App 里","noscript":"这个计算器需要 JavaScript。App 在你的手机上也能做到。"},"s":{"title":"按日期查询月相与月亮星座","intro":"选择日期，查看当天的月相、月亮被照亮的比例和所在星座，以及之后七天。加上城市，日期和时间就会按当地时间显示。","date":"日期","cityHint":"可不填。选了城市，日期与时间即为当地时间。","phase":"月相","sign":"月亮星座","day":"日期","utcNote":"日期按 UTC 计算。选择城市，即可看到月亮换星座和月相正好形成的确切时间。","zoneNote":"时间为{z}。箭头标出月亮进入下一个星座的时间。","now":"此刻","noon":"中午"},"labels":{"signs":{"aries":"白羊座","taurus":"金牛座","gemini":"双子座","cancer":"巨蟹座","leo":"狮子座","virgo":"处女座","libra":"天秤座","scorpio":"天蝎座","sagittarius":"射手座","capricorn":"摩羯座","aquarius":"水瓶座","pisces":"双鱼座"},"phases":{"new":"新月","waxingCrescent":"蛾眉月","firstQuarter":"上弦月","waxingGibbous":"盈凸月","full":"满月","waningGibbous":"亏凸月","lastQuarter":"下弦月","waningCrescent":"残月"},"illuminated":"被照亮{p}%","week":"未来七天的月亮"}}</script>
+<script type="module" src="../../tools/moon.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a>
 <div class="shots">
 <img src="../../screenshots/3-explore.jpg" width="540" height="1040" loading="lazy" alt="Explore（探索）页：行运、月相日历、生命灵数和个人流年数" />
@@ -173,7 +209,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>免费吗？</h3>
 <p>应用可免费下载，当前版本的所有功能都已开放。无广告。</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a></p>
-<p class="svc"><a href="../xingpan/">本命盘</a> · <strong>月相日历</strong> · <a href="../shuzi-mingli/">生命灵数</a> · <a href="../xingzuo-peidui/">星座配对</a> · <a href="../shengxiao/">生肖与吠陀占星</a> · <a href="../xingtu/">星图</a></p>
+<p class="svc"><a href="../xingpan/">本命盘</a> · <strong>月相日历</strong> · <a href="../shuzi-mingli/">生命灵数</a> · <a href="../xingzuo-peidui/">星座配对</a> · <a href="../shengxiao/">生肖与吠陀占星</a> · <a href="../xingtu/">星图</a> · <a href="../xingzuo-chaxun/">星座查询</a> · <a href="../jinri-xingxiang/">今日行星</a> · <a href="../meiri-yipai/">每日一牌</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

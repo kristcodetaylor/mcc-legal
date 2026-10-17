@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Dein chinesisches, japanisches und vedisches Horoskop aus deinem Geburtsdatum</h1>
 <p class="lead">Im Januar oder Anfang Februar geboren? Dein chinesisches Tierzeichen hängt vom Datum des chinesischen Neujahrs in deinem Geburtsjahr ab, nicht vom 1. Januar. My Cosmic Code schlägt das Datum nach und zeigt es, dann liest es dieselben Geburtsdaten auf japanische und auf vedische Weise.</p>
+<section class="tool" id="calculator">
+<h2>Chinesisches Horoskop, Neun-Sterne-Ki und vedisches Mondzeichen berechnen</h2>
+<p>Gib dein Geburtsdatum ein und finde dein chinesisches Tierzeichen mit Element, gezählt ab dem echten Datum des chinesischen Neujahrs, dein japanisches eto und deinen Stern im Neun-Sterne-Ki sowie dein vedisches Mondzeichen (Rashi).</p>
+<div id="tool-root"><noscript><p>Dieser Rechner braucht JavaScript. Die App macht dasselbe auf deinem Handy.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"de","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=de-DE","common":{"birthDate":"Geburtsdatum","birthTime":"Geburtszeit","timeHint":"Optional. Ohne sie wird der Mond für 12 Uhr berechnet.","place":"Stadt","placeSearch":"Stadt eingeben","placeNone":"Diese Stadt ist noch nicht in unserer Liste.","calculate":"Berechnen","badDate":"Gib ein echtes Datum ein.","privacy":"Wird in deinem Browser berechnet. Nichts, was du eingibst, wird gesendet oder gespeichert.","more":"Die ganze Deutung gibt es in der App","noscript":"Dieser Rechner braucht JavaScript. Die App macht dasselbe auf deinem Handy."},"s":{"title":"Chinesisches Horoskop, Neun-Sterne-Ki und vedisches Mondzeichen berechnen","intro":"Gib dein Geburtsdatum ein und finde dein chinesisches Tierzeichen mit Element, gezählt ab dem echten Datum des chinesischen Neujahrs, dein japanisches eto und deinen Stern im Neun-Sterne-Ki sowie dein vedisches Mondzeichen (Rashi).","timeHint":"Optional. Zeit und Stadt zählen nur, wenn der Mond an deinem Geburtstag das Zeichen gewechselt hat.","exactNote":"Gib Geburtszeit und Stadt ein, damit dein vedisches Mondzeichen feststeht.","range":"Unser chinesischer Kalender reicht von 1901 bis 2099. Gib ein Datum in diesem Zeitraum ein.","inApp":"Monats- und Stundentier, dein Kreis, Nakshatra, Lagna und Dasha findest du in der App."},"labels":{"chinese":"Chinesisch","japanese":"Japanisch","vedic":"Vedisch","yourAnimal":"Dein chinesisches Tierzeichen","eto":"Dein eto","nineStar":"Dein Stern im Neun-Sterne-Ki","vYourRashi":"Dein Mondzeichen · Rashi","element":"Element","polarity":"Polarität","yang":"Yang · aktiv","yin":"Yin · empfangend","youAre":"Dein Zeichen: {0} ({1}). Dein chinesisches Jahr dauert vom {2} bis zum {3}.","beforeNewYear":"Vor dem chinesischen Neujahr ({0}) geboren, daher zählt das Vorjahr.","afterNewYear":"Das chinesische Neujahr fiel auf den {0}, und dein Geburtstag liegt danach, also zählt dieses Jahr.","etoSame":"In Japan bist du {0} {1}, dasselbe Tier: {2}.","etoOther":"Japan zählt das Jahr ab dem 1. Januar, dort bist du {0} {1}: {2}.","starLine":"Dein Stern im Neun-Sterne-Ki ist die {0}, {1} ({2}).","vRashiLine":"Im siderischen Tierkreis steht dein Mond in {0} ({1}).","vWesternDiff":"Im westlichen Horoskop steht derselbe Mond in {0}: Der vedische Tierkreis liegt etwa 24° zurück.","vWesternSame":"Im westlichen Horoskop ist es dasselbe Zeichen.","vRashiEither":"Der Mond wechselte an deinem Geburtstag das Zeichen: {0} oder {1}, je nach Geburtszeit.","animals":{"rat":"Ratte","ox":"Büffel","tiger":"Tiger","rabbit":"Hase","dragon":"Drache","snake":"Schlange","horse":"Pferd","goat":"Ziege","monkey":"Affe","rooster":"Hahn","dog":"Hund","pig":"Schwein"},"boar":"Wildschwein","elements":{"wood":"Holz","fire":"Feuer","earth":"Erde","metal":"Metall","water":"Wasser"},"stars":{"1":"Weißes Wasser","2":"Schwarze Erde","3":"Hellgrünes Holz","4":"Grünes Holz","5":"Gelbe Erde","6":"Weißes Metall","7":"Rotes Metall","8":"Weiße Erde","9":"Purpurnes Feuer"},"yearNames":{"wood":{"rat":"Holz-Ratte","ox":"Holz-Büffel","tiger":"Holz-Tiger","rabbit":"Holz-Hase","dragon":"Holz-Drache","snake":"Holz-Schlange","horse":"Holz-Pferd","goat":"Holz-Ziege","monkey":"Holz-Affe","rooster":"Holz-Hahn","dog":"Holz-Hund","pig":"Holz-Schwein"},"fire":{"rat":"Feuer-Ratte","ox":"Feuer-Büffel","tiger":"Feuer-Tiger","rabbit":"Feuer-Hase","dragon":"Feuer-Drache","snake":"Feuer-Schlange","horse":"Feuer-Pferd","goat":"Feuer-Ziege","monkey":"Feuer-Affe","rooster":"Feuer-Hahn","dog":"Feuer-Hund","pig":"Feuer-Schwein"},"earth":{"rat":"Erd-Ratte","ox":"Erd-Büffel","tiger":"Erd-Tiger","rabbit":"Erd-Hase","dragon":"Erd-Drache","snake":"Erd-Schlange","horse":"Erd-Pferd","goat":"Erd-Ziege","monkey":"Erd-Affe","rooster":"Erd-Hahn","dog":"Erd-Hund","pig":"Erd-Schwein"},"metal":{"rat":"Metall-Ratte","ox":"Metall-Büffel","tiger":"Metall-Tiger","rabbit":"Metall-Hase","dragon":"Metall-Drache","snake":"Metall-Schlange","horse":"Metall-Pferd","goat":"Metall-Ziege","monkey":"Metall-Affe","rooster":"Metall-Hahn","dog":"Metall-Hund","pig":"Metall-Schwein"},"water":{"rat":"Wasser-Ratte","ox":"Wasser-Büffel","tiger":"Wasser-Tiger","rabbit":"Wasser-Hase","dragon":"Wasser-Drache","snake":"Wasser-Schlange","horse":"Wasser-Pferd","goat":"Wasser-Ziege","monkey":"Wasser-Affe","rooster":"Wasser-Hahn","dog":"Wasser-Hund","pig":"Wasser-Schwein"}},"signs":{"aries":"Widder","taurus":"Stier","gemini":"Zwillinge","cancer":"Krebs","leo":"Löwe","virgo":"Jungfrau","libra":"Waage","scorpio":"Skorpion","sagittarius":"Schütze","capricorn":"Steinbock","aquarius":"Wassermann","pisces":"Fische"}}}</script>
+<script type="module" src="../../tools/horoscopes.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=de-DE" rel="noopener">Jetzt bei Google Play</a>
 <h2>Chinesisches Horoskop</h2>
 <ul>
@@ -112,7 +148,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Ist die App kostenlos?</h3>
 <p>Die App kann kostenlos heruntergeladen werden, und in der aktuellen Version sind alle Funktionen offen. Keine Werbung.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=de-DE" rel="noopener">Jetzt bei Google Play</a></p>
-<p class="svc"><a href="../geburtshoroskop/">Geburtshoroskop</a> · <a href="../mondkalender/">Mondkalender</a> · <a href="../numerologie/">Numerologie</a> · <a href="../partnerhoroskop/">Partnerhoroskop</a> · <strong>Chinesisches &amp; vedisches Horoskop</strong> · <a href="../sternkarte/">Sternkarte</a> · <a href="../traumdeutung/">Traumdeutung</a></p>
+<p class="svc"><a href="../geburtshoroskop/">Geburtshoroskop</a> · <a href="../mondkalender/">Mondkalender</a> · <a href="../numerologie/">Numerologie</a> · <a href="../partnerhoroskop/">Partnerhoroskop</a> · <strong>Chinesisches &amp; vedisches Horoskop</strong> · <a href="../sternkarte/">Sternkarte</a> · <a href="../sternzeichen-berechnen/">Sternzeichen</a> · <a href="../planeten-heute/">Planeten heute</a> · <a href="../tageskarte/">Tageskarte</a> · <a href="../traumdeutung/">Traumdeutung</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

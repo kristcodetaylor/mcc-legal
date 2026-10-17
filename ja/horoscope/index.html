@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>ホロスコープ作成：あなたの太陽星座・月星座・アセンダント</h1>
 <p class="lead">出生図（ネイタルチャート）は、あなたが生まれた瞬間に、その場所から見えた空の地図です。My Cosmic Codeは実際の天文計算にもとづいてスマートフォン上で出生図を計算し、生まれ星座だけでなく、チャート全体を描き出します。</p>
+<section class="tool" id="calculator">
+<h2>出生図（ホロスコープ）計算</h2>
+<p>生年月日を入力し、わかれば出生時刻と都市も入れると、太陽・月・惑星がどこにあったかを表示します。それぞれのサインと度数を、黄道の円の上に。</p>
+<div id="tool-root"><noscript><p>この計算ツールには JavaScript が必要です。アプリならスマホで同じことができます。</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"ja","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=ja-JP","common":{"birthDate":"生年月日","birthTime":"出生時刻","timeHint":"任意。未入力の場合、月は正午で計算します。","place":"都市","placeSearch":"都市名を入力","placeNone":"その都市はまだリストにありません。","calculate":"計算する","badDate":"実在する日付を入力してください。","privacy":"ブラウザの中で計算します。入力した内容はどこにも送信・保存されません。","more":"詳しい読み解きはアプリで","noscript":"この計算ツールには JavaScript が必要です。アプリならスマホで同じことができます。"},"s":{"title":"出生図（ホロスコープ）計算","intro":"生年月日を入力し、わかれば出生時刻と都市も入れると、太陽・月・惑星がどこにあったかを表示します。それぞれのサインと度数を、黄道の円の上に。","cityHint":"任意。都市を選ぶと、その都市の時刻として計算します。","colBody":"天体","colSign":"サイン","colDeg":"度数","noTime":"出生時刻がない場合は正午の空で計算します。月は1日に約13°動くため度数は表示せず、サインは1日中同じサインにあった場合だけ表示します。","deviceClock":"都市が選ばれていないため、この端末の時計で計算します。","inApp":"ハウス、アセンダント、アスペクトはアプリで見られます。","wheel":"この出生時の空の天体を配置した黄道の円"},"labels":{"signs":{"aries":"牡羊座","taurus":"牡牛座","gemini":"双子座","cancer":"蟹座","leo":"獅子座","virgo":"乙女座","libra":"天秤座","scorpio":"蠍座","sagittarius":"射手座","capricorn":"山羊座","aquarius":"水瓶座","pisces":"魚座"},"bodies":{"sun":"太陽","moon":"月","mercury":"水星","venus":"金星","mars":"火星","jupiter":"木星","saturn":"土星","uranus":"天王星","neptune":"海王星","pluto":"冥王星"},"eyebrow":"生まれたときの空","moonUnknown":"その日、月はサインを移動しました。正確な時刻があれば確定します。","sunCusp":"その日、太陽はサインを移動しました。正確な時刻があれば確定します。","retrograde":"逆行","elementsEyebrow":"エレメント","elements":{"fire":"火","earth":"地","air":"風","water":"水"},"modalitiesEyebrow":"区分","modalities":{"cardinal":"活動宮","fixed":"不動宮","mutable":"柔軟宮"},"partial":"この出生データで確かめられる配置だけを数えています。"}}</script>
+<script type="module" src="../../tools/birth-chart.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a>
 <div class="shots">
 <img src="../../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="天体、ハウス、アスペクト、アセンダント、MC（天頂）を描いた円形のネイタルチャート" />
@@ -105,7 +141,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>無料ですか？</h3>
 <p>アプリは無料でダウンロードでき、現在のバージョンではすべての機能が使えます。広告はありません。</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a></p>
-<p class="svc"><strong>出生図</strong> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <a href="../eto-kyusei/">干支・九星気学・インド占星術</a> · <a href="../hoshizora/">今夜の星空</a></p>
+<p class="svc"><strong>出生図</strong> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <a href="../eto-kyusei/">干支・九星気学・インド占星術</a> · <a href="../hoshizora/">今夜の星空</a> · <a href="../seiza/">星座を調べる</a> · <a href="../kyou-no-wakusei/">今日の惑星</a> · <a href="../kyou-no-kaado/">今日のカード</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

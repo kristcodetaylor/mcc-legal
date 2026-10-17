@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Synastrie : la compatibilité astrologique à partir de deux thèmes entiers</h1>
 <p class="lead">La compatibilité des signes solaires compare deux signes. My Cosmic Code compare deux thèmes astraux entiers, chaque planète d’une personne avec chaque planète de l’autre, et montre où ils se rencontrent.</p>
+<section class="tool" id="calculator">
+<h2>Calculateur de compatibilité astrologique</h2>
+<p>Entre deux dates de naissance pour voir les deux signes solaires et lunaires, les deux ascendants si tu connais les heures et les lieux, et la paire d’éléments où vos thèmes se rencontrent.</p>
+<div id="tool-root"><noscript><p>Ce calculateur a besoin de JavaScript. L’app fait la même chose sur ton téléphone.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"fr","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=fr-FR","common":{"birthDate":"Date de naissance","birthTime":"Heure de naissance","timeHint":"Facultatif. Sans elle, la Lune est calculée à midi.","place":"Ville","placeSearch":"Tape une ville","placeNone":"Cette ville n’est pas encore dans notre liste.","calculate":"Calculer","badDate":"Entre une date réelle.","privacy":"Calculé dans ton navigateur. Rien de ce que tu tapes n’est envoyé ni enregistré.","more":"La lecture complète est dans l’app","noscript":"Ce calculateur a besoin de JavaScript. L’app fait la même chose sur ton téléphone."},"s":{"title":"Calculateur de compatibilité astrologique","intro":"Entre deux dates de naissance pour voir les deux signes solaires et lunaires, les deux ascendants si tu connais les heures et les lieux, et la paire d’éléments où vos thèmes se rencontrent.","them":"L’autre personne","timeHint":"Facultatif. Sans elle, la Lune n’est affichée que si elle reste toute la journée dans un même signe.","placeHint":"Facultatif. Avec l’heure, elle donne l’ascendant.","moonUnknown":"Un tiret pour la Lune signifie qu’elle a changé de signe ce jour-là. L’heure de naissance tranche.","sunElements":"Éléments du Soleil","inApp":"Dans l’app, cette paire est lue pour : {list}.","sep":", ","profiles":{"aries":{"rulingPlanet":"Mars","birthstone":"Diamant","color":"Rouge"},"taurus":{"rulingPlanet":"Vénus","birthstone":"Émeraude","color":"Vert"},"gemini":{"rulingPlanet":"Mercure","birthstone":"Agate","color":"Jaune"},"cancer":{"rulingPlanet":"Lune","birthstone":"Pierre de lune","color":"Argenté"},"leo":{"rulingPlanet":"Soleil","birthstone":"Péridot","color":"Doré"},"virgo":{"rulingPlanet":"Mercure","birthstone":"Saphir","color":"Bleu marine"},"libra":{"rulingPlanet":"Vénus","birthstone":"Opale","color":"Rose pastel"},"scorpio":{"rulingPlanet":"Pluton","birthstone":"Topaze","color":"Rouge profond"},"sagittarius":{"rulingPlanet":"Jupiter","birthstone":"Turquoise","color":"Violet"},"capricorn":{"rulingPlanet":"Saturne","birthstone":"Grenat","color":"Marron"},"aquarius":{"rulingPlanet":"Uranus","birthstone":"Améthyste","color":"Bleu électrique"},"pisces":{"rulingPlanet":"Neptune","birthstone":"Aigue-marine","color":"Vert d’eau"}}},"labels":{"signs":{"aries":"Bélier","taurus":"Taureau","gemini":"Gémeaux","cancer":"Cancer","leo":"Lion","virgo":"Vierge","libra":"Balance","scorpio":"Scorpion","sagittarius":"Sagittaire","capricorn":"Capricorne","aquarius":"Verseau","pisces":"Poissons"},"sun":"Soleil","moon":"Lune","rising":"Ascendant","elements":{"fire":"Feu","earth":"Terre","air":"Air","water":"Eau"},"you":"Toi","risingUnknownBoth":"L’Ascendant nécessite une heure et un lieu de naissance exacts pour vous deux.","profileEyebrow":"PROFIL DU SIGNE SOLAIRE","rulingPlanet":"Planète maîtresse","birthstone":"Pierre de naissance","color":"Couleur","synastryEyebrow":"LÀ OÙ VOS THÈMES SE RENCONTRENT","domains":{"friendship":"Amitié","business":"Travail","romantic":"Amour","sexual":"Sexualité","health":"Santé"},"aspectsEyebrow":"ASPECTS ENTRE VOUS","aspectsNeedTier":"Les maisons, l’Ascendant, le Milieu du Ciel et l’ensemble des aspects font partie de Pro."}}</script>
+<script type="module" src="../../tools/compatibility.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=fr-FR" rel="noopener">Disponible sur Google Play</a>
 <h2>Ce que tu compares</h2>
 <ul>
@@ -100,7 +136,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Est-ce gratuit ?</h3>
 <p>L’app se télécharge gratuitement et, dans la version actuelle, toutes les fonctionnalités sont ouvertes. Pas de pub.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=fr-FR" rel="noopener">Disponible sur Google Play</a></p>
-<p class="svc"><a href="../theme-astral/">Thème astral</a> · <a href="../calendrier-lunaire/">Calendrier lunaire</a> · <a href="../numerologie/">Numérologie</a> · <strong>Compatibilité astrologique</strong> · <a href="../horoscope-chinois/">Horoscope chinois et védique</a> · <a href="../carte-du-ciel/">Carte du ciel</a> · <a href="../dictionnaire-des-reves/">Dictionnaire des rêves</a></p>
+<p class="svc"><a href="../theme-astral/">Thème astral</a> · <a href="../calendrier-lunaire/">Calendrier lunaire</a> · <a href="../numerologie/">Numérologie</a> · <strong>Compatibilité astrologique</strong> · <a href="../horoscope-chinois/">Horoscope chinois et védique</a> · <a href="../carte-du-ciel/">Carte du ciel</a> · <a href="../quel-est-mon-signe/">Mon signe</a> · <a href="../planetes-aujourd-hui/">Planètes aujourd’hui</a> · <a href="../carte-du-jour/">Carte du jour</a> · <a href="../dictionnaire-des-reves/">Dictionnaire des rêves</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

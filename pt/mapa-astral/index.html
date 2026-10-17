@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Mapa astral grátis: seu signo solar, seu signo lunar e seu ascendente</h1>
 <p class="lead">Um mapa astral (mapa natal) é um mapa do céu no minuto e no lugar em que você nasceu. My Cosmic Code calcula o seu no celular com astronomia real e desenha a roda inteira, não só o seu signo do zodíaco.</p>
+<section class="tool" id="calculator">
+<h2>Calculadora de mapa astral</h2>
+<p>Digite sua data de nascimento, e a hora e a cidade se você souber, para ver onde estavam o Sol, a Lua e os planetas: o signo e o grau de cada um, numa roda do zodíaco.</p>
+<div id="tool-root"><noscript><p>Esta calculadora precisa de JavaScript. O app faz o mesmo no seu celular.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"pt","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=pt-BR","common":{"birthDate":"Data de nascimento","birthTime":"Hora de nascimento","timeHint":"Opcional. Sem ela, a Lua é calculada ao meio-dia.","place":"Cidade","placeSearch":"Digite uma cidade","placeNone":"Essa cidade ainda não está na nossa lista.","calculate":"Calcular","badDate":"Digite uma data real.","privacy":"Calculado no seu navegador. Nada do que você digita é enviado ou salvo.","more":"A leitura completa está no app","noscript":"Esta calculadora precisa de JavaScript. O app faz o mesmo no seu celular."},"s":{"title":"Calculadora de mapa astral","intro":"Digite sua data de nascimento, e a hora e a cidade se você souber, para ver onde estavam o Sol, a Lua e os planetas: o signo e o grau de cada um, numa roda do zodíaco.","cityHint":"Opcional. Com uma cidade, a hora é lida no relógio dessa cidade.","colBody":"Planeta","colSign":"Signo","colDeg":"Grau","noTime":"Sem hora de nascimento, usamos o céu ao meio-dia. A Lua anda cerca de 13° por dia, então deixamos o grau dela de fora e mostramos o signo só se ela ficou no mesmo signo o dia todo.","deviceClock":"Nenhuma cidade escolhida, então a hora é lida no relógio deste aparelho.","inApp":"As casas, o ascendente e os aspectos estão no app.","wheel":"Roda do zodíaco com os planetas deste céu de nascimento"},"labels":{"signs":{"aries":"Áries","taurus":"Touro","gemini":"Gêmeos","cancer":"Câncer","leo":"Leão","virgo":"Virgem","libra":"Libra","scorpio":"Escorpião","sagittarius":"Sagitário","capricorn":"Capricórnio","aquarius":"Aquário","pisces":"Peixes"},"bodies":{"sun":"Sol","moon":"Lua","mercury":"Mercúrio","venus":"Vênus","mars":"Marte","jupiter":"Júpiter","saturn":"Saturno","uranus":"Urano","neptune":"Netuno","pluto":"Plutão"},"eyebrow":"O CÉU DO SEU NASCIMENTO","moonUnknown":"A Lua mudou de signo nesse dia; a hora exata resolveria.","sunCusp":"O Sol mudou de signo nesse dia; a hora exata resolveria.","retrograde":"Retrógrado","elementsEyebrow":"ELEMENTOS","elements":{"fire":"Fogo","earth":"Terra","air":"Ar","water":"Água"},"modalitiesEyebrow":"MODALIDADES","modalities":{"cardinal":"Cardinal","fixed":"Fixo","mutable":"Mutável"},"partial":"Contado só a partir das posições que estes dados de nascimento conseguem comprovar."}}</script>
+<script type="module" src="../../tools/birth-chart.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=pt-BR" rel="noopener">Disponível no Google Play</a>
 <div class="shots">
 <img src="../../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Mapa astral com planetas, casas, aspectos, Ascendente e Meio do Céu" />
@@ -105,7 +141,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>É grátis?</h3>
 <p>O app é gratuito para baixar e, na versão atual, todos os recursos estão abertos. Sem anúncios.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=pt-BR" rel="noopener">Disponível no Google Play</a></p>
-<p class="svc"><strong>Mapa astral</strong> · <a href="../calendario-lunar/">Calendário lunar</a> · <a href="../numerologia/">Numerologia</a> · <a href="../compatibilidade-dos-signos/">Compatibilidade dos signos</a> · <a href="../horoscopo-chines/">Horóscopo chinês e védico</a> · <a href="../mapa-do-ceu/">Mapa do céu</a> · <a href="../significado-dos-sonhos/">Dicionário dos sonhos</a></p>
+<p class="svc"><strong>Mapa astral</strong> · <a href="../calendario-lunar/">Calendário lunar</a> · <a href="../numerologia/">Numerologia</a> · <a href="../compatibilidade-dos-signos/">Compatibilidade dos signos</a> · <a href="../horoscopo-chines/">Horóscopo chinês e védico</a> · <a href="../mapa-do-ceu/">Mapa do céu</a> · <a href="../qual-e-meu-signo/">Meu signo</a> · <a href="../planetas-hoje/">Planetas hoje</a> · <a href="../carta-do-dia/">Carta do Dia</a> · <a href="../significado-dos-sonhos/">Dicionário dos sonhos</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

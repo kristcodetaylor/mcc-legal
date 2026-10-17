@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>今夜の星空と、あなたが生まれた日の空を、スマートフォンで</h1>
 <p class="lead">スマートフォンを空にかざすだけで、頭上にあるものがわかります。恒星、星座、月、惑星を、どの場所・どの時刻でも表示。My Cosmic Codeは実際の天文計算にもとづいて端末上で星空を計算し、「マイ・コズミック・スカイ」では、あなたが生まれたときの惑星も星々のあいだに表示します。</p>
+<section class="tool" id="calculator">
+<h2>星空マップ：いま頭上にある空</h2>
+<p>都市を選ぶと、いまこの瞬間その上空にある本当の空を表示します。星、星座の線と名前、月と惑星、そして地平線と東西南北も一緒に。</p>
+<div id="tool-root"><noscript><p>この計算ツールには JavaScript が必要です。アプリならスマホで同じことができます。</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"ja","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=ja-JP","common":{"birthDate":"生年月日","birthTime":"出生時刻","timeHint":"任意。未入力の場合、月は正午で計算します。","place":"都市","placeSearch":"都市名を入力","placeNone":"その都市はまだリストにありません。","calculate":"計算する","badDate":"実在する日付を入力してください。","privacy":"ブラウザの中で計算します。入力した内容はどこにも送信・保存されません。","more":"詳しい読み解きはアプリで","noscript":"この計算ツールには JavaScript が必要です。アプリならスマホで同じことができます。"},"s":{"title":"星空マップ：いま頭上にある空","intro":"都市を選ぶと、いまこの瞬間その上空にある本当の空を表示します。星、星座の線と名前、月と惑星、そして地平線と東西南北も一緒に。","show":"星空を表示","pickCity":"リストから都市を選んでください。","hint":"ドラッグで見回し、＋と−で拡大・縮小できます。","up":"いま地平線の上にあるもの","noneUp":"いまは太陽・月・惑星がすべて地平線の下にあります。","zoomIn":"拡大","zoomOut":"縮小","map":"星空マップ：{city}"},"labels":{"bodies":{"sun":"太陽","moon":"月","mercury":"水星","venus":"金星","mars":"火星","jupiter":"木星","saturn":"土星","uranus":"天王星","neptune":"海王星","pluto":"冥王星"},"compass":{"n":"北","e":"東","s":"南","w":"西"},"layers":{"lines":"星座線","names":"名前","ground":"地上の風景"},"daylight":"太陽が昇っています。星はそこにありますが、昼の光に隠れて見えません。","twilight":"薄明：まだ明るい星しか見えません。","now":"現在","resetView":"表示をリセット","credits":"恒星：Yale Bright Star Catalogue。星座線：M. van der Sluys（CC BY 4.0）。恒星名：IAU WGSN。星雲・星団・銀河の位置：SIMBAD（CDS）。位置計算：astronomy-engine。"}}</script>
+<script type="module" src="../../tools/night-sky.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a>
 <h2>表示される内容</h2>
 <ul>
@@ -117,7 +153,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>無料ですか？</h3>
 <p>アプリは無料でダウンロードでき、現在のバージョンではすべての機能が使えます。広告はありません。</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a></p>
-<p class="svc"><a href="../horoscope/">出生図</a> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <a href="../eto-kyusei/">干支・九星気学・インド占星術</a> · <strong>今夜の星空</strong></p>
+<p class="svc"><a href="../horoscope/">出生図</a> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <a href="../suhijutsu/">数秘術</a> · <a href="../aisho/">相性</a> · <a href="../eto-kyusei/">干支・九星気学・インド占星術</a> · <strong>今夜の星空</strong> · <a href="../seiza/">星座を調べる</a> · <a href="../kyou-no-wakusei/">今日の惑星</a> · <a href="../kyou-no-kaado/">今日のカード</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

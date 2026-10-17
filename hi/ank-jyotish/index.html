@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>भाग्यांक (लाइफ पाथ नंबर), हर चरण के साथ</h1>
 <p class="lead">अंक ज्योतिष आपकी जन्म तिथि को कुछ अंकों में बदलता है। My Cosmic Code इन्हें आपके फ़ोन पर निकालता है और पूरा हिसाब सामने रखता है, ताकि आप भरोसे पर मानने के बजाय देख सकें कि हर अंक कैसे निकला।</p>
+<section class="tool" id="calculator">
+<h2>जीवन पथ अंक कैलकुलेटर</h2>
+<p>अपनी जन्म तिथि लिखें और जोड़ के हर चरण के साथ अपना जीवन पथ अंक, जन्मदिन अंक और व्यक्तिगत वर्ष देखें।</p>
+<div id="tool-root"><noscript><p>इस कैलकुलेटर को JavaScript चाहिए। ऐप आपके फ़ोन पर यही करता है।</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"hi","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=hi-IN","common":{"birthDate":"जन्म तिथि","birthTime":"जन्म समय","timeHint":"वैकल्पिक। इसके बिना चंद्रमा की गणना दोपहर के हिसाब से होती है।","place":"शहर","placeSearch":"शहर लिखें","placeNone":"यह शहर अभी हमारी सूची में नहीं है।","calculate":"गणना करें","badDate":"एक असली तारीख़ लिखें।","privacy":"आपके ब्राउज़र में गणना होती है। आप जो लिखते हैं वह कहीं भेजा या सहेजा नहीं जाता।","more":"पूरा विवरण ऐप में है","noscript":"इस कैलकुलेटर को JavaScript चाहिए। ऐप आपके फ़ोन पर यही करता है।"},"s":{"title":"जीवन पथ अंक कैलकुलेटर","intro":"अपनी जन्म तिथि लिखें और जोड़ के हर चरण के साथ अपना जीवन पथ अंक, जन्मदिन अंक और व्यक्तिगत वर्ष देखें।","lifePath":"जीवन पथ","birthday":"जन्मदिन अंक","personalYear":"व्यक्तिगत वर्ष {y}","check":"काग़ज़ पर जाँच लें: पहले दिन, महीना और वर्ष घटाए जाते हैं, फिर जोड़े जाते हैं।","master":"मास्टर अंक: 11, 22 और 33 को आगे नहीं घटाया जाता।","day":"दिन","month":"महीना","year":"वर्ष","total":"कुल"},"labels":{}}</script>
+<script type="module" src="../../tools/numerology.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a>
 <div class="shots">
 <img src="../../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="होम स्क्रीन: आपका Cosmic Code — भाग्यांक और व्यक्तिगत वर्ष — सूर्य, चंद्र और लग्न राशि के साथ" />
@@ -98,7 +134,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>क्या मास्टर अंक छोटे किए जाते हैं?</h3>
 <p>नहीं। 11, 22 और 33 जैसे हैं वैसे ही रखे जाते हैं।</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a></p>
-<p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <a href="../chandra-calendar/">चंद्र कैलेंडर</a> · <strong>अंक ज्योतिष</strong> · <a href="../rashi-milan/">राशि अनुकूलता</a> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <a href="../taron-ka-naksha/">तारों का नक्शा</a></p>
+<p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <a href="../chandra-calendar/">चंद्र कैलेंडर</a> · <strong>अंक ज्योतिष</strong> · <a href="../rashi-milan/">राशि अनुकूलता</a> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <a href="../taron-ka-naksha/">तारों का नक्शा</a> · <a href="../meri-rashi/">मेरी राशि</a> · <a href="../aaj-ke-grah/">आज के ग्रह</a> · <a href="../aaj-ka-card/">आज का कार्ड</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>

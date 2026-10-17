@@ -67,6 +67,35 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
+.tool { margin: 1.25rem 0 1.5rem; padding: 1.1rem 1.1rem 1rem; border: 1px solid #2A2D3D; border-radius: 16px; background: #0E1018; }
+.tool h2 { margin-top: 0; }
+.tform { display: flex; flex-wrap: wrap; gap: .75rem 1rem; align-items: flex-end; }
+.tf { display: flex; flex-direction: column; gap: .3rem; min-width: 12rem; flex: 1 1 12rem; position: relative; }
+.tf label { font-size: .85rem; color: #B9B6C8; }
+.tf small { font-size: .78rem; color: #8C89A0; }
+.tf input { font: inherit; color: #F2EFE6; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; padding: .6rem .7rem; color-scheme: dark; }
+.tf input:focus { outline: 2px solid #C9A227; outline-offset: 1px; }
+.tbtn { font: inherit; font-weight: 700; color: #05060A; background: #C9A227; border: 0; border-radius: 999px; padding: .7rem 1.4rem; cursor: pointer; }
+.tbtn:focus-visible { outline: 2px solid #F2EFE6; outline-offset: 2px; }
+.tcity { list-style: none; margin: 0; padding: .25rem; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; background: #14161F; border: 1px solid #2A2D3D; border-radius: 10px; max-height: 15rem; overflow: auto; }
+.tcity li { padding: .5rem .6rem; border-radius: 8px; cursor: pointer; }
+.tcity li:hover, .tcity li:focus { background: #222536; outline: none; }
+.tcity li.none { cursor: default; color: #8C89A0; }
+.tout { margin-top: 1rem; }
+.tres { border-top: 1px solid #2A2D3D; padding-top: 1rem; }
+.tbig { display: flex; align-items: baseline; gap: .75rem; }
+.tbig span { color: #B9B6C8; }
+.tbig strong { font-size: 2.6rem; color: #E6C584; line-height: 1; }
+.tnote { color: #B9B6C8; font-size: .92rem; }
+.ttab { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+.ttab th, .ttab td { text-align: left; padding: .45rem .5rem; border-bottom: 1px solid #1F2230; vertical-align: top; }
+.ttab th { color: #B9B6C8; font-weight: 600; white-space: nowrap; }
+.tdl { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; margin: 0 0 1rem; }
+.tdl dt { color: #B9B6C8; }
+.tdl dd { margin: 0; color: #F2EFE6; font-weight: 600; }
+.terr { color: #F2A0A0; }
+.tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -80,6 +109,13 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Lebenszahl berechnen, mit jedem Rechenschritt</h1>
 <p class="lead">Numerologie macht aus deinem Geburtsdatum ein paar Zahlen. My Cosmic Code berechnet sie auf deinem Handy und legt die Rechnung offen, damit du nachvollziehen kannst, wie jede Zahl entsteht, statt sie einfach zu glauben.</p>
+<section class="tool" id="calculator">
+<h2>Lebenszahl-Rechner</h2>
+<p>Gib dein Geburtsdatum ein und sieh deine Lebenszahl mit jedem Rechenschritt, deine Geburtstagszahl und dein persönliches Jahr.</p>
+<div id="tool-root"><noscript><p>Dieser Rechner braucht JavaScript. Die App macht dasselbe auf deinem Handy.</p></noscript></div>
+<script type="application/json" id="tool-config">{"lang":"de","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=de-DE","common":{"birthDate":"Geburtsdatum","birthTime":"Geburtszeit","timeHint":"Optional. Ohne sie wird der Mond für 12 Uhr berechnet.","place":"Stadt","placeSearch":"Stadt eingeben","placeNone":"Diese Stadt ist noch nicht in unserer Liste.","calculate":"Berechnen","badDate":"Gib ein echtes Datum ein.","privacy":"Wird in deinem Browser berechnet. Nichts, was du eingibst, wird gesendet oder gespeichert.","more":"Die ganze Deutung gibt es in der App","noscript":"Dieser Rechner braucht JavaScript. Die App macht dasselbe auf deinem Handy."},"s":{"title":"Lebenszahl-Rechner","intro":"Gib dein Geburtsdatum ein und sieh deine Lebenszahl mit jedem Rechenschritt, deine Geburtstagszahl und dein persönliches Jahr.","lifePath":"Lebenszahl","birthday":"Geburtstagszahl","personalYear":"Persönliches Jahr {y}","check":"Prüf es auf Papier: Tag, Monat und Jahr werden zuerst reduziert, dann addiert.","master":"Eine Meisterzahl: 11, 22 und 33 werden nicht weiter reduziert.","day":"Tag","month":"Monat","year":"Jahr","total":"Summe"},"labels":{}}</script>
+<script type="module" src="../../tools/numerology.js"></script>
+</section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=de-DE" rel="noopener">Jetzt bei Google Play</a>
 <div class="shots">
 <img src="../../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Startbildschirm: dein Cosmic Code — Lebenszahl und persönliches Jahr — mit Sonne, Mond und Aszendent" />
@@ -98,7 +134,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>Werden Meisterzahlen reduziert?</h3>
 <p>Nein. 11, 22 und 33 bleiben, wie sie sind.</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=de-DE" rel="noopener">Jetzt bei Google Play</a></p>
-<p class="svc"><a href="../geburtshoroskop/">Geburtshoroskop</a> · <a href="../mondkalender/">Mondkalender</a> · <strong>Numerologie</strong> · <a href="../partnerhoroskop/">Partnerhoroskop</a> · <a href="../chinesisches-horoskop/">Chinesisches &amp; vedisches Horoskop</a> · <a href="../sternkarte/">Sternkarte</a> · <a href="../traumdeutung/">Traumdeutung</a></p>
+<p class="svc"><a href="../geburtshoroskop/">Geburtshoroskop</a> · <a href="../mondkalender/">Mondkalender</a> · <strong>Numerologie</strong> · <a href="../partnerhoroskop/">Partnerhoroskop</a> · <a href="../chinesisches-horoskop/">Chinesisches &amp; vedisches Horoskop</a> · <a href="../sternkarte/">Sternkarte</a> · <a href="../sternzeichen-berechnen/">Sternzeichen</a> · <a href="../planeten-heute/">Planeten heute</a> · <a href="../tageskarte/">Tageskarte</a> · <a href="../traumdeutung/">Traumdeutung</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 </body>
