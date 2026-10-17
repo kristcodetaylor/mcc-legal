@@ -88,11 +88,14 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
 
-.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
-.svc a { display: block; height: 100%; padding: .9rem 1rem; border: 1px solid #2A2D3D; border-radius: 14px; background: #0E1018; text-decoration: none; }
-.svc a:hover, .svc a:focus-visible { border-color: #C9A227; }
-.svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
-.svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+.svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 </style>
 
 </head>
@@ -107,16 +110,16 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 </header>
 <h2>Burada, tarayıcında dene</h2>
 <ul class="svc">
-<li><a href="dogum-haritasi/#calculator"><strong>Doğum haritası</strong><span>Doğum tarihi, saati ve yerinden doğum haritan: Güneş, Ay ve yükselen burç, gezegenler, evler ve açılar. Ücretsiz Android uygulaması; hesap yok, reklam yok.</span></a></li>
-<li><a href="ay-takvimi/#calculator"><strong>Ay takvimi</strong><span>Ay evreleri, Ay takvimi ve Ay’ın bugün bulunduğu burç, gün gün; kendi doğum haritandaki Ay’ın yanında. Ücretsiz Android astroloji uygulaması, reklamsız.</span></a></li>
-<li><a href="numeroloji/#calculator"><strong>Numeroloji</strong><span>Doğum tarihinden yaşam yolu sayını, kişisel yılını ve kişisel gününü bul; hesabın her adımı gösterilir. Ücretsiz Android uygulaması, hesap gerekmez.</span></a></li>
-<li><a href="burc-uyumu/#calculator"><strong>Burç uyumu</strong><span>Sinastri haritanı ücretsiz hesapla: iki doğum haritası aşk, yakınlık, arkadaşlık, iş ve iyi oluşta; açılar, kompozit harita ve evlerle. Reklam yok.</span></a></li>
-<li><a href="cin-burcu/#calculator"><strong>Çin ve Vedik burç</strong><span>Gerçek Çin Yeni Yılı tarihine göre Çin burcundaki hayvanın ve elementin, Japon eto’n ve Ki yıldızın, Vedik Ay burcun ve nakshatra’n. Android uygulaması, hesap yok.</span></a></li>
-<li><a href="gokyuzu-haritasi/#calculator"><strong>Gökyüzü haritası</strong><span>Her yer ve her saat için gerçek gece gökyüzü: yıldızlar, 88 takımyıldızı, bu gece görünen gezegenler ve doğduğun günün gökyüzü. Android uygulaması, reklamsız.</span></a></li>
-<li><a href="burcum-ne/#calculator"><strong>Burcum ne</strong><span>Doğum tarihinden burcunu ve Ay burcunu, her birinin elementi ve niteliğiyle öğren. O gün burç değiştiyse karar doğum saatinindir.</span></a></li>
-<li><a href="gezegenler-bugun/#calculator"><strong>Bugün gezegenler</strong><span>Gezegenler bugün nerede: Ay’ın evresi ve burcu, her gezegenin burcu ve derecesi, hangilerinin retro olduğu ve önümüzdeki 7 günde neyin değiştiği.</span></a></li>
-<li><a href="gunun-karti/#calculator"><strong>Günün Kartı</strong><span>78 kartlık destenin tamamından Günün Kartını çek: kartın adı, düz mü ters mi geldiği, üç anahtar kelime, teması ve üzerine düşünmen için bir soru. Android uygulaması, reklamsız.</span></a></li>
-<li><a href="ruya-tabirleri/"><strong>Rüya tabirleri</strong></a></li>
+<li><a href="dogum-haritasi/#calculator" style="background-image:url('../cards/birth-chart.webp')"><div class="pad"><strong>Doğum Haritası</strong><span>Kozmik planın</span></div></a></li>
+<li><a href="ay-takvimi/#calculator" style="background-image:url('../cards/moon.webp')"><div class="pad"><strong>Ay Takvimi</strong><span>Ay döngüleri ve evreleri</span></div></a></li>
+<li><a href="numeroloji/#calculator" style="background-image:url('../cards/numerology.webp')"><div class="pad"><strong>Numeroloji</strong><span>Sayıların gücünü çöz</span></div></a></li>
+<li><a href="burc-uyumu/#calculator" style="background-image:url('../cards/compatibility.webp')"><div class="pad"><strong>Uyum</strong><span>Haritalarınız nasıl buluşuyor</span></div></a></li>
+<li><a href="cin-burcu/#calculator" style="background-image:url('../cards/horoscopes.webp')"><div class="pad"><strong>Burçlar</strong><span>Çin, Japon ve Vedik</span></div></a></li>
+<li><a href="gokyuzu-haritasi/#calculator" style="background-image:url('../cards/night-sky.webp')"><div class="pad"><strong>Gece Gökyüzü</strong><span>Gerçek gökyüzü, haritana bağlı</span></div></a></li>
+<li><a href="burcum-ne/#calculator" style="background-image:url('../cards/planets.webp')"><div class="pad"><strong>Burcum ne</strong><span>Güneş ve Ay burcun</span></div></a></li>
+<li><a href="gezegenler-bugun/#calculator" style="background-image:url('../cards/transits.webp')"><div class="pad"><strong>Bugün gezegenler</strong><span>Ay, gezegenler ve retrolar şimdi</span></div></a></li>
+<li><a href="gunun-karti/#calculator" style="background-image:url('../cards/deck.webp')"><div class="pad"><strong>Günün Kartı</strong><span>Peçeli Gözcü’ye sor</span></div></a></li>
+<li><a href="ruya-tabirleri/" style="background-image:url('../cards/dream-book.webp')"><div class="pad"><strong>Rüya sözlüğü</strong><span>Tüm rüya sembolleri, A’dan Z’ye</span></div></a></li>
 </ul>
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Ana ekran: Cosmic Code’un — yaşam yolu ve kişisel yıl — Güneş, Ay ve yükselen burçla" />

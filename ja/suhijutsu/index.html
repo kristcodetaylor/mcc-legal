@@ -101,6 +101,15 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .terr { color: #F2A0A0; }
 .tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
 
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+.svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -139,6 +148,18 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>マスターナンバーは還元しますか？</h3>
 <p>いいえ。11、22、33はそのまま残します。</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=ja-JP" rel="noopener">Google Play で手に入れよう</a></p>
+<h2>ほかにも試す</h2>
+<ul class="svc">
+<li><a href="../horoscope/#calculator" style="background-image:url('../../cards/birth-chart.webp')"><div class="pad"><strong>出生図</strong><span>あなたの宇宙の設計図</span></div></a></li>
+<li><a href="../tsuki-no-koyomi/#calculator" style="background-image:url('../../cards/moon.webp')"><div class="pad"><strong>月のカレンダー</strong><span>月のリズムと満ち欠け</span></div></a></li>
+<li><a href="../aisho/#calculator" style="background-image:url('../../cards/compatibility.webp')"><div class="pad"><strong>相性</strong><span>チャートの重なり方</span></div></a></li>
+<li><a href="../eto-kyusei/#calculator" style="background-image:url('../../cards/horoscopes.webp')"><div class="pad"><strong>ホロスコープ</strong><span>中国・日本・ヴェーダ</span></div></a></li>
+<li><a href="../hoshizora/#calculator" style="background-image:url('../../cards/night-sky.webp')"><div class="pad"><strong>夜空</strong><span>チャートとつながる本物の空</span></div></a></li>
+<li><a href="../seiza/#calculator" style="background-image:url('../../cards/planets.webp')"><div class="pad"><strong>星座を調べる</strong><span>太陽星座と月星座</span></div></a></li>
+<li><a href="../kyou-no-wakusei/#calculator" style="background-image:url('../../cards/transits.webp')"><div class="pad"><strong>今日の惑星</strong><span>いまの月・惑星・逆行</span></div></a></li>
+<li><a href="../kyou-no-kaado/#calculator" style="background-image:url('../../cards/deck.webp')"><div class="pad"><strong>今日のカード</strong><span>ヴェールの導き手に尋ねる</span></div></a></li>
+</ul>
+
 <p class="svc"><a href="../horoscope/">出生図</a> · <a href="../tsuki-no-koyomi/">月齢カレンダー</a> · <strong>数秘術</strong> · <a href="../aisho/">相性</a> · <a href="../eto-kyusei/">干支・九星気学・インド占星術</a> · <a href="../hoshizora/">今夜の星空</a> · <a href="../seiza/">星座を調べる</a> · <a href="../kyou-no-wakusei/">今日の惑星</a> · <a href="../kyou-no-kaado/">今日のカード</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>

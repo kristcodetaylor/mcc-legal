@@ -88,11 +88,14 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
 
-.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
-.svc a { display: block; height: 100%; padding: .9rem 1rem; border: 1px solid #2A2D3D; border-radius: 14px; background: #0E1018; text-decoration: none; }
-.svc a:hover, .svc a:focus-visible { border-color: #C9A227; }
-.svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
-.svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+.svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 </style>
 
 </head>
@@ -107,15 +110,15 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 </header>
 <h2>यहीं ब्राउज़र में आज़माएँ</h2>
 <ul class="svc">
-<li><a href="janm-kundali/#calculator"><strong>पश्चिमी जन्म कुंडली</strong><span>आपकी जन्म तिथि, समय और स्थान से आपकी पश्चिमी (सायन) जन्म कुंडली: सूर्य, चंद्र और लग्न राशि, ग्रह, भाव और पहलू। मुफ़्त Android ऐप, न अकाउंट, न विज्ञापन।</span></a></li>
-<li><a href="chandra-calendar/#calculator"><strong>चंद्र कैलेंडर</strong><span>चंद्रमा की कलाएँ, चंद्र कैलेंडर और आज चंद्रमा किस राशि में है, दिन-ब-दिन, आपकी अपनी जन्म कुंडली के चंद्रमा के साथ। मुफ़्त Android ज्योतिष ऐप, कोई विज्ञापन नहीं।</span></a></li>
-<li><a href="ank-jyotish/#calculator"><strong>अंक ज्योतिष</strong><span>अपनी जन्म तिथि से अपना भाग्यांक (लाइफ पाथ नंबर), व्यक्तिगत वर्ष और व्यक्तिगत दिन जानें, गणना के हर चरण के साथ। मुफ़्त Android ऐप, कोई अकाउंट नहीं।</span></a></li>
-<li><a href="rashi-milan/#calculator"><strong>राशि अनुकूलता</strong><span>मुफ़्त में सिनैस्ट्री निकालें: प्रेम, अंतरंगता, दोस्ती, काम और सेहत में दो जन्म कुंडलियों की तुलना, पहलुओं, कंपोज़िट चार्ट और भावों के साथ। न विज्ञापन।</span></a></li>
-<li><a href="vedic-kundali/#calculator"><strong>चीनी और वैदिक राशिफल</strong><span>असली चीनी नव वर्ष की तारीख से अपनी चीनी राशि का जानवर और तत्व, अपना जापानी एतो और नाइन स्टार की तारा, और अपनी वैदिक चंद्र राशि और नक्षत्र जानें। Android ऐप, कोई अकाउंट नहीं।</span></a></li>
-<li><a href="taron-ka-naksha/#calculator"><strong>तारों का नक्शा</strong><span>किसी भी जगह और किसी भी समय का असली रात का आकाश: तारे, 88 तारामंडल, आज रात दिखने वाले ग्रह और आपके जन्म के दिन का आकाश। Android ऐप, कोई विज्ञापन नहीं।</span></a></li>
-<li><a href="meri-rashi/#calculator"><strong>मेरी राशि</strong><span>जन्म तिथि से अपनी पश्चिमी सूर्य राशि और चंद्र राशि जानें, हर एक के तत्व और स्वभाव के साथ। जिस दिन राशि बदली हो, उस दिन जन्म समय तय करता है।</span></a></li>
-<li><a href="aaj-ke-grah/#calculator"><strong>आज के ग्रह</strong><span>आज ग्रह कहाँ हैं: चंद्रमा की कला और राशि, हर ग्रह की राशि और अंश, कौन-से ग्रह वक्री हैं, और अगले 7 दिनों में क्या बदलता है।</span></a></li>
-<li><a href="aaj-ka-card/#calculator"><strong>आज का कार्ड</strong><span>78 कार्डों के पूरे डेक से अपना आज का कार्ड खींचें: उसका नाम, सीधा या उलटा, तीन मुख्य शब्द, उसका विषय और सोचने के लिए एक प्रश्न। Android ऐप, कोई विज्ञापन नहीं।</span></a></li>
+<li><a href="janm-kundali/#calculator" style="background-image:url('../cards/birth-chart.webp')"><div class="pad"><strong>पश्चिमी जन्म कुंडली</strong><span>आपका कॉस्मिक नक्शा</span></div></a></li>
+<li><a href="chandra-calendar/#calculator" style="background-image:url('../cards/moon.webp')"><div class="pad"><strong>चंद्र कैलेंडर</strong><span>चंद्र चक्र और कलाएँ</span></div></a></li>
+<li><a href="ank-jyotish/#calculator" style="background-image:url('../cards/numerology.webp')"><div class="pad"><strong>अंक ज्योतिष</strong><span>अंकों की शक्ति को समझें</span></div></a></li>
+<li><a href="rashi-milan/#calculator" style="background-image:url('../cards/compatibility.webp')"><div class="pad"><strong>अनुकूलता</strong><span>आपके चार्ट कैसे मिलते हैं</span></div></a></li>
+<li><a href="vedic-kundali/#calculator" style="background-image:url('../cards/horoscopes.webp')"><div class="pad"><strong>राशिफल</strong><span>चीनी, जापानी और वैदिक</span></div></a></li>
+<li><a href="taron-ka-naksha/#calculator" style="background-image:url('../cards/night-sky.webp')"><div class="pad"><strong>रात का आकाश</strong><span>असली आकाश, आपके चार्ट से जुड़ा</span></div></a></li>
+<li><a href="meri-rashi/#calculator" style="background-image:url('../cards/planets.webp')"><div class="pad"><strong>मेरी राशि</strong><span>आपकी सूर्य और चंद्र राशि</span></div></a></li>
+<li><a href="aaj-ke-grah/#calculator" style="background-image:url('../cards/transits.webp')"><div class="pad"><strong>आज के ग्रह</strong><span>अभी चंद्रमा, ग्रह और वक्री ग्रह</span></div></a></li>
+<li><a href="aaj-ka-card/#calculator" style="background-image:url('../cards/deck.webp')"><div class="pad"><strong>आज का कार्ड</strong><span>परदे वाले द्रष्टा से पूछें</span></div></a></li>
 </ul>
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="होम स्क्रीन: आपका Cosmic Code — भाग्यांक और व्यक्तिगत वर्ष — सूर्य, चंद्र और लग्न राशि के साथ" />

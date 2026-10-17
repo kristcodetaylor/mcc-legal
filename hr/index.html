@@ -88,11 +88,14 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
 
-.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
-.svc a { display: block; height: 100%; padding: .9rem 1rem; border: 1px solid #2A2D3D; border-radius: 14px; background: #0E1018; text-decoration: none; }
-.svc a:hover, .svc a:focus-visible { border-color: #C9A227; }
-.svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
-.svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+.svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 </style>
 
 </head>
@@ -107,16 +110,16 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 </header>
 <h2>Isprobaj ovdje, u pregledniku</h2>
 <ul class="svc">
-<li><a href="natalna-karta/#calculator"><strong>Natalna karta</strong><span>Natalna karta iz datuma, vremena i mjesta rođenja: znak Sunca, Mjeseca i podznak, planeti, kuće i aspekti. Besplatna Android aplikacija, bez računa i oglasa.</span></a></li>
-<li><a href="mjesecev-kalendar/#calculator"><strong>Mjesečev kalendar</strong><span>Mjesečeve mijene, lunarni kalendar i znak u kojem je Mjesec danas, iz dana u dan, uz Mjesec u tvojoj natalnoj karti. Besplatna Android aplikacija, bez oglasa.</span></a></li>
-<li><a href="numerologija/#calculator"><strong>Numerologija</strong><span>Izračunaj životni broj, osobnu godinu i osobni dan iz datuma rođenja, sa svakim korakom računa. Besplatna Android aplikacija, bez korisničkog računa.</span></a></li>
-<li><a href="slaganje-znakova/#calculator"><strong>Slaganje znakova</strong><span>Izračunaj sinastriju besplatno: dvije natalne karte u ljubavi, intimi, prijateljstvu, poslu i dobrobiti, s aspektima, kompozitnom kartom i kućama. Bez oglasa.</span></a></li>
-<li><a href="kineski-horoskop/#calculator"><strong>Kineski i vedski horoskop</strong><span>Saznaj svoju životinju kineskog zodijaka i element prema stvarnom datumu Kineske Nove godine, japanski eto i zvijezdu Devet zvijezda te vedski Mjesečev znak i nakshatru. Android aplikacija, bez računa.</span></a></li>
-<li><a href="karta-neba/#calculator"><strong>Karta neba</strong><span>Pravo noćno nebo za bilo koje mjesto i sat: zvijezde, 88 zviježđa, planeti vidljivi večeras i nebo na dan tvog rođenja. Android aplikacija, bez oglasa.</span></a></li>
-<li><a href="koji-sam-znak/#calculator"><strong>Koji sam znak</strong><span>Saznaj svoj horoskopski znak i znak Mjeseca iz datuma rođenja, uz element i kvalitetu svakog. Na dan kad se znak promijenio, presuđuje vrijeme rođenja.</span></a></li>
-<li><a href="planeti-danas/#calculator"><strong>Planeti danas</strong><span>Gdje su planeti danas: Mjesečeva mijena i znak, znak i stupanj svakog planeta, koji su planeti retrogradni i što se mijenja u idućih 7 dana.</span></a></li>
-<li><a href="karta-dana/#calculator"><strong>Karta dana</strong><span>Izvuci kartu dana iz cijelog špila od 78 karata: njezino ime, uspravno ili obrnuto, tri ključne riječi, temu i pitanje za razmišljanje. Android aplikacija, bez oglasa.</span></a></li>
-<li><a href="sanjarica/"><strong>Sanjarica</strong></a></li>
+<li><a href="natalna-karta/#calculator" style="background-image:url('../cards/birth-chart.webp')"><div class="pad"><strong>Natalna karta</strong><span>Tvoj kozmički nacrt</span></div></a></li>
+<li><a href="mjesecev-kalendar/#calculator" style="background-image:url('../cards/moon.webp')"><div class="pad"><strong>Mjesečev kalendar</strong><span>Lunarni ciklusi i mijene</span></div></a></li>
+<li><a href="numerologija/#calculator" style="background-image:url('../cards/numerology.webp')"><div class="pad"><strong>Numerologija</strong><span>Otkrij moć brojeva</span></div></a></li>
+<li><a href="slaganje-znakova/#calculator" style="background-image:url('../cards/compatibility.webp')"><div class="pad"><strong>Kompatibilnost</strong><span>Kako se vaše karte susreću</span></div></a></li>
+<li><a href="kineski-horoskop/#calculator" style="background-image:url('../cards/horoscopes.webp')"><div class="pad"><strong>Horoskopi</strong><span>Kineski, japanski i vedski</span></div></a></li>
+<li><a href="karta-neba/#calculator" style="background-image:url('../cards/night-sky.webp')"><div class="pad"><strong>Noćno nebo</strong><span>Pravo nebo, povezano s tvojom kartom</span></div></a></li>
+<li><a href="koji-sam-znak/#calculator" style="background-image:url('../cards/planets.webp')"><div class="pad"><strong>Koji sam znak</strong><span>Tvoj znak Sunca i Mjeseca</span></div></a></li>
+<li><a href="planeti-danas/#calculator" style="background-image:url('../cards/transits.webp')"><div class="pad"><strong>Planeti danas</strong><span>Mjesec, planeti i retrogradni sada</span></div></a></li>
+<li><a href="karta-dana/#calculator" style="background-image:url('../cards/deck.webp')"><div class="pad"><strong>Karta dana</strong><span>Pitaj Zastrtog Vidjelca</span></div></a></li>
+<li><a href="sanjarica/" style="background-image:url('../cards/dream-book.webp')"><div class="pad"><strong>Sanjarica</strong><span>Svi simboli snova, od A do Ž</span></div></a></li>
 </ul>
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Početni zaslon: tvoj Cosmic Code — životni put i osobna godina — sa Suncem, Mjesecom i podznakom" />

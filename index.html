@@ -88,11 +88,14 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .shots { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: .25rem 0 1rem; margin: 0 0 1rem; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; scroll-snap-align: start; }
 
-.svc { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
-.svc a { display: block; height: 100%; padding: .9rem 1rem; border: 1px solid #2A2D3D; border-radius: 14px; background: #0E1018; text-decoration: none; }
-.svc a:hover, .svc a:focus-visible { border-color: #C9A227; }
-.svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
-.svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+.svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 </style>
 <script>(function(){try{
 var P={"hr":"hr/index.html","de":"de/index.html","es":"es/index.html","fr":"fr/index.html","pt":"pt/index.html","it":"it/index.html","pl":"pl/index.html","tr":"tr/index.html","zh-tw":"zh-tw/index.html","zh-cn":"zh-cn/index.html","ja":"ja/index.html","hi":"hi/index.html"},T={"Europe/Zagreb":"hr","Europe/Sarajevo":"hr","Europe/Berlin":"de","Europe/Vienna":"de","Europe/Zurich":"de","Europe/Vaduz":"de","Europe/Madrid":"es","Atlantic/Canary":"es","America/Mexico_City":"es","America/Bogota":"es","America/Lima":"es","America/Santiago":"es","America/Argentina/Buenos_Aires":"es","America/Buenos_Aires":"es","America/Caracas":"es","America/Montevideo":"es","America/Guatemala":"es","America/Guayaquil":"es","America/La_Paz":"es","America/Asuncion":"es","America/Panama":"es","America/Costa_Rica":"es","America/El_Salvador":"es","America/Tegucigalpa":"es","America/Managua":"es","America/Santo_Domingo":"es","America/Havana":"es","Europe/Paris":"fr","Europe/Monaco":"fr","Europe/Luxembourg":"fr","Europe/Lisbon":"pt","Atlantic/Azores":"pt","Atlantic/Madeira":"pt","America/Sao_Paulo":"pt","America/Fortaleza":"pt","America/Recife":"pt","America/Bahia":"pt","America/Manaus":"pt","America/Belem":"pt","Africa/Luanda":"pt","Africa/Maputo":"pt","Europe/Rome":"it","Europe/San_Marino":"it","Europe/Vatican":"it","Europe/Warsaw":"pl","Europe/Istanbul":"tr","Asia/Istanbul":"tr","Asia/Taipei":"zh-tw","Asia/Hong_Kong":"zh-tw","Asia/Macau":"zh-tw","Asia/Shanghai":"zh-cn","Asia/Chongqing":"zh-cn","Asia/Urumqi":"zh-cn","Asia/Tokyo":"ja","Asia/Kolkata":"hi","Asia/Calcutta":"hi"};
@@ -118,16 +121,16 @@ if(w&&w!=='en'&&P[w])location.replace(P[w]);
 </header>
 <h2>Use it here, in your browser</h2>
 <ul class="svc">
-<li><a href="birth-chart/#calculator"><strong>Birth chart</strong><span>Your natal chart from your birth date, time and place: Sun, Moon and rising sign, planets, houses and aspects. Free Android app, no account, no ads.</span></a></li>
-<li><a href="moon-calendar/#calculator"><strong>Moon calendar</strong><span>Moon phases, a Moon calendar and the sign the Moon is in today, day by day, next to the Moon in your own birth chart. Free Android astrology app, no ads.</span></a></li>
-<li><a href="numerology/#calculator"><strong>Numerology</strong><span>Find your life path number, personal year and personal day from your birth date, with every step of the arithmetic laid out. Free Android app, no account.</span></a></li>
-<li><a href="compatibility/#calculator"><strong>Compatibility</strong><span>Calculate synastry free: compare two birth charts in love, intimacy, friendship, work and wellbeing, with aspects, a composite chart and houses. No ads.</span></a></li>
-<li><a href="chinese-zodiac/#calculator"><strong>Chinese &amp; Vedic horoscope</strong><span>Find your Chinese zodiac animal and element from the real Chinese New Year date, your Japanese eto and Nine Star Ki star, and your Vedic Moon sign and nakshatra. Android app, no account.</span></a></li>
-<li><a href="night-sky-map/#calculator"><strong>Night sky map</strong><span>The real night sky for any place and hour: stars, 88 constellations, the planets visible tonight and the sky on the day you were born. Android app, no ads.</span></a></li>
-<li><a href="zodiac-sign-calculator/#calculator"><strong>Zodiac sign</strong><span>Find your zodiac sign and Moon sign from your birth date, with the element and modality of each. On a day the sign changed, your birth time decides.</span></a></li>
-<li><a href="planets-today/#calculator"><strong>Planets today</strong><span>Where the planets are today: the Moon’s phase and sign, each planet’s sign and degree, which planets are retrograde, and the next 7 days of changes.</span></a></li>
-<li><a href="card-of-the-day/#calculator"><strong>Card of the Day</strong><span>Draw your Card of the Day from the full 78-card deck: its name, upright or reversed, three keywords, its theme and a question to reflect on. Android app, no ads.</span></a></li>
-<li><a href="dream-dictionary/"><strong>Dream dictionary</strong></a></li>
+<li><a href="birth-chart/#calculator" style="background-image:url('cards/birth-chart.webp')"><div class="pad"><strong>Birth Chart</strong><span>Your cosmic blueprint</span></div></a></li>
+<li><a href="moon-calendar/#calculator" style="background-image:url('cards/moon.webp')"><div class="pad"><strong>Moon Calendar</strong><span>Lunar cycles and phases</span></div></a></li>
+<li><a href="numerology/#calculator" style="background-image:url('cards/numerology.webp')"><div class="pad"><strong>Numerology</strong><span>Decode the power of numbers</span></div></a></li>
+<li><a href="compatibility/#calculator" style="background-image:url('cards/compatibility.webp')"><div class="pad"><strong>Compatibility</strong><span>How your charts meet</span></div></a></li>
+<li><a href="chinese-zodiac/#calculator" style="background-image:url('cards/horoscopes.webp')"><div class="pad"><strong>Horoscopes</strong><span>Chinese, Japanese and Vedic</span></div></a></li>
+<li><a href="night-sky-map/#calculator" style="background-image:url('cards/night-sky.webp')"><div class="pad"><strong>Night Sky</strong><span>The real sky, tied to your chart</span></div></a></li>
+<li><a href="zodiac-sign-calculator/#calculator" style="background-image:url('cards/planets.webp')"><div class="pad"><strong>Zodiac sign</strong><span>Your Sun and Moon sign</span></div></a></li>
+<li><a href="planets-today/#calculator" style="background-image:url('cards/transits.webp')"><div class="pad"><strong>Planets today</strong><span>Moon, planets and retrogrades now</span></div></a></li>
+<li><a href="card-of-the-day/#calculator" style="background-image:url('cards/deck.webp')"><div class="pad"><strong>Card of the Day</strong><span>Ask the Veiled Seer</span></div></a></li>
+<li><a href="dream-dictionary/" style="background-image:url('cards/dream-book.webp')"><div class="pad"><strong>Dream Dictionary</strong><span>Every dream symbol, A to Z</span></div></a></li>
 </ul>
 <div class="shots">
 <img src="screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Home screen: your Cosmic Code — Life Path and Personal Year — with Sun, Moon and Rising signs" />

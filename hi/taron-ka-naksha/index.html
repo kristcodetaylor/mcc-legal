@@ -101,6 +101,15 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .terr { color: #F2A0A0; }
 .tpriv { font-size: .8rem; color: #8C89A0; margin: .75rem 0 0; }
 
+.svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
+@media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
+.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
+.svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -158,6 +167,18 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>क्या यह मुफ़्त है?</h3>
 <p>ऐप डाउनलोड करना मुफ़्त है, और मौजूदा संस्करण में हर फ़ीचर खुला है। कोई विज्ञापन नहीं।</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a></p>
+<h2>और भी आज़माएँ</h2>
+<ul class="svc">
+<li><a href="../janm-kundali/#calculator" style="background-image:url('../../cards/birth-chart.webp')"><div class="pad"><strong>पश्चिमी जन्म कुंडली</strong><span>आपका कॉस्मिक नक्शा</span></div></a></li>
+<li><a href="../chandra-calendar/#calculator" style="background-image:url('../../cards/moon.webp')"><div class="pad"><strong>चंद्र कैलेंडर</strong><span>चंद्र चक्र और कलाएँ</span></div></a></li>
+<li><a href="../ank-jyotish/#calculator" style="background-image:url('../../cards/numerology.webp')"><div class="pad"><strong>अंक ज्योतिष</strong><span>अंकों की शक्ति को समझें</span></div></a></li>
+<li><a href="../rashi-milan/#calculator" style="background-image:url('../../cards/compatibility.webp')"><div class="pad"><strong>अनुकूलता</strong><span>आपके चार्ट कैसे मिलते हैं</span></div></a></li>
+<li><a href="../vedic-kundali/#calculator" style="background-image:url('../../cards/horoscopes.webp')"><div class="pad"><strong>राशिफल</strong><span>चीनी, जापानी और वैदिक</span></div></a></li>
+<li><a href="../meri-rashi/#calculator" style="background-image:url('../../cards/planets.webp')"><div class="pad"><strong>मेरी राशि</strong><span>आपकी सूर्य और चंद्र राशि</span></div></a></li>
+<li><a href="../aaj-ke-grah/#calculator" style="background-image:url('../../cards/transits.webp')"><div class="pad"><strong>आज के ग्रह</strong><span>अभी चंद्रमा, ग्रह और वक्री ग्रह</span></div></a></li>
+<li><a href="../aaj-ka-card/#calculator" style="background-image:url('../../cards/deck.webp')"><div class="pad"><strong>आज का कार्ड</strong><span>परदे वाले द्रष्टा से पूछें</span></div></a></li>
+</ul>
+
 <p class="svc"><a href="../janm-kundali/">पश्चिमी जन्म कुंडली</a> · <a href="../chandra-calendar/">चंद्र कैलेंडर</a> · <a href="../ank-jyotish/">अंक ज्योतिष</a> · <a href="../rashi-milan/">राशि अनुकूलता</a> · <a href="../vedic-kundali/">चीनी और वैदिक राशिफल</a> · <strong>तारों का नक्शा</strong> · <a href="../meri-rashi/">मेरी राशि</a> · <a href="../aaj-ke-grah/">आज के ग्रह</a> · <a href="../aaj-ka-card/">आज का कार्ड</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
