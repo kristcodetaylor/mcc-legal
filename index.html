@@ -9,15 +9,20 @@
 <link rel="canonical" href="https://mycosmiccode.app/" />
 <link rel="alternate" hreflang="en" href="https://mycosmiccode.app/" />
 <link rel="alternate" hreflang="hr" href="https://mycosmiccode.app/hr/" />
+<link rel="alternate" hreflang="bs" href="https://mycosmiccode.app/hr/" />
 <link rel="alternate" hreflang="de" href="https://mycosmiccode.app/de/" />
 <link rel="alternate" hreflang="es" href="https://mycosmiccode.app/es/" />
 <link rel="alternate" hreflang="fr" href="https://mycosmiccode.app/fr/" />
 <link rel="alternate" hreflang="pt-BR" href="https://mycosmiccode.app/pt/" />
+<link rel="alternate" hreflang="pt" href="https://mycosmiccode.app/pt/" />
 <link rel="alternate" hreflang="it" href="https://mycosmiccode.app/it/" />
 <link rel="alternate" hreflang="pl" href="https://mycosmiccode.app/pl/" />
 <link rel="alternate" hreflang="tr" href="https://mycosmiccode.app/tr/" />
 <link rel="alternate" hreflang="zh-TW" href="https://mycosmiccode.app/zh-tw/" />
+<link rel="alternate" hreflang="zh-HK" href="https://mycosmiccode.app/zh-tw/" />
+<link rel="alternate" hreflang="zh-MO" href="https://mycosmiccode.app/zh-tw/" />
 <link rel="alternate" hreflang="zh-CN" href="https://mycosmiccode.app/zh-cn/" />
+<link rel="alternate" hreflang="zh-SG" href="https://mycosmiccode.app/zh-cn/" />
 <link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/" />
 <link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/" />
 <link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/" />
@@ -89,6 +94,18 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .svc strong { display: block; color: #E6C584; font-size: 1.05rem; margin-bottom: .25rem; }
 .svc span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; color: #B9B6C8; font-size: .9rem; }
 </style>
+<script>(function(){try{
+var P={"hr":"hr/index.html","de":"de/index.html","es":"es/index.html","fr":"fr/index.html","pt":"pt/index.html","it":"it/index.html","pl":"pl/index.html","tr":"tr/index.html","zh-tw":"zh-tw/index.html","zh-cn":"zh-cn/index.html","ja":"ja/index.html","hi":"hi/index.html"},T={"Europe/Zagreb":"hr","Europe/Sarajevo":"hr","Europe/Berlin":"de","Europe/Vienna":"de","Europe/Zurich":"de","Europe/Vaduz":"de","Europe/Madrid":"es","Atlantic/Canary":"es","America/Mexico_City":"es","America/Bogota":"es","America/Lima":"es","America/Santiago":"es","America/Argentina/Buenos_Aires":"es","America/Buenos_Aires":"es","America/Caracas":"es","America/Montevideo":"es","America/Guatemala":"es","America/Guayaquil":"es","America/La_Paz":"es","America/Asuncion":"es","America/Panama":"es","America/Costa_Rica":"es","America/El_Salvador":"es","America/Tegucigalpa":"es","America/Managua":"es","America/Santo_Domingo":"es","America/Havana":"es","Europe/Paris":"fr","Europe/Monaco":"fr","Europe/Luxembourg":"fr","Europe/Lisbon":"pt","Atlantic/Azores":"pt","Atlantic/Madeira":"pt","America/Sao_Paulo":"pt","America/Fortaleza":"pt","America/Recife":"pt","America/Bahia":"pt","America/Manaus":"pt","America/Belem":"pt","Africa/Luanda":"pt","Africa/Maputo":"pt","Europe/Rome":"it","Europe/San_Marino":"it","Europe/Vatican":"it","Europe/Warsaw":"pl","Europe/Istanbul":"tr","Asia/Istanbul":"tr","Asia/Taipei":"zh-tw","Asia/Hong_Kong":"zh-tw","Asia/Macau":"zh-tw","Asia/Shanghai":"zh-cn","Asia/Chongqing":"zh-cn","Asia/Urumqi":"zh-cn","Asia/Tokyo":"ja","Asia/Kolkata":"hi","Asia/Calcutta":"hi"};
+if(/[?&]lang=/.test(location.search))return;
+var r=document.referrer;if(r&&r.indexOf(location.host)!==-1)return;
+function pick(t){t=(t||'').toLowerCase();if(!t)return null;if(t.indexOf('en')===0)return'en';
+if(t.indexOf('zh')===0)return/^(zh-(tw|hk|mo)|zh-hant)/.test(t)?'zh-tw':'zh-cn';
+var b=t.split('-')[0];if(b==='bs')b='hr';return P[b]?b:null}
+var L=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language],w=null;
+for(var i=0;i<L.length&&!w;i++)w=pick(L[i]);
+if(!w){var z='';try{z=Intl.DateTimeFormat().resolvedOptions().timeZone||''}catch(e){}w=T[z]||null}
+if(w&&w!=='en'&&P[w])location.replace(P[w]);
+}catch(e){}})();</script>
 </head>
 <body>
 <div class="wrap">
