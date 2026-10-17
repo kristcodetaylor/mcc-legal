@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Numerologia: calcolo del percorso di vita, passo per passo</title>
-<meta name="description" content="Calcola numero del percorso di vita, anno personale e giorno personale dalla data di nascita, con ogni passaggio del calcolo. App Android gratis, senza account." />
+<title>Numero del destino: calcolo dalla data di nascita</title>
+<meta name="description" content="Calcola il numero del destino (percorso di vita) dalla data di nascita, con ogni passaggio, più numero del compleanno e anno personale. Il resto nell’app." />
 <meta name="robots" content="index,follow" />
 <link rel="canonical" href="https://mycosmiccode.app/it/numerologia/" />
 <link rel="alternate" hreflang="en" href="https://mycosmiccode.app/numerology/" />
@@ -26,15 +26,17 @@
 <link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/suhijutsu/" />
 <link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/ank-jyotish/" />
 <link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/numerology/" />
-<link rel="icon" href="../../icon-512.png" />
+<link rel="icon" href="../../icon-48.png" sizes="48x48" type="image/png" />
+<link rel="icon" href="../../icon-192.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="../../icon-192.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="My Cosmic Code" />
-<meta property="og:title" content="Numerologia: calcolo del percorso di vita, passo per passo" />
-<meta property="og:description" content="Calcola numero del percorso di vita, anno personale e giorno personale dalla data di nascita, con ogni passaggio del calcolo. App Android gratis, senza account." />
+<meta property="og:title" content="Numero del destino: calcolo dalla data di nascita" />
+<meta property="og:description" content="Calcola il numero del destino (percorso di vita) dalla data di nascita, con ogni passaggio, più numero del compleanno e anno personale. Il resto nell’app." />
 <meta property="og:url" content="https://mycosmiccode.app/it/numerologia/" />
 <meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"Calcola numero del percorso di vita, anno personale e giorno personale dalla data di nascita, con ogni passaggio del calcolo. App Android gratis, senza account.","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"it","url":"https://mycosmiccode.app/it/numerologia/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT","screenshot":["https://mycosmiccode.app/screenshots/1-home.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Come si calcola il numero del percorso di vita?","acceptedAnswer":{"@type":"Answer","text":"Riduci il giorno, il mese e l’anno di nascita, sommali e riduci il totale. Per il 14 marzo 1991: 1+4 = 5, 0+3 = 3, 1+9+9+1 = 20 → 2, e 5+3+2 = 10 → 1. Percorso di vita 1."}},{"@type":"Question","name":"Che cos’è l’anno personale?","acceptedAnswer":{"@type":"Answer","text":"Un numero ricavato dal giorno e dal mese di nascita con l’anno solare in corso, ridotto allo stesso modo. Va da gennaio a dicembre."}},{"@type":"Question","name":"I numeri maestri vengono ridotti?","acceptedAnswer":{"@type":"Answer","text":"No. 11, 22 e 33 restano così come sono."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/it/"},{"@type":"ListItem","position":2,"name":"Numerologia","item":"https://mycosmiccode.app/it/numerologia/"}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"Calcola il numero del destino (percorso di vita) dalla data di nascita, con ogni passaggio, più numero del compleanno e anno personale. Il resto nell’app.","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"it","url":"https://mycosmiccode.app/it/numerologia/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT","screenshot":["https://mycosmiccode.app/screenshots/1-home.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Come si calcola il numero del percorso di vita?","acceptedAnswer":{"@type":"Answer","text":"Riduci il giorno, il mese e l’anno di nascita, sommali e riduci il totale. Per il 14 marzo 1991: 1+4 = 5, 0+3 = 3, 1+9+9+1 = 20 → 2, e 5+3+2 = 10 → 1. Percorso di vita 1."}},{"@type":"Question","name":"Che cos’è l’anno personale?","acceptedAnswer":{"@type":"Answer","text":"Un numero ricavato dal giorno e dal mese di nascita con l’anno solare in corso, ridotto allo stesso modo. Va da gennaio a dicembre."}},{"@type":"Question","name":"I numeri maestri vengono ridotti?","acceptedAnswer":{"@type":"Answer","text":"No. 11, 22 e 33 restano così come sono."}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/it/"},{"@type":"ListItem","position":2,"name":"Numerologia","item":"https://mycosmiccode.app/it/numerologia/"}]}]</script>
 <style>
 :root { color-scheme: dark; }
 * { box-sizing: border-box; }
@@ -103,10 +105,11 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 
 .svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
 @media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
-.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc .art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
+.svc a::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
 .svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
-.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc .pad { position: relative; z-index: 2; padding: 4.5rem .75rem .75rem; }
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 
@@ -115,19 +118,19 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .lead { font-size: 1.15rem; color: #E8E6F0; }
 .shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
-.svc { font-size: .9rem; line-height: 2; }
+.svc-links { font-size: .9rem; line-height: 2; }
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a href="../index.html"><img src="../../icon-512.png" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
-<h1>Numero del percorso di vita, con ogni passaggio in vista</h1>
+<nav><a href="../"><img src="../../icon-192.webp" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
+<h1>Numero del destino: il calcolo dalla data di nascita, passo per passo</h1>
 <p class="lead">La numerologia trasforma la tua data di nascita in pochi numeri. My Cosmic Code li calcola sul tuo telefono ed espone i conti, così puoi seguire come si arriva a ogni numero invece di prenderlo per buono.</p>
 <section class="tool" id="calculator">
-<h2>Calcolo del sentiero di vita</h2>
-<p>Inserisci la tua data di nascita per vedere il numero del sentiero di vita con ogni passaggio della somma, il numero del compleanno e il tuo anno personale.</p>
+<h2>Calcolo del numero del destino</h2>
+<p>Inserisci la tua data di nascita per vedere il numero del destino con ogni passaggio della somma, il numero del compleanno e il tuo anno personale.</p>
 <div id="tool-root"><noscript><p>Questo calcolatore richiede JavaScript. L’app fa lo stesso sul tuo telefono.</p></noscript></div>
-<script type="application/json" id="tool-config">{"lang":"it","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=it-IT","common":{"birthDate":"Data di nascita","birthTime":"Ora di nascita","timeHint":"Facoltativa. Senza, la Luna è calcolata a mezzogiorno.","place":"Città","placeSearch":"Scrivi una città","placeNone":"Questa città non è ancora nella nostra lista.","calculate":"Calcola","badDate":"Inserisci una data reale.","privacy":"Calcolato nel tuo browser. Niente di ciò che scrivi viene inviato o salvato.","more":"La lettura completa è nell’app","noscript":"Questo calcolatore richiede JavaScript. L’app fa lo stesso sul tuo telefono."},"s":{"title":"Calcolo del sentiero di vita","intro":"Inserisci la tua data di nascita per vedere il numero del sentiero di vita con ogni passaggio della somma, il numero del compleanno e il tuo anno personale.","lifePath":"Sentiero di vita","birthday":"Numero del compleanno","personalYear":"Anno personale {y}","check":"Verificalo su carta: giorno, mese e anno si riducono prima, poi si sommano.","master":"Un numero maestro: 11, 22 e 33 non si riducono oltre.","day":"Giorno","month":"Mese","year":"Anno","total":"Totale"},"labels":{}}</script>
+<script type="application/json" id="tool-config">{"lang":"it","play":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app\u0026hl=it-IT","common":{"birthDate":"Data di nascita","birthTime":"Ora di nascita","timeHint":"Facoltativa. Senza, la Luna è calcolata a mezzogiorno.","place":"Città","placeSearch":"Scrivi una città","placeNone":"Questa città non è ancora nella nostra lista.","calculate":"Calcola","badDate":"Inserisci una data reale.","privacy":"Calcolato nel tuo browser. Niente di ciò che scrivi viene inviato o salvato.","more":"La lettura completa è nell’app","noscript":"Questo calcolatore richiede JavaScript. L’app fa lo stesso sul tuo telefono."},"s":{"title":"Calcolo del numero del destino","intro":"Inserisci la tua data di nascita per vedere il numero del destino con ogni passaggio della somma, il numero del compleanno e il tuo anno personale.","lifePath":"Sentiero di vita","birthday":"Numero del compleanno","personalYear":"Anno personale {y}","check":"Verificalo su carta: giorno, mese e anno si riducono prima, poi si sommano.","master":"Un numero maestro: 11, 22 e 33 non si riducono oltre.","day":"Giorno","month":"Mese","year":"Anno","total":"Totale"},"labels":{}}</script>
 <script type="module" src="../../tools/numerology.js"></script>
 </section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT" rel="noopener">Disponibile su Google Play</a>
@@ -150,18 +153,18 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=it-IT" rel="noopener">Disponibile su Google Play</a></p>
 <h2>Prova anche</h2>
 <ul class="svc">
-<li><a href="../tema-natale/#calculator" style="background-image:url('../../cards/birth-chart.webp')"><div class="pad"><strong>Tema natale</strong><span>La tua mappa cosmica</span></div></a></li>
-<li><a href="../calendario-lunare/#calculator" style="background-image:url('../../cards/moon.webp')"><div class="pad"><strong>Calendario lunare</strong><span>Cicli e fasi della Luna</span></div></a></li>
-<li><a href="../affinita-di-coppia/#calculator" style="background-image:url('../../cards/compatibility.webp')"><div class="pad"><strong>Compatibilità</strong><span>Come si incontrano i vostri temi</span></div></a></li>
-<li><a href="../oroscopo-cinese/#calculator" style="background-image:url('../../cards/horoscopes.webp')"><div class="pad"><strong>Oroscopi</strong><span>Cinese, giapponese e vedico</span></div></a></li>
-<li><a href="../mappa-del-cielo/#calculator" style="background-image:url('../../cards/night-sky.webp')"><div class="pad"><strong>Cielo notturno</strong><span>Il cielo vero, legato al tuo tema</span></div></a></li>
-<li><a href="../che-segno-sono/#calculator" style="background-image:url('../../cards/planets.webp')"><div class="pad"><strong>Che segno sono</strong><span>Il tuo segno solare e lunare</span></div></a></li>
-<li><a href="../pianeti-oggi/#calculator" style="background-image:url('../../cards/transits.webp')"><div class="pad"><strong>Pianeti oggi</strong><span>Luna, pianeti e retrogradi ora</span></div></a></li>
-<li><a href="../carta-del-giorno/#calculator" style="background-image:url('../../cards/deck.webp')"><div class="pad"><strong>Carta del giorno</strong><span>Chiedi alla Guida Velata</span></div></a></li>
-<li><a href="../dizionario-dei-sogni/" style="background-image:url('../../cards/dream-book.webp')"><div class="pad"><strong>Dizionario dei sogni</strong><span>Tutti i simboli, dalla A alla Z</span></div></a></li>
+<li><a href="../tema-natale/#calculator"><img class="art" src="../../cards/birth-chart.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Tema natale</strong><span>La tua mappa cosmica</span></div></a></li>
+<li><a href="../calendario-lunare/#calculator"><img class="art" src="../../cards/moon.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Calendario lunare</strong><span>Cicli e fasi della Luna</span></div></a></li>
+<li><a href="../affinita-di-coppia/#calculator"><img class="art" src="../../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Compatibilità</strong><span>Come si incontrano i vostri temi</span></div></a></li>
+<li><a href="../oroscopo-cinese/#calculator"><img class="art" src="../../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Oroscopi</strong><span>Cinese, giapponese e vedico</span></div></a></li>
+<li><a href="../mappa-del-cielo/#calculator"><img class="art" src="../../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Cielo notturno</strong><span>Il cielo vero, legato al tuo tema</span></div></a></li>
+<li><a href="../che-segno-sono/#calculator"><img class="art" src="../../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Che segno sono</strong><span>Il tuo segno solare e lunare</span></div></a></li>
+<li><a href="../pianeti-oggi/#calculator"><img class="art" src="../../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Pianeti oggi</strong><span>Luna, pianeti e retrogradi ora</span></div></a></li>
+<li><a href="../carta-del-giorno/#calculator"><img class="art" src="../../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Carta del giorno</strong><span>Chiedi alla Guida Velata</span></div></a></li>
+<li><a href="../dizionario-dei-sogni/"><img class="art" src="../../cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Dizionario dei sogni</strong><span>Tutti i simboli, dalla A alla Z</span></div></a></li>
 </ul>
 
-<p class="svc"><a href="../tema-natale/">Tema natale</a> · <a href="../calendario-lunare/">Calendario lunare</a> · <strong>Numerologia</strong> · <a href="../affinita-di-coppia/">Affinità di coppia</a> · <a href="../oroscopo-cinese/">Oroscopo cinese e vedico</a> · <a href="../mappa-del-cielo/">Mappa del cielo</a> · <a href="../che-segno-sono/">Che segno sono</a> · <a href="../pianeti-oggi/">Pianeti oggi</a> · <a href="../carta-del-giorno/">Carta del giorno</a> · <a href="../dizionario-dei-sogni/">Dizionario dei sogni</a></p>
+<p class="svc-links"><a href="../tema-natale/">Tema natale</a> · <a href="../calendario-lunare/">Calendario lunare</a> · <strong>Numerologia</strong> · <a href="../affinita-di-coppia/">Affinità di coppia</a> · <a href="../oroscopo-cinese/">Oroscopo cinese e vedico</a> · <a href="../mappa-del-cielo/">Mappa del cielo</a> · <a href="../che-segno-sono/">Che segno sono</a> · <a href="../pianeti-oggi/">Pianeti oggi</a> · <a href="../carta-del-giorno/">Carta del giorno</a> · <a href="../dizionario-dei-sogni/">Dizionario dei sogni</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 <script src="/consent.js" defer></script>

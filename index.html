@@ -26,7 +26,9 @@
 <link rel="alternate" hreflang="ja" href="https://mycosmiccode.app/ja/" />
 <link rel="alternate" hreflang="hi" href="https://mycosmiccode.app/hi/" />
 <link rel="alternate" hreflang="x-default" href="https://mycosmiccode.app/" />
-<link rel="icon" href="icon-512.png" />
+<link rel="icon" href="icon-48.png" sizes="48x48" type="image/png" />
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png" />
+<link rel="apple-touch-icon" href="icon-192.png" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="My Cosmic Code" />
 <meta property="og:title" content="My Cosmic Code: Horoscope" />
@@ -40,7 +42,7 @@
 <meta name="twitter:title" content="My Cosmic Code: Horoscope" />
 <meta name="twitter:description" content="Daily horoscope, birth chart, zodiac love compatibility &amp; dream dictionary." />
 <meta name="twitter:image" content="https://mycosmiccode.app/feature-graphic.png" />
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","alternateName":"My Cosmic Code: Horoscope","description":"Daily horoscope, birth chart, zodiac love compatibility & dream dictionary.","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"en","url":"https://mycosmiccode.app/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=en-US","image":"https://mycosmiccode.app/feature-graphic.png","screenshot":["https://mycosmiccode.app/screenshots/1-home.jpg","https://mycosmiccode.app/screenshots/2-birth-chart.jpg","https://mycosmiccode.app/screenshots/3-explore.jpg","https://mycosmiccode.app/screenshots/4-aspects.jpg","https://mycosmiccode.app/screenshots/5-dream-journal.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Person","name":"Krist Code Taylor"},"sameAs":["https://www.facebook.com/profile.php?id=61594778747018","https://play.google.com/store/apps/details?id=com.mycosmiccode.app"]}</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","alternateName":"My Cosmic Code: Horoscope","description":"Daily horoscope, birth chart, zodiac love compatibility & dream dictionary.","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"en","url":"https://mycosmiccode.app/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=en-US","image":"https://mycosmiccode.app/feature-graphic.png","screenshot":["https://mycosmiccode.app/screenshots/1-home.jpg","https://mycosmiccode.app/screenshots/2-birth-chart.jpg","https://mycosmiccode.app/screenshots/3-explore.jpg","https://mycosmiccode.app/screenshots/4-aspects.jpg","https://mycosmiccode.app/screenshots/5-dream-journal.jpg"],"offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"publisher":{"@type":"Person","name":"Krist Code Taylor"},"sameAs":["https://www.facebook.com/profile.php?id=61594778747018","https://play.google.com/store/apps/details?id=com.mycosmiccode.app"]},{"@context":"https://schema.org","@type":"WebSite","name":"My Cosmic Code","alternateName":"mycosmiccode.app","url":"https://mycosmiccode.app/","inLanguage":"en"}]</script>
 <style>
 :root { color-scheme: dark; }
 * { box-sizing: border-box; }
@@ -90,15 +92,16 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 
 .svc { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: .5rem 0 1.5rem; padding: 0; list-style: none; }
 @media (min-width: 40rem) { .svc { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.svc a { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F center / cover no-repeat; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
-.svc a::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
+.svc a { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; min-height: 148px; height: 100%; border-radius: 16px; overflow: hidden; text-decoration: none; background: #14161F; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.svc .art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: 0; }
+.svc a::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(5,6,10,0) 0%, rgba(5,6,10,0) 40%, rgba(5,6,10,.92) 70%, rgba(5,6,10,.92) 100%); }
 .svc a:hover, .svc a:focus-visible { outline: 2px solid #C9A227; outline-offset: 2px; }
-.svc .pad { position: relative; padding: 4.5rem .75rem .75rem; }
+.svc .pad { position: relative; z-index: 2; padding: 4.5rem .75rem .75rem; }
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 </style>
 <script>(function(){try{
-var P={"hr":"hr/index.html","de":"de/index.html","es":"es/index.html","fr":"fr/index.html","pt":"pt/index.html","it":"it/index.html","pl":"pl/index.html","tr":"tr/index.html","zh-tw":"zh-tw/index.html","zh-cn":"zh-cn/index.html","ja":"ja/index.html","hi":"hi/index.html"},T={"Europe/Zagreb":"hr","Europe/Sarajevo":"hr","Europe/Berlin":"de","Europe/Vienna":"de","Europe/Zurich":"de","Europe/Vaduz":"de","Europe/Madrid":"es","Atlantic/Canary":"es","America/Mexico_City":"es","America/Bogota":"es","America/Lima":"es","America/Santiago":"es","America/Argentina/Buenos_Aires":"es","America/Buenos_Aires":"es","America/Caracas":"es","America/Montevideo":"es","America/Guatemala":"es","America/Guayaquil":"es","America/La_Paz":"es","America/Asuncion":"es","America/Panama":"es","America/Costa_Rica":"es","America/El_Salvador":"es","America/Tegucigalpa":"es","America/Managua":"es","America/Santo_Domingo":"es","America/Havana":"es","Europe/Paris":"fr","Europe/Monaco":"fr","Europe/Luxembourg":"fr","Europe/Lisbon":"pt","Atlantic/Azores":"pt","Atlantic/Madeira":"pt","America/Sao_Paulo":"pt","America/Fortaleza":"pt","America/Recife":"pt","America/Bahia":"pt","America/Manaus":"pt","America/Belem":"pt","Africa/Luanda":"pt","Africa/Maputo":"pt","Europe/Rome":"it","Europe/San_Marino":"it","Europe/Vatican":"it","Europe/Warsaw":"pl","Europe/Istanbul":"tr","Asia/Istanbul":"tr","Asia/Taipei":"zh-tw","Asia/Hong_Kong":"zh-tw","Asia/Macau":"zh-tw","Asia/Shanghai":"zh-cn","Asia/Chongqing":"zh-cn","Asia/Urumqi":"zh-cn","Asia/Tokyo":"ja","Asia/Kolkata":"hi","Asia/Calcutta":"hi"};
+var P={"hr":"hr/","de":"de/","es":"es/","fr":"fr/","pt":"pt/","it":"it/","pl":"pl/","tr":"tr/","zh-tw":"zh-tw/","zh-cn":"zh-cn/","ja":"ja/","hi":"hi/"},T={"Europe/Zagreb":"hr","Europe/Sarajevo":"hr","Europe/Berlin":"de","Europe/Vienna":"de","Europe/Zurich":"de","Europe/Vaduz":"de","Europe/Madrid":"es","Atlantic/Canary":"es","America/Mexico_City":"es","America/Bogota":"es","America/Lima":"es","America/Santiago":"es","America/Argentina/Buenos_Aires":"es","America/Buenos_Aires":"es","America/Caracas":"es","America/Montevideo":"es","America/Guatemala":"es","America/Guayaquil":"es","America/La_Paz":"es","America/Asuncion":"es","America/Panama":"es","America/Costa_Rica":"es","America/El_Salvador":"es","America/Tegucigalpa":"es","America/Managua":"es","America/Santo_Domingo":"es","America/Havana":"es","Europe/Paris":"fr","Europe/Monaco":"fr","Europe/Luxembourg":"fr","Europe/Lisbon":"pt","Atlantic/Azores":"pt","Atlantic/Madeira":"pt","America/Sao_Paulo":"pt","America/Fortaleza":"pt","America/Recife":"pt","America/Bahia":"pt","America/Manaus":"pt","America/Belem":"pt","Africa/Luanda":"pt","Africa/Maputo":"pt","Europe/Rome":"it","Europe/San_Marino":"it","Europe/Vatican":"it","Europe/Warsaw":"pl","Europe/Istanbul":"tr","Asia/Istanbul":"tr","Asia/Taipei":"zh-tw","Asia/Hong_Kong":"zh-tw","Asia/Macau":"zh-tw","Asia/Shanghai":"zh-cn","Asia/Chongqing":"zh-cn","Asia/Urumqi":"zh-cn","Asia/Tokyo":"ja","Asia/Kolkata":"hi","Asia/Calcutta":"hi"};
 if(/[?&]lang=/.test(location.search))return;
 var r=document.referrer;if(r&&r.indexOf(location.host)!==-1)return;
 function pick(t){t=(t||'').toLowerCase();if(!t)return null;if(t.indexOf('en')===0)return'en';
@@ -113,24 +116,24 @@ if(w&&w!=='en'&&P[w])location.replace(P[w]);
 <body>
 <div class="wrap">
 <header class="hero">
-<img class="graphic" src="feature-graphic.png" width="1024" height="500" alt="My Cosmic Code: Horoscope" />
-<img class="icon" src="icon-512.png" width="96" height="96" alt="" />
+<img class="graphic" src="feature-graphic.webp" width="1024" height="500" fetchpriority="high" alt="My Cosmic Code: Horoscope" />
+<img class="icon" src="icon-192.webp" width="96" height="96" alt="" />
 <h1>My Cosmic Code: Horoscope</h1>
 <p class="lead">Daily horoscope, birth chart, zodiac love compatibility &amp; dream dictionary.</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=en-US" rel="noopener">Get it on Google Play</a>
 </header>
 <h2>Use it here, in your browser</h2>
 <ul class="svc">
-<li><a href="birth-chart/#calculator" style="background-image:url('cards/birth-chart.webp')"><div class="pad"><strong>Birth Chart</strong><span>Your cosmic blueprint</span></div></a></li>
-<li><a href="moon-calendar/#calculator" style="background-image:url('cards/moon.webp')"><div class="pad"><strong>Moon Calendar</strong><span>Lunar cycles and phases</span></div></a></li>
-<li><a href="numerology/#calculator" style="background-image:url('cards/numerology.webp')"><div class="pad"><strong>Numerology</strong><span>Decode the power of numbers</span></div></a></li>
-<li><a href="compatibility/#calculator" style="background-image:url('cards/compatibility.webp')"><div class="pad"><strong>Compatibility</strong><span>How your charts meet</span></div></a></li>
-<li><a href="chinese-zodiac/#calculator" style="background-image:url('cards/horoscopes.webp')"><div class="pad"><strong>Horoscopes</strong><span>Chinese, Japanese and Vedic</span></div></a></li>
-<li><a href="night-sky-map/#calculator" style="background-image:url('cards/night-sky.webp')"><div class="pad"><strong>Night Sky</strong><span>The real sky, tied to your chart</span></div></a></li>
-<li><a href="zodiac-sign-calculator/#calculator" style="background-image:url('cards/planets.webp')"><div class="pad"><strong>Zodiac sign</strong><span>Your Sun and Moon sign</span></div></a></li>
-<li><a href="planets-today/#calculator" style="background-image:url('cards/transits.webp')"><div class="pad"><strong>Planets today</strong><span>Moon, planets and retrogrades now</span></div></a></li>
-<li><a href="card-of-the-day/#calculator" style="background-image:url('cards/deck.webp')"><div class="pad"><strong>Card of the Day</strong><span>Ask the Veiled Seer</span></div></a></li>
-<li><a href="dream-dictionary/" style="background-image:url('cards/dream-book.webp')"><div class="pad"><strong>Dream Dictionary</strong><span>Every dream symbol, A to Z</span></div></a></li>
+<li><a href="birth-chart/#calculator"><img class="art" src="cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Birth Chart</strong><span>Your cosmic blueprint</span></div></a></li>
+<li><a href="moon-calendar/#calculator"><img class="art" src="cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Moon Calendar</strong><span>Lunar cycles and phases</span></div></a></li>
+<li><a href="numerology/#calculator"><img class="art" src="cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Numerology</strong><span>Decode the power of numbers</span></div></a></li>
+<li><a href="compatibility/#calculator"><img class="art" src="cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Compatibility</strong><span>How your charts meet</span></div></a></li>
+<li><a href="chinese-zodiac/#calculator"><img class="art" src="cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Horoscopes</strong><span>Chinese, Japanese and Vedic</span></div></a></li>
+<li><a href="night-sky-map/#calculator"><img class="art" src="cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Night Sky</strong><span>The real sky, tied to your chart</span></div></a></li>
+<li><a href="zodiac-sign-calculator/#calculator"><img class="art" src="cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Zodiac sign</strong><span>Your Sun and Moon sign</span></div></a></li>
+<li><a href="planets-today/#calculator"><img class="art" src="cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Planets today</strong><span>Moon, planets and retrogrades now</span></div></a></li>
+<li><a href="card-of-the-day/#calculator"><img class="art" src="cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Card of the Day</strong><span>Ask the Veiled Seer</span></div></a></li>
+<li><a href="dream-dictionary/"><img class="art" src="cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Dream Dictionary</strong><span>Every dream symbol, A to Z</span></div></a></li>
 </ul>
 <div class="shots">
 <img src="screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Home screen: your Cosmic Code — Life Path and Personal Year — with Sun, Moon and Rising signs" />
@@ -215,7 +218,7 @@ if(w&&w!=='en'&&P[w])location.replace(P[w]);
 <li><a href="delete-account.html">Account &amp; Data Deletion</a></li>
 </ul>
 <h2>Languages</h2>
-<p class="langs"><strong>English</strong> · <a href="hr/index.html" hreflang="hr" lang="hr">Hrvatski</a> · <a href="de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="es/index.html" hreflang="es" lang="es">Español</a> · <a href="fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="pt/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="tr/index.html" hreflang="tr" lang="tr">Türkçe</a> · <a href="zh-tw/index.html" hreflang="zh-TW" lang="zh-TW">繁體中文</a> · <a href="zh-cn/index.html" hreflang="zh-CN" lang="zh-CN">简体中文</a> · <a href="ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="hi/index.html" hreflang="hi" lang="hi">हिन्दी</a></p>
+<p class="langs"><strong>English</strong> · <a href="hr/" hreflang="hr" lang="hr">Hrvatski</a> · <a href="de/" hreflang="de" lang="de">Deutsch</a> · <a href="es/" hreflang="es" lang="es">Español</a> · <a href="fr/" hreflang="fr" lang="fr">Français</a> · <a href="pt/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="it/" hreflang="it" lang="it">Italiano</a> · <a href="pl/" hreflang="pl" lang="pl">Polski</a> · <a href="tr/" hreflang="tr" lang="tr">Türkçe</a> · <a href="zh-tw/" hreflang="zh-TW" lang="zh-TW">繁體中文</a> · <a href="zh-cn/" hreflang="zh-CN" lang="zh-CN">简体中文</a> · <a href="ja/" hreflang="ja" lang="ja">日本語</a> · <a href="hi/" hreflang="hi" lang="hi">हिन्दी</a></p>
 <footer>My Cosmic Code · <a href="https://www.facebook.com/profile.php?id=61594778747018" rel="noopener">Facebook</a> · com.mycosmiccode.app · Contact: kristcodetaylor@gmail.com · Krist Code Taylor, Braće Stipčić 34, 51000 Rijeka, HR · OIB 79241136189 · MBO 119015504</footer>
 </div>
 <script src="/consent.js" defer></script>
