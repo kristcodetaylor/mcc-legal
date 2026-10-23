@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://mycosmiccode.app/zh-cn/shengxiao/" />
 <meta property="og:image" content="https://mycosmiccode.app/feature-graphic.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"按实际的农历新年日期查你的生肖和五行，还有日本干支生肖（eto）与九星气学本命星，以及你的吠陀月亮星座和星宿（nakshatra）。Android 应用，无需账号。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-CN","url":"https://mycosmiccode.app/zh-cn/shengxiao/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么我的生肖和我以为的不一样？","acceptedAnswer":{"@type":"Answer","text":"农历年从春节（农历新年）开始，时间在 1 月 21 日到 2 月 20 日之间。如果你在一月或二月初出生，你可能属于前一年的生肖。应用会显示你所属农历年的确切起止日期。"}},{"@type":"Question","name":"我的吠陀月亮星座是什么？","acceptedAnswer":{"@type":"Answer","text":"你出生时月亮所在的星座，以恒星为参照（恒星黄道），而不是以季节为参照。如今这两种黄道相差约 24 度，所以你的吠陀月亮星座常常是你西方占星月亮星座的前一个。"}},{"@type":"Question","name":"什么是九星气学？","acceptedAnswer":{"@type":"Answer","text":"日本的一套体系：每一年对应九星之一，每颗星各有所属的五行。你的本命星由出生年份决定，从立春（约 2 月 4 日）起算。"}},{"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"应用可免费下载，当前版本的所有功能都已开放。无广告。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/zh-cn/"},{"@type":"ListItem","position":2,"name":"生肖与吠陀占星","item":"https://mycosmiccode.app/zh-cn/shengxiao/"}]}]</script>
+<script type="application/ld+json">[{"@context":"https://schema.org","@type":"MobileApplication","name":"My Cosmic Code","description":"按实际的农历新年日期查你的生肖和五行，还有日本干支生肖（eto）与九星气学本命星，以及你的吠陀月亮星座和星宿（nakshatra）。Android 应用，无需账号。","operatingSystem":"ANDROID","applicationCategory":"LifestyleApplication","inLanguage":"zh-CN","url":"https://mycosmiccode.app/zh-cn/shengxiao/","installUrl":"https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"为什么我的生肖和我以为的不一样？","acceptedAnswer":{"@type":"Answer","text":"农历年从春节（农历新年）开始，时间在 1 月 21 日到 2 月 20 日之间。如果你在一月或二月初出生，你可能属于前一年的生肖。应用会显示你所属农历年的确切起止日期。"}},{"@type":"Question","name":"我的吠陀月亮星座是什么？","acceptedAnswer":{"@type":"Answer","text":"你出生时月亮所在的星座，以恒星为参照（恒星黄道），而不是以季节为参照。如今这两种黄道相差约 24 度，所以你的吠陀月亮星座常常是你西方占星月亮星座的前一个。"}},{"@type":"Question","name":"什么是九星气学？","acceptedAnswer":{"@type":"Answer","text":"日本的一套体系：每一年对应九星之一，每颗星各有所属的五行。你的本命星由出生年份决定，从立春（约 2 月 4 日）起算。"}},{"@type":"Question","name":"免费吗？","acceptedAnswer":{"@type":"Answer","text":"应用可免费下载，而且大部分功能一直免费：你的宇宙密码、出生星盘中的行星、今日、接下来一周的月亮、每日一牌、解梦词典和你的日记。通过 Google Play 的 Pro 和 Max 可开启其余功能。无广告。"}}]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"My Cosmic Code","item":"https://mycosmiccode.app/zh-cn/"},{"@type":"ListItem","position":2,"name":"生肖与吠陀占星","item":"https://mycosmiccode.app/zh-cn/shengxiao/"}]}]</script>
 <style>
 :root { color-scheme: dark; }
 * { box-sizing: border-box; }
@@ -119,6 +119,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 1rem 0; }
 .shots img { flex: 0 0 auto; width: 46%; max-width: 220px; height: auto; border-radius: 14px; }
 .svc-links { font-size: .9rem; line-height: 2; }
+.notify { font-size: .95rem; color: #CFCBE0; margin: .25rem 0 1rem; }
 </style>
 </head>
 <body>
@@ -134,6 +135,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <script type="module" src="../../tools/horoscopes.js"></script>
 </section>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a>
+<p class="notify">想在行星进入或离开你的星座、开始逆行，或新月、满月落在你的星座时收到通知吗？这些通知只在 App 里提供，请从 Google Play 安装。</p>
 <h2>中国生肖</h2>
 <ul>
 <li>你的年生肖和五行，从农历新年起算（收录 1901–2099 年的农历新年日期）。</li>
@@ -163,7 +165,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <h3>什么是九星气学？</h3>
 <p>日本的一套体系：每一年对应九星之一，每颗星各有所属的五行。你的本命星由出生年份决定，从立春（约 2 月 4 日）起算。</p>
 <h3>免费吗？</h3>
-<p>应用可免费下载，当前版本的所有功能都已开放。无广告。</p>
+<p>应用可免费下载，而且大部分功能一直免费：你的宇宙密码、出生星盘中的行星、今日、接下来一周的月亮、每日一牌、解梦词典和你的日记。通过 Google Play 的 Pro 和 Max 可开启其余功能。无广告。</p>
 <p style="text-align:center"><a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=zh-CN" rel="noopener">前往 Google Play 下载</a></p>
 <h2>也试试这些</h2>
 <ul class="svc">
