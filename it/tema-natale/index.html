@@ -113,6 +113,9 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
 
+@keyframes mccwarp { from { transform: scale(.92) } to { transform: scale(1) } }
+.warping .wrap { animation: mccwarp 560ms cubic-bezier(.55,.085,.68,.53) backwards; }
+
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .cta.ghost { background: transparent; color: #C9A227; border: 1px solid #C9A227; margin-top: .25rem; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
@@ -123,6 +126,27 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 </style>
 </head>
 <body>
+<script>(function(){
+if(!window.matchMedia||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var c=document.createElement('canvas'),x=c.getContext&&c.getContext('2d');if(!x)return;
+var N=44,D=560,r=document.documentElement,w,h,R,s=[],t0=0,i;
+function sd(n){var v=Math.sin(n*12.9898+78.233)*43758.5453;return v-Math.floor(v)}
+for(i=0;i<N;i++)s.push({a:i/N*Math.PI*2+sd(i)*.35,st:12+sd(i+100)*70,l:40+sd(i+200)*90,g:sd(i+300)<.22,d:sd(i+400)*.25});
+function size(){var p=window.devicePixelRatio||1;w=innerWidth;h=innerHeight;R=Math.sqrt(w*w+h*h)/2+40;c.width=w*p;c.height=h*p;x.setTransform(p,0,0,p,0,0)}
+function lin(v,a,b){if(v<=a[0])return b[0];for(var k=1;k<a.length;k++)if(v<=a[k])return b[k-1]+(b[k]-b[k-1])*((v-a[k-1])/((a[k]-a[k-1])||1));return b[b.length-1]}
+function end(){if(c.parentNode)c.parentNode.removeChild(c);r.classList.remove('warping')}
+function f(now){if(!t0)t0=now;var q=Math.min(1,(now-t0)/D),p=q*q;
+x.clearRect(0,0,w,h);x.globalAlpha=lin(p,[0,.7,1],[1,.6,0]);x.fillStyle='#05060A';x.fillRect(0,0,w,h);
+for(var k=0;k<N;k++){var o=s[k],d=o.d,at=function(z){return d+(1-d)*z};
+var dist=lin(p,[0,d,1],[o.st,o.st,R]),str=lin(p,[0,d,at(.5),1],[.08,.08,1,.5]),op=lin(p,[0,d,at(.1),at(.75),1],[0,0,1,.9,0]);
+if(op<=0)continue;var L=o.l*str/2,ca=Math.cos(o.a),sa=Math.sin(o.a);
+x.globalAlpha=op;x.strokeStyle=o.g?'#E6C584':'#EDEBFF';x.lineWidth=o.g?2:1.5;x.lineCap='round';x.beginPath();
+x.moveTo(w/2+ca*(dist-L),h/2+sa*(dist-L));x.lineTo(w/2+ca*(dist+L),h/2+sa*(dist+L));x.stroke()}
+if(q<1)requestAnimationFrame(f);else end()}
+c.setAttribute('aria-hidden','true');c.style.cssText='position:fixed;inset:0;width:100%;height:100%;z-index:60;pointer-events:none';
+size();r.classList.add('warping');document.body.appendChild(c);requestAnimationFrame(f);
+setTimeout(end,2000);
+})();</script>
 <div class="wrap">
 <nav><a href="../"><img src="../../icon-192.webp" width="28" height="28" alt="" style="vertical-align:middle;border-radius:7px" /> My Cosmic Code</a></nav>
 <h1>Tema natale gratis: dove erano i tuoi pianeti alla nascita</h1>
