@@ -80,9 +80,15 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
-.hero { text-align: center; padding: 1rem 0 1.5rem; }
-.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
-.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.hero { text-align: center; padding: 1.25rem 0 1.5rem; }
+img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero .brand { display: inline-flex; align-items: center; gap: .6rem; margin: 0; font-size: 1.15rem; color: #F2EFE6; }
+.hero .brand img { width: 44px; height: 44px; border-radius: 11px; }
+.hero .trust { display: flex; align-items: center; gap: .8rem; margin: 1.1rem auto .2rem; max-width: 34rem; color: #E6C584; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; }
+.hero .trust::before, .hero .trust::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(230,197,132,.6)); }
+.hero .trust::after { background: linear-gradient(90deg, rgba(230,197,132,.6), transparent); }
+.hero h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(1.9rem, 7vw, 2.8rem); line-height: 1.12; margin: .7rem auto .9rem; max-width: 34rem; color: #F2EFE6; }
+.hero .cta { font-size: 1.1rem; padding: 1rem 2.3rem; box-shadow: 0 0 0 1px rgba(230,197,132,.5), 0 8px 28px rgba(201,162,39,.35); }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
 .notify { font-size: .95rem; color: #CFCBE0; margin: .5rem auto 0; max-width: 34rem; }
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
@@ -100,32 +106,34 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .svc .pad { position: relative; z-index: 2; padding: 4.5rem .75rem .75rem; }
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
+.svc .free { position: absolute; top: .55rem; left: .55rem; z-index: 2; padding: .18rem .55rem; border-radius: 6px; background: rgba(5,6,10,.72); border: 1px solid rgba(230,197,132,.7); color: #E6C584; font-size: .66rem; font-weight: 700; letter-spacing: .1em; }
 </style>
 
 </head>
 <body>
 <div class="wrap">
 <header class="hero">
-<img class="graphic" src="../feature-graphic.webp" width="1024" height="500" fetchpriority="high" alt="My Cosmic Code: Horoskop" />
-<img class="icon" src="../icon-192.webp" width="96" height="96" alt="" />
-<h1>My Cosmic Code: Horoskop</h1>
+<p class="brand"><img src="../icon-192.webp" width="44" height="44" alt="" />My Cosmic Code: Horoskop</p><br />
+<p class="trust">Bez registracije ✦ Bez reklama ✦ 13 jezika</p>
+<h1>Natalna karta, horoskop i dnevnik snova u jednoj aplikaciji</h1>
 <p class="lead">Dnevni horoskop, natalna karta, kompatibilnost, numerologija i sanjarica.</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hr" rel="noopener">Preuzmi na Google Playu</a>
 <p class="notify">Želiš obavijest kad planet uđe u tvoj znak ili izađe iz njega, krene retrogradno ili kad mlađak ili uštap padne u tvoj znak? Te obavijesti stižu samo u aplikaciji, pa je instaliraj s Google Playa.</p>
 </header>
 <h2>Isprobaj ovdje, u pregledniku</h2>
 <ul class="svc">
-<li><a href="natalna-karta/#calculator"><img class="art" src="../cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Natalna karta</strong><span>Tvoj kozmički nacrt</span></div></a></li>
-<li><a href="mjesecev-kalendar/#calculator"><img class="art" src="../cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Mjesečev kalendar</strong><span>Lunarni ciklusi i mijene</span></div></a></li>
-<li><a href="numerologija/#calculator"><img class="art" src="../cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Numerologija</strong><span>Otkrij moć brojeva</span></div></a></li>
-<li><a href="slaganje-znakova/#calculator"><img class="art" src="../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Kompatibilnost</strong><span>Kako se vaše karte susreću</span></div></a></li>
-<li><a href="kineski-horoskop/#calculator"><img class="art" src="../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Horoskopi</strong><span>Kineski, japanski i vedski</span></div></a></li>
-<li><a href="karta-neba/#calculator"><img class="art" src="../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Noćno nebo</strong><span>Pravo nebo, povezano s tvojom kartom</span></div></a></li>
-<li><a href="koji-sam-znak/#calculator"><img class="art" src="../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Koji sam znak</strong><span>Tvoj znak Sunca i Mjeseca</span></div></a></li>
-<li><a href="planeti-danas/#calculator"><img class="art" src="../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Planeti danas</strong><span>Mjesec, planeti i retrogradni sada</span></div></a></li>
-<li><a href="karta-dana/#calculator"><img class="art" src="../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Karta dana</strong><span>Pitaj Zastrtog Vidjelca</span></div></a></li>
-<li><a href="sanjarica/"><img class="art" src="../cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Sanjarica</strong><span>Svi simboli snova, od A do Ž</span></div></a></li>
+<li><a href="natalna-karta/#calculator"><img class="art" src="../cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Natalna karta</strong><span>Tvoj kozmički nacrt</span></div></a></li>
+<li><a href="mjesecev-kalendar/#calculator"><img class="art" src="../cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Mjesečev kalendar</strong><span>Lunarni ciklusi i mijene</span></div></a></li>
+<li><a href="numerologija/#calculator"><img class="art" src="../cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Numerologija</strong><span>Otkrij moć brojeva</span></div></a></li>
+<li><a href="slaganje-znakova/#calculator"><img class="art" src="../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Kompatibilnost</strong><span>Kako se vaše karte susreću</span></div></a></li>
+<li><a href="kineski-horoskop/#calculator"><img class="art" src="../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Horoskopi</strong><span>Kineski, japanski i vedski</span></div></a></li>
+<li><a href="karta-neba/#calculator"><img class="art" src="../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Noćno nebo</strong><span>Pravo nebo, povezano s tvojom kartom</span></div></a></li>
+<li><a href="koji-sam-znak/#calculator"><img class="art" src="../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Koji sam znak</strong><span>Tvoj znak Sunca i Mjeseca</span></div></a></li>
+<li><a href="planeti-danas/#calculator"><img class="art" src="../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Planeti danas</strong><span>Mjesec, planeti i retrogradni sada</span></div></a></li>
+<li><a href="karta-dana/#calculator"><img class="art" src="../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Karta dana</strong><span>Pitaj Zastrtog Vidjelca</span></div></a></li>
+<li><a href="sanjarica/"><img class="art" src="../cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ BESPLATNO ONLINE</b><div class="pad"><strong>Sanjarica</strong><span>Svi simboli snova, od A do Ž</span></div></a></li>
 </ul>
+<img class="graphic" src="../feature-graphic.webp" width="1024" height="500" loading="lazy" alt="My Cosmic Code: Horoskop" />
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Početni zaslon: tvoj Cosmic Code — životni put i osobna godina — sa Suncem, Mjesecom i podznakom" />
 <img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Natalna karta s planetima, kućama, aspektima, ascendentom i MC-om" />

@@ -80,9 +80,15 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
-.hero { text-align: center; padding: 1rem 0 1.5rem; }
-.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
-.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.hero { text-align: center; padding: 1.25rem 0 1.5rem; }
+img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero .brand { display: inline-flex; align-items: center; gap: .6rem; margin: 0; font-size: 1.15rem; color: #F2EFE6; }
+.hero .brand img { width: 44px; height: 44px; border-radius: 11px; }
+.hero .trust { display: flex; align-items: center; gap: .8rem; margin: 1.1rem auto .2rem; max-width: 34rem; color: #E6C584; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; }
+.hero .trust::before, .hero .trust::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(230,197,132,.6)); }
+.hero .trust::after { background: linear-gradient(90deg, rgba(230,197,132,.6), transparent); }
+.hero h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(1.9rem, 7vw, 2.8rem); line-height: 1.12; margin: .7rem auto .9rem; max-width: 34rem; color: #F2EFE6; }
+.hero .cta { font-size: 1.1rem; padding: 1rem 2.3rem; box-shadow: 0 0 0 1px rgba(230,197,132,.5), 0 8px 28px rgba(201,162,39,.35); }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
 .notify { font-size: .95rem; color: #CFCBE0; margin: .5rem auto 0; max-width: 34rem; }
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
@@ -100,6 +106,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .svc .pad { position: relative; z-index: 2; padding: 4.5rem .75rem .75rem; }
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
+.svc .free { position: absolute; top: .55rem; left: .55rem; z-index: 2; padding: .18rem .55rem; border-radius: 6px; background: rgba(5,6,10,.72); border: 1px solid rgba(230,197,132,.7); color: #E6C584; font-size: .66rem; font-weight: 700; letter-spacing: .1em; }
 </style>
 <script>(function(){try{
 var P={"hr":"hr/","de":"de/","es":"es/","fr":"fr/","pt":"pt/","it":"it/","pl":"pl/","tr":"tr/","zh-tw":"zh-tw/","zh-cn":"zh-cn/","ja":"ja/","hi":"hi/"},T={"Europe/Zagreb":"hr","Europe/Sarajevo":"hr","Europe/Berlin":"de","Europe/Vienna":"de","Europe/Zurich":"de","Europe/Vaduz":"de","Europe/Madrid":"es","Atlantic/Canary":"es","America/Mexico_City":"es","America/Bogota":"es","America/Lima":"es","America/Santiago":"es","America/Argentina/Buenos_Aires":"es","America/Buenos_Aires":"es","America/Caracas":"es","America/Montevideo":"es","America/Guatemala":"es","America/Guayaquil":"es","America/La_Paz":"es","America/Asuncion":"es","America/Panama":"es","America/Costa_Rica":"es","America/El_Salvador":"es","America/Tegucigalpa":"es","America/Managua":"es","America/Santo_Domingo":"es","America/Havana":"es","Europe/Paris":"fr","Europe/Monaco":"fr","Europe/Luxembourg":"fr","Europe/Lisbon":"pt","Atlantic/Azores":"pt","Atlantic/Madeira":"pt","America/Sao_Paulo":"pt","America/Fortaleza":"pt","America/Recife":"pt","America/Bahia":"pt","America/Manaus":"pt","America/Belem":"pt","Africa/Luanda":"pt","Africa/Maputo":"pt","Europe/Rome":"it","Europe/San_Marino":"it","Europe/Vatican":"it","Europe/Warsaw":"pl","Europe/Istanbul":"tr","Asia/Istanbul":"tr","Asia/Taipei":"zh-tw","Asia/Hong_Kong":"zh-tw","Asia/Macau":"zh-tw","Asia/Shanghai":"zh-cn","Asia/Chongqing":"zh-cn","Asia/Urumqi":"zh-cn","Asia/Tokyo":"ja","Asia/Kolkata":"hi","Asia/Calcutta":"hi"};
@@ -117,26 +124,27 @@ if(w&&w!=='en'&&P[w])location.replace(P[w]);
 <body>
 <div class="wrap">
 <header class="hero">
-<img class="graphic" src="feature-graphic.webp" width="1024" height="500" fetchpriority="high" alt="My Cosmic Code: Horoscope" />
-<img class="icon" src="icon-192.webp" width="96" height="96" alt="" />
-<h1>My Cosmic Code: Horoscope</h1>
+<p class="brand"><img src="icon-192.webp" width="44" height="44" alt="" />My Cosmic Code: Horoscope</p><br />
+<p class="trust">No sign-up ✦ No ads ✦ 13 languages</p>
+<h1>Your birth chart, horoscope and dream journal in one app</h1>
 <p class="lead">Daily horoscope, birth chart, zodiac love compatibility &amp; dream dictionary.</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=en-US" rel="noopener">Get it on Google Play</a>
 <p class="notify">Want a note when a planet enters or leaves your sign, turns retrograde, or a New or Full Moon falls in your sign? Those notifications come only in the app: install it from Google Play.</p>
 </header>
 <h2>Use it here, in your browser</h2>
 <ul class="svc">
-<li><a href="birth-chart/#calculator"><img class="art" src="cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Birth Chart</strong><span>Your cosmic blueprint</span></div></a></li>
-<li><a href="moon-calendar/#calculator"><img class="art" src="cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Moon Calendar</strong><span>Lunar cycles and phases</span></div></a></li>
-<li><a href="numerology/#calculator"><img class="art" src="cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Numerology</strong><span>Decode the power of numbers</span></div></a></li>
-<li><a href="compatibility/#calculator"><img class="art" src="cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Compatibility</strong><span>How your charts meet</span></div></a></li>
-<li><a href="chinese-zodiac/#calculator"><img class="art" src="cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Horoscopes</strong><span>Chinese, Japanese and Vedic</span></div></a></li>
-<li><a href="night-sky-map/#calculator"><img class="art" src="cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Night Sky</strong><span>The real sky, tied to your chart</span></div></a></li>
-<li><a href="zodiac-sign-calculator/#calculator"><img class="art" src="cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Zodiac sign</strong><span>Your Sun and Moon sign</span></div></a></li>
-<li><a href="planets-today/#calculator"><img class="art" src="cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Planets today</strong><span>Moon, planets and retrogrades now</span></div></a></li>
-<li><a href="card-of-the-day/#calculator"><img class="art" src="cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Card of the Day</strong><span>Ask the Veiled Seer</span></div></a></li>
-<li><a href="dream-dictionary/"><img class="art" src="cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Dream Dictionary</strong><span>Every dream symbol, A to Z</span></div></a></li>
+<li><a href="birth-chart/#calculator"><img class="art" src="cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Birth Chart</strong><span>Your cosmic blueprint</span></div></a></li>
+<li><a href="moon-calendar/#calculator"><img class="art" src="cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Moon Calendar</strong><span>Lunar cycles and phases</span></div></a></li>
+<li><a href="numerology/#calculator"><img class="art" src="cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Numerology</strong><span>Decode the power of numbers</span></div></a></li>
+<li><a href="compatibility/#calculator"><img class="art" src="cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Compatibility</strong><span>How your charts meet</span></div></a></li>
+<li><a href="chinese-zodiac/#calculator"><img class="art" src="cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Horoscopes</strong><span>Chinese, Japanese and Vedic</span></div></a></li>
+<li><a href="night-sky-map/#calculator"><img class="art" src="cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Night Sky</strong><span>The real sky, tied to your chart</span></div></a></li>
+<li><a href="zodiac-sign-calculator/#calculator"><img class="art" src="cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Zodiac sign</strong><span>Your Sun and Moon sign</span></div></a></li>
+<li><a href="planets-today/#calculator"><img class="art" src="cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Planets today</strong><span>Moon, planets and retrogrades now</span></div></a></li>
+<li><a href="card-of-the-day/#calculator"><img class="art" src="cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Card of the Day</strong><span>Ask the Veiled Seer</span></div></a></li>
+<li><a href="dream-dictionary/"><img class="art" src="cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ FREE ONLINE</b><div class="pad"><strong>Dream Dictionary</strong><span>Every dream symbol, A to Z</span></div></a></li>
 </ul>
+<img class="graphic" src="feature-graphic.webp" width="1024" height="500" loading="lazy" alt="My Cosmic Code: Horoscope" />
 <div class="shots">
 <img src="screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Home screen: your Cosmic Code — Life Path and Personal Year — with Sun, Moon and Rising signs" />
 <img src="screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Natal chart wheel with planets, houses, aspects, Ascendant and Midheaven" />

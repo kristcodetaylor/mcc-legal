@@ -80,9 +80,15 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
-.hero { text-align: center; padding: 1rem 0 1.5rem; }
-.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
-.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.hero { text-align: center; padding: 1.25rem 0 1.5rem; }
+img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero .brand { display: inline-flex; align-items: center; gap: .6rem; margin: 0; font-size: 1.15rem; color: #F2EFE6; }
+.hero .brand img { width: 44px; height: 44px; border-radius: 11px; }
+.hero .trust { display: flex; align-items: center; gap: .8rem; margin: 1.1rem auto .2rem; max-width: 34rem; color: #E6C584; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; }
+.hero .trust::before, .hero .trust::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(230,197,132,.6)); }
+.hero .trust::after { background: linear-gradient(90deg, rgba(230,197,132,.6), transparent); }
+.hero h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(1.9rem, 7vw, 2.8rem); line-height: 1.12; margin: .7rem auto .9rem; max-width: 34rem; color: #F2EFE6; }
+.hero .cta { font-size: 1.1rem; padding: 1rem 2.3rem; box-shadow: 0 0 0 1px rgba(230,197,132,.5), 0 8px 28px rgba(201,162,39,.35); }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
 .notify { font-size: .95rem; color: #CFCBE0; margin: .5rem auto 0; max-width: 34rem; }
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
@@ -100,31 +106,33 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .svc .pad { position: relative; z-index: 2; padding: 4.5rem .75rem .75rem; }
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
+.svc .free { position: absolute; top: .55rem; left: .55rem; z-index: 2; padding: .18rem .55rem; border-radius: 6px; background: rgba(5,6,10,.72); border: 1px solid rgba(230,197,132,.7); color: #E6C584; font-size: .66rem; font-weight: 700; letter-spacing: .1em; }
 </style>
 
 </head>
 <body>
 <div class="wrap">
 <header class="hero">
-<img class="graphic" src="../feature-graphic.webp" width="1024" height="500" fetchpriority="high" alt="My Cosmic Code: राशिफल" />
-<img class="icon" src="../icon-192.webp" width="96" height="96" alt="" />
-<h1>My Cosmic Code: राशिफल</h1>
+<p class="brand"><img src="../icon-192.webp" width="44" height="44" alt="" />My Cosmic Code: राशिफल</p><br />
+<p class="trust">पंजीकरण नहीं ✦ कोई विज्ञापन नहीं ✦ 13 भाषाएँ</p>
+<h1>आपकी जन्म कुंडली, राशिफल और सपनों की डायरी — एक ही ऐप में</h1>
 <p class="lead">राशिफल, जन्म कुंडली, नक्षत्र, चीनी राशि, अंक ज्योतिष और सपनों का अर्थ</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=hi-IN" rel="noopener">Google Play पर पाएँ</a>
 <p class="notify">क्या आप सूचना चाहते हैं जब कोई ग्रह आपकी राशि में आए या उससे जाए, वक्री हो, या आपकी राशि में अमावस्या या पूर्णिमा पड़े? ये सूचनाएँ सिर्फ़ ऐप में मिलती हैं: इसे Google Play से इंस्टॉल करें।</p>
 </header>
 <h2>यहीं ब्राउज़र में आज़माएँ</h2>
 <ul class="svc">
-<li><a href="janm-kundali/#calculator"><img class="art" src="../cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>पश्चिमी जन्म कुंडली</strong><span>आपका कॉस्मिक नक्शा</span></div></a></li>
-<li><a href="chandra-calendar/#calculator"><img class="art" src="../cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>चंद्र कैलेंडर</strong><span>चंद्र चक्र और कलाएँ</span></div></a></li>
-<li><a href="ank-jyotish/#calculator"><img class="art" src="../cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>अंक ज्योतिष</strong><span>अंकों की शक्ति को समझें</span></div></a></li>
-<li><a href="rashi-milan/#calculator"><img class="art" src="../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>अनुकूलता</strong><span>आपके चार्ट कैसे मिलते हैं</span></div></a></li>
-<li><a href="vedic-kundali/#calculator"><img class="art" src="../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>राशिफल</strong><span>चीनी, जापानी और वैदिक</span></div></a></li>
-<li><a href="taron-ka-naksha/#calculator"><img class="art" src="../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>रात का आकाश</strong><span>असली आकाश, आपके चार्ट से जुड़ा</span></div></a></li>
-<li><a href="meri-rashi/#calculator"><img class="art" src="../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>मेरी राशि</strong><span>आपकी सूर्य और चंद्र राशि</span></div></a></li>
-<li><a href="aaj-ke-grah/#calculator"><img class="art" src="../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>आज के ग्रह</strong><span>अभी चंद्रमा, ग्रह और वक्री ग्रह</span></div></a></li>
-<li><a href="aaj-ka-card/#calculator"><img class="art" src="../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>आज का कार्ड</strong><span>परदे वाले द्रष्टा से पूछें</span></div></a></li>
+<li><a href="janm-kundali/#calculator"><img class="art" src="../cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>पश्चिमी जन्म कुंडली</strong><span>आपका कॉस्मिक नक्शा</span></div></a></li>
+<li><a href="chandra-calendar/#calculator"><img class="art" src="../cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>चंद्र कैलेंडर</strong><span>चंद्र चक्र और कलाएँ</span></div></a></li>
+<li><a href="ank-jyotish/#calculator"><img class="art" src="../cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>अंक ज्योतिष</strong><span>अंकों की शक्ति को समझें</span></div></a></li>
+<li><a href="rashi-milan/#calculator"><img class="art" src="../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>अनुकूलता</strong><span>आपके चार्ट कैसे मिलते हैं</span></div></a></li>
+<li><a href="vedic-kundali/#calculator"><img class="art" src="../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>राशिफल</strong><span>चीनी, जापानी और वैदिक</span></div></a></li>
+<li><a href="taron-ka-naksha/#calculator"><img class="art" src="../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>रात का आकाश</strong><span>असली आकाश, आपके चार्ट से जुड़ा</span></div></a></li>
+<li><a href="meri-rashi/#calculator"><img class="art" src="../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>मेरी राशि</strong><span>आपकी सूर्य और चंद्र राशि</span></div></a></li>
+<li><a href="aaj-ke-grah/#calculator"><img class="art" src="../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>आज के ग्रह</strong><span>अभी चंद्रमा, ग्रह और वक्री ग्रह</span></div></a></li>
+<li><a href="aaj-ka-card/#calculator"><img class="art" src="../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ ऑनलाइन मुफ़्त</b><div class="pad"><strong>आज का कार्ड</strong><span>परदे वाले द्रष्टा से पूछें</span></div></a></li>
 </ul>
+<img class="graphic" src="../feature-graphic.webp" width="1024" height="500" loading="lazy" alt="My Cosmic Code: राशिफल" />
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="होम स्क्रीन: आपका Cosmic Code — भाग्यांक और व्यक्तिगत वर्ष — सूर्य, चंद्र और लग्न राशि के साथ" />
 <img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="ग्रहों, भावों, पहलुओं, लग्न और मध्य आकाश के साथ जन्म कुंडली चक्र" />

@@ -64,7 +64,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <div class="wrap">
 <nav><a href="./">Home</a><strong>Privacy</strong><a href="terms.html">Terms</a><a href="delete-account.html">Delete account</a></nav>
 <h1>Privacy Notice — My Cosmic Code</h1>
-<p><strong>Last updated: 17 October 2026</strong></p>
+<p><strong>Last updated: 28 October 2026</strong></p>
 <p>My Cosmic Code is an astrology, numerology, and dream-journal app that runs almost entirely on your device. This notice explains, in plain language, exactly what the app does and does not do with your information. Every statement below is checked against the code that ships with this version. If a future version changes how data is handled, this notice changes in the same release — a privacy promise that outlives its truth is worthless.</p>
 <p>The short version: <strong>the app has no account server, no cloud sync, and no analytics. Everything you enter is stored on your phone, and that includes anything you dictate — voice recognition is required to run on your device.</strong></p>
 <hr />
@@ -101,10 +101,12 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <tr><td><code>mcc.locale.v1</code></td><td>Your language choice</td></tr>
 <tr><td><code>mcc.recentSearches.v1</code></td><td>Text you've typed into in-app search, kept so you can see your own recent searches</td></tr>
 <tr><td><code>mcc.lastExport.v1</code></td><td>The timestamp of your last export, nothing else</td></tr>
-<tr><td><code>mcc.entitlement.v1</code></td><td>Which plan you have and whether you were an early user who keeps Max free — no payment details</td></tr>
+<tr><td><code>mcc.entitlement.v1</code></td><td>Which plan you have, and whether you were an early user with free Max and until when — no payment details</td></tr>
 <tr><td><code>mcc.cosmicReport.saves.v1</code></td><td>Any Cosmic Reports you've chosen to save</td></tr>
 <tr><td><code>mcc.onlineVoiceConsent.v1</code></td><td>Whether you allowed online dictation for a language with no offline model — only your yes or no</td></tr>
-<tr><td><code>mcc.identSeen.v1</code>, <code>mcc.tutorialSeen.v1</code>, <code>mcc.timelineGuideSeen.v1</code>, <code>mcc.skyNotesSeen.v1</code>, <code>mcc.ambientMuted.v1</code></td><td>Interface flags — not personal data</td></tr>
+<tr><td><code>mcc.identSeen.v1</code>, <code>mcc.tutorialSeen.v1</code>, <code>mcc.timelineGuideSeen.v1</code>, <code>mcc.skyNotesSeen.v1</code>, <code>mcc.whatsNewSeen.v1</code>, <code>mcc.updateDismissed.v1</code>, <code>mcc.ambientMuted.v1</code></td><td>Interface flags — not personal data</td></tr>
+<tr><td><code>mcc.reviewAsk.v1</code></td><td>How many times you have spent a while in a service, since when, and when the rating window was last offered — nothing else</td></tr>
+<tr><td><code>mcc.transitTrial.v1</code></td><td>Which free transit notifications were sent and when — nothing else</td></tr>
 </tbody>
 </table></div>
 <hr />
@@ -148,6 +150,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <li>The app contains <strong>no third-party trackers or data brokers</strong>.</li>
 <li>The app makes <strong>no automated decisions</strong> about you and does not profile you.</li>
 <li>Payments are handled by <strong>Google Play</strong>, not by us — see <em>Purchases</em>.</li>
+<li><strong>Updates and ratings</strong> also go through Google Play on your device: the app asks the Play Store app whether a newer version is out, and after you have used the app for a few days it may open Google Play's own rating window. If you rate, your rating goes to Google Play under Google's privacy policy; the app never learns whether or how you rated — we see only what Google Play publishes.</li>
 <li>Apart from Google Play for purchases and Android's own location service (see <em>Your location</em> above), the one service outside our control that may see any of your data is your phone's own operating-system speech-recognition service, and only if you choose to dictate rather than type. It runs on your device, except for a language your phone cannot transcribe offline, and then only after you tap <strong>Allow and speak</strong> — see <em>Voice dictation</em> above.</li>
 </ul>
 <hr />

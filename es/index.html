@@ -80,9 +80,15 @@ th { color: #C9A227; font-weight: 600; }
 footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; font-size: .85rem; color: #8A8CA0; }
 @media (max-width: 30rem) { .wrap { padding: 1.5rem 1rem 4rem; } h1 { font-size: 1.55rem; } }
 
-.hero { text-align: center; padding: 1rem 0 1.5rem; }
-.hero img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
-.hero img.icon { width: 96px; height: 96px; border-radius: 22px; }
+.hero { text-align: center; padding: 1.25rem 0 1.5rem; }
+img.graphic { width: 100%; height: auto; border-radius: 14px; display: block; margin: 0 0 1.5rem; }
+.hero .brand { display: inline-flex; align-items: center; gap: .6rem; margin: 0; font-size: 1.15rem; color: #F2EFE6; }
+.hero .brand img { width: 44px; height: 44px; border-radius: 11px; }
+.hero .trust { display: flex; align-items: center; gap: .8rem; margin: 1.1rem auto .2rem; max-width: 34rem; color: #E6C584; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; }
+.hero .trust::before, .hero .trust::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(230,197,132,.6)); }
+.hero .trust::after { background: linear-gradient(90deg, rgba(230,197,132,.6), transparent); }
+.hero h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(1.9rem, 7vw, 2.8rem); line-height: 1.12; margin: .7rem auto .9rem; max-width: 34rem; color: #F2EFE6; }
+.hero .cta { font-size: 1.1rem; padding: 1rem 2.3rem; box-shadow: 0 0 0 1px rgba(230,197,132,.5), 0 8px 28px rgba(201,162,39,.35); }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
 .notify { font-size: .95rem; color: #CFCBE0; margin: .5rem auto 0; max-width: 34rem; }
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
@@ -100,32 +106,34 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 .svc .pad { position: relative; z-index: 2; padding: 4.5rem .75rem .75rem; }
 .svc strong { display: block; color: #F2EFE6; font-size: 1rem; font-weight: 600; line-height: 1.25; }
 .svc span { display: block; margin-top: .2rem; color: #B9B6C8; font-size: .82rem; line-height: 1.3; }
+.svc .free { position: absolute; top: .55rem; left: .55rem; z-index: 2; padding: .18rem .55rem; border-radius: 6px; background: rgba(5,6,10,.72); border: 1px solid rgba(230,197,132,.7); color: #E6C584; font-size: .66rem; font-weight: 700; letter-spacing: .1em; }
 </style>
 
 </head>
 <body>
 <div class="wrap">
 <header class="hero">
-<img class="graphic" src="../feature-graphic.webp" width="1024" height="500" fetchpriority="high" alt="My Cosmic Code: Horóscopo" />
-<img class="icon" src="../icon-192.webp" width="96" height="96" alt="" />
-<h1>My Cosmic Code: Horóscopo</h1>
+<p class="brand"><img src="../icon-192.webp" width="44" height="44" alt="" />My Cosmic Code: Horóscopo</p><br />
+<p class="trust">Sin registro ✦ Sin anuncios ✦ 13 idiomas</p>
+<h1>Tu carta natal, tu horóscopo y tu diario de sueños en una sola app</h1>
 <p class="lead">Horóscopo diario, carta astral, compatibilidad y diccionario de sueños.</p>
 <a class="cta" href="https://play.google.com/store/apps/details?id=com.mycosmiccode.app&hl=es-ES" rel="noopener">Disponible en Google Play</a>
 <p class="notify">¿Quieres un aviso cuando un planeta entre en tu signo o salga de él, se vuelva retrógrado o una Luna nueva o llena caiga en tu signo? Esos avisos llegan solo en la app: instálala desde Google Play.</p>
 </header>
 <h2>Pruébalo aquí, en tu navegador</h2>
 <ul class="svc">
-<li><a href="carta-natal/#calculator"><img class="art" src="../cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Carta natal</strong><span>Tu mapa cósmico</span></div></a></li>
-<li><a href="calendario-lunar/#calculator"><img class="art" src="../cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Calendario lunar</strong><span>Ciclos y fases de la Luna</span></div></a></li>
-<li><a href="numerologia/#calculator"><img class="art" src="../cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Numerología</strong><span>Descifra el poder de los números</span></div></a></li>
-<li><a href="compatibilidad-de-signos/#calculator"><img class="art" src="../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Compatibilidad</strong><span>Cómo se encuentran dos cartas</span></div></a></li>
-<li><a href="horoscopo-chino/#calculator"><img class="art" src="../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Horóscopos</strong><span>Chino, japonés y védico</span></div></a></li>
-<li><a href="mapa-del-cielo/#calculator"><img class="art" src="../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Cielo nocturno</strong><span>El cielo real, unido a tu carta</span></div></a></li>
-<li><a href="que-signo-soy/#calculator"><img class="art" src="../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Qué signo soy</strong><span>Tu signo solar y lunar</span></div></a></li>
-<li><a href="planetas-hoy/#calculator"><img class="art" src="../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Planetas hoy</strong><span>Luna, planetas y retrógrados ahora</span></div></a></li>
-<li><a href="carta-del-dia/#calculator"><img class="art" src="../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Carta del día</strong><span>Pregunta al Vigía Velado</span></div></a></li>
-<li><a href="significado-de-los-suenos/"><img class="art" src="../cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><div class="pad"><strong>Diccionario de sueños</strong><span>Todos los símbolos, de la A a la Z</span></div></a></li>
+<li><a href="carta-natal/#calculator"><img class="art" src="../cards/birth-chart.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Carta natal</strong><span>Tu mapa cósmico</span></div></a></li>
+<li><a href="calendario-lunar/#calculator"><img class="art" src="../cards/moon.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Calendario lunar</strong><span>Ciclos y fases de la Luna</span></div></a></li>
+<li><a href="numerologia/#calculator"><img class="art" src="../cards/numerology.webp" loading="eager" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Numerología</strong><span>Descifra el poder de los números</span></div></a></li>
+<li><a href="compatibilidad-de-signos/#calculator"><img class="art" src="../cards/compatibility.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Compatibilidad</strong><span>Cómo se encuentran dos cartas</span></div></a></li>
+<li><a href="horoscopo-chino/#calculator"><img class="art" src="../cards/horoscopes.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Horóscopos</strong><span>Chino, japonés y védico</span></div></a></li>
+<li><a href="mapa-del-cielo/#calculator"><img class="art" src="../cards/night-sky.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Cielo nocturno</strong><span>El cielo real, unido a tu carta</span></div></a></li>
+<li><a href="que-signo-soy/#calculator"><img class="art" src="../cards/planets.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Qué signo soy</strong><span>Tu signo solar y lunar</span></div></a></li>
+<li><a href="planetas-hoy/#calculator"><img class="art" src="../cards/transits.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Planetas hoy</strong><span>Luna, planetas y retrógrados ahora</span></div></a></li>
+<li><a href="carta-del-dia/#calculator"><img class="art" src="../cards/deck.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Carta del día</strong><span>Pregunta al Vigía Velado</span></div></a></li>
+<li><a href="significado-de-los-suenos/"><img class="art" src="../cards/dream-book.webp" loading="lazy" decoding="async" width="630" height="550" alt="" /><b class="free">✦ GRATIS ONLINE</b><div class="pad"><strong>Diccionario de sueños</strong><span>Todos los símbolos, de la A a la Z</span></div></a></li>
 </ul>
+<img class="graphic" src="../feature-graphic.webp" width="1024" height="500" loading="lazy" alt="My Cosmic Code: Horóscopo" />
 <div class="shots">
 <img src="../screenshots/1-home.jpg" width="540" height="1040" loading="lazy" alt="Pantalla de inicio: tu Cosmic Code — camino de vida y año personal — con signo solar, lunar y ascendente" />
 <img src="../screenshots/2-birth-chart.jpg" width="540" height="1040" loading="lazy" alt="Carta natal con planetas, casas, aspectos, Ascendente y Medio Cielo" />

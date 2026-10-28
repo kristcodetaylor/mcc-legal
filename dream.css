@@ -40,6 +40,9 @@ nav.crumbs { gap: .5rem; flex-wrap: wrap; align-items: center; }
 .lead { font-size: 1.15rem; color: #E8E6F0; }
 .meaning { font-size: 1.1rem; }
 .question { font-size: 1.1rem; font-style: italic; }
+.bridge { margin: 1.5rem 0; padding: 1rem 1.2rem; border: 1px solid rgba(201,162,39,.45); border-radius: 14px; background: rgba(201,162,39,.08); }
+.bridge p { margin: 0; }
+.bridge .cta { margin: .8rem 0 0; }
 .cta { display: inline-block; margin: 1rem 0 .5rem; padding: .85rem 1.6rem; border-radius: 999px; background: #C9A227; color: #05060A; font-weight: 700; text-decoration: none; }
 .letters { font-size: 1rem; line-height: 2.1; word-spacing: .35rem; }
 ul.az { columns: 2 12rem; column-gap: 2rem; padding-left: 1.1rem; }

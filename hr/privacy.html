@@ -65,7 +65,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <nav><a href="./">Početna</a><strong>Privatnost</strong><a href="terms.html">Uvjeti</a><a href="delete-account.html">Brisanje računa</a></nav>
 <h1>Obavijest o privatnosti — My Cosmic Code</h1>
 <p><em>Ovo je prijevod pružen radi lakšeg snalaženja; ako se razlikuje od engleske verzije, mjerodavna je <a href="https://mycosmiccode.app/privacy.html" rel="noopener">engleska verzija</a>.</em></p>
-<p><strong>Posljednje ažuriranje: 17. listopada 2026.</strong></p>
+<p><strong>Posljednje ažuriranje: 28. listopada 2026.</strong></p>
 <p>My Cosmic Code je aplikacija za astrologiju, numerologiju i dnevnik snova koja gotovo u potpunosti radi na vašem uređaju. Ova obavijest jednostavnim jezikom objašnjava što točno aplikacija čini, a što ne čini s vašim podacima. Svaka tvrdnja u nastavku provjerena je u odnosu na kôd koji se isporučuje s ovom verzijom. Ako neka buduća verzija promijeni način postupanja s podacima, ova se obavijest mijenja u istom izdanju — obećanje o privatnosti koje nadživi vlastitu istinitost ne vrijedi ništa.</p>
 <p>Ukratko: <strong>aplikacija nema poslužitelj za račune, nema sinkronizaciju u oblaku i nema analitiku. Sve što unesete pohranjuje se na vašem telefonu, uključujući i sve što izdiktirate — prepoznavanje govora mora se izvoditi na vašem uređaju.</strong></p>
 <hr />
@@ -102,10 +102,12 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <tr><td><code>mcc.locale.v1</code></td><td>Vaš odabir jezika</td></tr>
 <tr><td><code>mcc.recentSearches.v1</code></td><td>Tekst koji ste upisali u pretraživanje unutar aplikacije, čuva se kako biste mogli vidjeti svoja nedavna pretraživanja</td></tr>
 <tr><td><code>mcc.lastExport.v1</code></td><td>Vremenska oznaka vašeg posljednjeg izvoza, ništa drugo</td></tr>
-<tr><td><code>mcc.entitlement.v1</code></td><td>Koji plan imate i jeste li rani korisnik koji besplatno zadržava Max — bez podataka o plaćanju</td></tr>
+<tr><td><code>mcc.entitlement.v1</code></td><td>Koji plan imate i jeste li rani korisnik s besplatnim Maxom, i do kada — bez podataka o plaćanju</td></tr>
 <tr><td><code>mcc.cosmicReport.saves.v1</code></td><td>Kozmički izvještaji koje ste odlučili spremiti</td></tr>
 <tr><td><code>mcc.onlineVoiceConsent.v1</code></td><td>Jeste li dopustili online diktiranje za jezik bez izvanmrežnog modela — samo vaše da ili ne</td></tr>
-<tr><td><code>mcc.identSeen.v1</code>, <code>mcc.tutorialSeen.v1</code>, <code>mcc.timelineGuideSeen.v1</code>, <code>mcc.skyNotesSeen.v1</code>, <code>mcc.ambientMuted.v1</code></td><td>Oznake sučelja — nisu osobni podaci</td></tr>
+<tr><td><code>mcc.identSeen.v1</code>, <code>mcc.tutorialSeen.v1</code>, <code>mcc.timelineGuideSeen.v1</code>, <code>mcc.skyNotesSeen.v1</code>, <code>mcc.whatsNewSeen.v1</code>, <code>mcc.updateDismissed.v1</code>, <code>mcc.ambientMuted.v1</code></td><td>Oznake sučelja — nisu osobni podaci</td></tr>
+<tr><td><code>mcc.reviewAsk.v1</code></td><td>Koliko ste puta duže koristili neku uslugu, od kada, i kad je prozor za ocjenu zadnji put ponuđen — ništa drugo</td></tr>
+<tr><td><code>mcc.transitTrial.v1</code></td><td>Koje su besplatne obavijesti o tranzitima poslane i kada — ništa drugo</td></tr>
 </tbody>
 </table></div>
 <hr />
@@ -149,6 +151,7 @@ footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid #23262F; f
 <li>Aplikacija <strong>ne sadrži alate trećih strana za praćenje ni posrednike podacima</strong>.</li>
 <li>Aplikacija <strong>ne donosi automatizirane odluke</strong> o vama i ne izrađuje vaš profil.</li>
 <li>Plaćanja obavlja <strong>Google Play</strong>, a ne mi — vidi <em>Kupnje</em>.</li>
+<li><strong>Ažuriranja i ocjene</strong> također idu preko usluge Google Play na vašem uređaju: aplikacija pita aplikaciju Trgovina Play postoji li novija verzija, a nakon što aplikaciju koristite nekoliko dana može otvoriti Googleov vlastiti prozor za ocjenu. Ako ostavite ocjenu, ona ide usluzi Google Play prema Googleovim pravilima o privatnosti; aplikacija nikad ne sazna jeste li ocijenili ni kako — mi vidimo samo ono što Google Play objavi.</li>
 <li>Osim usluge Google Play za kupnje i Androidove vlastite usluge lokacije (vidi <em>Vaša lokacija</em> gore), jedina usluga izvan naše kontrole koja bi mogla vidjeti bilo koji vaš podatak jest usluga prepoznavanja govora operacijskog sustava vašeg telefona, i to samo ako odlučite diktirati umjesto tipkati. Ona se izvodi na vašem uređaju, osim za jezik koji vaš telefon ne može transkribirati izvanmrežno, i tada tek nakon što dodirnete <strong>Dopusti i govori</strong> — vidi <em>Glasovno diktiranje</em> gore.</li>
 </ul>
 <hr />
